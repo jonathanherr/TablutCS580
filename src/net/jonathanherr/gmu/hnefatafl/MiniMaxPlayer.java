@@ -11,7 +11,7 @@ import net.jonathanherr.gmu.hnefatafl.Hnefatafl.Direction;
  */
 public class MiniMaxPlayer extends Player {
 	MiniMaxTree tree;
-	int searchDepth=3;
+	int searchDepth=3; //plies to search
 	int minMoveSize=1; //mechanism to restrict game to large movements, for testing. Set to 1 for normal movement.
 	int currentDepth=0;
 	public MiniMaxPlayer(Hnefatafl game, ArrayList<Piece> pieces) {
@@ -28,7 +28,7 @@ public class MiniMaxPlayer extends Player {
 		tree.setRoot(node);
 		
 		generateStates(currentState,currentState.getWhitepieces(),tree.root);
-		printTree(node);
+		//printTree(node);
 		tree.choose(this,this.getPieceColor());
 		return null;
 	}
@@ -60,7 +60,6 @@ public class MiniMaxPlayer extends Player {
 		}
 		int totalLevelStates=node.links.size();
 		if(totalLevelStates>0) {
-			System.out.println("current state - level " + currentDepth + " " + node.getColor());
 			
 			for(Link link:node.links) {
 				rownum=0;
@@ -80,7 +79,7 @@ public class MiniMaxPlayer extends Player {
 			for(Link link:node.links) {
 				printTree(link.child);
 			}
-			currentDepth+=1;
+			
 		}		
 	}
 	
@@ -93,9 +92,7 @@ public class MiniMaxPlayer extends Player {
 	private void generateStates(BoardState state, ArrayList<Piece> pieces, Node parent) {
 		BoardState movestate=null;
 		int totalMoves=0;
-		
 		for(Piece piece:pieces) {
-			
 			for(Direction moveDir:Direction.values()) {
 				int availMoves=piece.availLength(moveDir,game,state.board);
 				
@@ -130,9 +127,6 @@ public class MiniMaxPlayer extends Player {
 					
 			}
 		}
-		
-		
-		
 	}
 	/**
 	 * For the time being, call the basic evaluation method

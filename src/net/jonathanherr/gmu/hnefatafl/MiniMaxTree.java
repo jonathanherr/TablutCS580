@@ -25,6 +25,9 @@ class Node{
 		id=nodeid;
 
 	}
+	public Move getMove(){
+		return state.getMove();
+	}
 	public void addChild(Node node) {
 		Link link=new Link(this,node);
 		links.add(link);
@@ -94,28 +97,52 @@ public class MiniMaxTree {
 	/**
 	 * Score the leaves and propagate scores upward based on minimax
 	 */
-	public void choose(MiniMaxPlayer player,String color) {
+	public Move choose(MiniMaxPlayer player,String color) {
 		
 		Node leafParent=findLeaf(root);
+		Move bestMove=null;
+		double bestScore=0.0d;
 		for(Link leaflink:leafParent.links) {
 			Node leaf=leaflink.getChild();
-			//TODO: side recognition clearly broken
-			if(player.getName().equals("white"))
-				leaf.whiteScore=((Player) player).evaluate(leaf.getState());
+			boolean min=false;
+			//figure out if we are minimizing or maximizing the leaves - if same color, max, else min
+			if(leaf.getMove().getPiece().name.equals(player.getColor()))
+				min=false;
 			else
-				leaf.blackScore=((Player) player).evaluate(leaf.getState());
+				min=true;
+			//TODO: score leaf node, backup to parent, score all children of parent, assign appropriate score(min or max) to parent, and then repeat at parent's parent. DFS. 
+			if(player.getColor().equals("white")){
+				leaf.whiteScore=player.evaluate(leaf.getState());
+				if(leaf.whiteScore>bestScore){
+					bestScore=leaf.whiteScore;
+					bestMove=leaf.getMove();
+				}
+			}
+			else{
+				leaf.blackScore=player.evaluate(leaf.getState());
+				if(leaf.blackScore>bestScore){
+					bestScore=leaf.blackScore;
+					bestMove=leaf.getMove();
+				}
+			}
 		}
+		return bestMove;
 	}
+	private int levels=0;
 	private Node findLeaf(Node node) {
 		//DFS for leaf node, propagate back up
-		for(Link link:root.getChildren()) {
+		levels+=1;
+		Node parent=null;
+		System.out.println("levels:" + levels);
+		for(Link link:node.getChildren()) {
 			if(link.getChild().getChildren().size()>0) { //not a leafnode
-				findLeaf(link.getChild());
+				parent=findLeaf(link.getChild());
+				break;
 			}
 			else
 				return link.getParent();
 		}
-		return null;
+		return parent;
 	}
 	
 }

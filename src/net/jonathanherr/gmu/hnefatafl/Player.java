@@ -18,7 +18,7 @@ Player {
 	protected int featureCount=4;
 	protected int captures;
 	private int wins;
-	private String name;
+	private String type;
 	private String color;
 	
 	
@@ -37,15 +37,15 @@ Player {
 	public int getWins() {
 		return wins;
 	}
-	public String getName() {
-		return name;
+	public String getType() {
+		return type;
 	}
 	
 	
 	public Player(Hnefatafl game, ArrayList<Piece> pieces, String name){
 		this.game=game;
 		this.pieces=pieces;
-		this.name=name;
+		this.type=name;
 		moves=new ArrayList<Move>();
 		games=new ArrayList<Outcome>();
 		featureWeights=new ArrayList<Double>();
@@ -63,7 +63,7 @@ Player {
 	public void addPlayedGame(long gameid,boolean wonGame,String side, int moveCount, double gameTime, Result result){
 		if(wonGame)
 			this.wins+=1;
-		Outcome outcome=new Outcome(gameid,name,side,wonGame,moveCount,gameTime,result);
+		Outcome outcome=new Outcome(gameid,type,side,wonGame,moveCount,gameTime,result);
 		games.add(outcome);
 		
 	}
@@ -113,6 +113,9 @@ Player {
 		for(Double score:pieceScores) {
 			totalScore+=score;
 		}
+		System.out.println("Score for board below:" + totalScore);
+		System.out.println(game.getStateString("", board.board));
+		
 		return totalScore;
 	}
 	protected int distanceFromOpponent(BoardState board,ArrayList<Piece> opponentPieces, Piece piece) {
@@ -137,10 +140,13 @@ Player {
 		return distFromKing;
 	}
 	public String getPieceColor(){
-		return color;
+		return getColor();
 	}
 	public void setColor(String color) {
 		this.color=color;
 		
+	}
+	public String getColor() {
+		return color;
 	}
 }

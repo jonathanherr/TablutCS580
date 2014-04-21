@@ -697,8 +697,8 @@ public class Hnefatafl {
 		
 		Hnefatafl game=new Hnefatafl();
 		
-		//playMinimax(game);
-		playRandom(game);
+		playMinimax(game);
+		//playRandom(game);
 		
 		
 	}
@@ -706,7 +706,7 @@ public class Hnefatafl {
 		System.out.println(game.toStateString());
 		RandomPlayer black=new RandomPlayer(game, game.blackpieces);
 		MiniMaxPlayer white = new MiniMaxPlayer(game,game.whitepieces);
-		game.play(white, black, 1, 2,0);
+		game.play(white, black, 1, 50,0);
 		
 		for(Outcome result:black.games){
 			System.out.println(result);
