@@ -3,16 +3,24 @@ package net.jonathanherr.gmu.hnefatafl;
 import java.util.ArrayList;
 
 import net.jonathanherr.gmu.hnefatafl.Hnefatafl.Direction;
-
+/**
+ * Player generates a decision tree and applies minimax algorithm to states based on evaluation of tree value at depth defined by searchDepth property. 
+ * 
+ * @author herrjr
+ *
+ */
 public class MiniMaxPlayer extends Player {
 	MiniMaxTree tree;
 	int searchDepth=3;
-	int minMoveSize=1; //mechanism to restrict game to large movements, for testing. Set to 0 for normal movement.
+	int minMoveSize=1; //mechanism to restrict game to large movements, for testing. Set to 1 for normal movement.
 	int currentDepth=0;
 	public MiniMaxPlayer(Hnefatafl game, ArrayList<Piece> pieces) {
 		super(game, pieces, "Minimax");
 		tree=new MiniMaxTree();
 	}
+	/**
+	 * Obey player interface, provide a Move object to game controller representing the player's choice of action. 
+	 */
 	public Move turn() {
 		BoardState currentState=new BoardState(game.board, game.getBlackpieces(), game.getWhitepieces());
 		Node node=new Node(currentState);
@@ -24,6 +32,10 @@ public class MiniMaxPlayer extends Player {
 		tree.choose(this,this.getPieceColor());
 		return null;
 	}
+	/**
+	 * Print out the tree for debugging
+	 * @param node
+	 */
 	private void printTree(Node node) {
 		
 		//System.out.println(game.getStateString("",node.board));
@@ -72,6 +84,12 @@ public class MiniMaxPlayer extends Player {
 		}		
 	}
 	
+	/**
+	 * Generate the next level of a decision tree by looking at the available moves for each piece on the board owned by this player
+	 * @param state
+	 * @param pieces
+	 * @param parent
+	 */
 	private void generateStates(BoardState state, ArrayList<Piece> pieces, Node parent) {
 		BoardState movestate=null;
 		int totalMoves=0;
@@ -98,6 +116,9 @@ public class MiniMaxPlayer extends Player {
 				}
 			}
 		}
+		/**
+		 * Call self recursively to generate more levels
+		 */
 		if(searchDepth>0) {
 			searchDepth-=1;
 			for(Link link:parent.getChildren()) {
@@ -113,6 +134,9 @@ public class MiniMaxPlayer extends Player {
 		
 		
 	}
+	/**
+	 * For the time being, call the basic evaluation method
+	 */
 	public double evaluate(BoardState board) {
 		return super.evaluate(board);
 	}
