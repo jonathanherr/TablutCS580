@@ -85,38 +85,44 @@ Player {
 		
 		ArrayList<Double> pieceScores=new ArrayList<>(); //for debug/tracking, not necessary
 		if(this.getPieceColor().equals(Hnefatafl.WHITE_NAME)) {
-			//for white, each piece, except king, accumulates points based on several factors, proximity to king, proximity to exit nodes and proximity to opponents
-			//total score for board is sum of white piece scores. all scores normalized by board width.
-			for(Piece piece:board.getWhitepieces()) {
-				if(!piece.name.equals(Hnefatafl.KING_NAME)) {
-					double score=0.0d;
-					score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get(0);
-					score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get(1);
-					score+=(1.0d/(double) distanceFromOpponent(board,game.getBlackpieces(), piece))*featureWeights.get(2);
-					pieceScores.add(score);
-				}
-				else {
-					pieceScores.add((1.0d/(double)distanceFromCorner(piece))*featureWeights.get(3));
-				}
-			}
+			evaluateWhite(board, pieceScores);
 		}
 		else if(this.getPieceColor().equals(Hnefatafl.BLACK_NAME)) {
-			for(Piece piece:board.getBlackpieces()) {
-				double score=0.0d;
-				score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get(0);
-				score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get(1);
-				score+=(1.0d/(double) distanceFromOpponent(board,game.getWhitepieces(), piece))*featureWeights.get(2);
-				pieceScores.add(score);
-			}
+			evaluateBlack(board, pieceScores);
 		}
 		double totalScore=0.0d;
 		for(Double score:pieceScores) {
 			totalScore+=score;
 		}
-		System.out.println("Score for board below:" + totalScore);
-		System.out.println(game.getStateString("", board.board));
+		//System.out.println("Score for board below:" + totalScore);
+		//System.out.println(game.getStateString("", board.board));
 		
 		return totalScore;
+	}
+	private void evaluateBlack(BoardState board, ArrayList<Double> pieceScores) {
+		for(Piece piece:board.getBlackpieces()) {
+			double score=0.0d;
+			score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get(0);
+			score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get(1);
+			score+=(1.0d/(double) distanceFromOpponent(board,game.getWhitepieces(), piece))*featureWeights.get(2);
+			pieceScores.add(score);
+		}
+	}
+	private void evaluateWhite(BoardState board, ArrayList<Double> pieceScores) {
+		//for white, each piece, except king, accumulates points based on several factors, proximity to king, proximity to exit nodes and proximity to opponents
+		//total score for board is sum of white piece scores. all scores normalized by board width.
+		for(Piece piece:board.getWhitepieces()) {
+			if(!piece.name.equals(Hnefatafl.KING_NAME)) {
+				double score=0.0d;
+				score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get(0);
+				score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get(1);
+				score+=(1.0d/(double) distanceFromOpponent(board,game.getBlackpieces(), piece))*featureWeights.get(2);
+				pieceScores.add(score);
+			}
+			else {
+				pieceScores.add((1.0d/(double)distanceFromCorner(piece))*featureWeights.get(3));
+			}
+		}
 	}
 	protected int distanceFromOpponent(BoardState board,ArrayList<Piece> opponentPieces, Piece piece) {
 		int oppDistTotal=0;
@@ -148,5 +154,22 @@ Player {
 	}
 	public String getColor() {
 		return color;
+	}
+	/**
+	 * Evaluate opponent score
+	 * @param state
+	 * @return
+	 */
+	public double evaluateOpponent(BoardState state) {
+		ArrayList<Double> pieceScores=new ArrayList<>(); //for debug/tracking, not necessary
+		if(this.getColor().equals("white"))
+			evaluateBlack(state, pieceScores);
+		else
+			evaluateWhite(state,pieceScores);
+		double totalScore=0.0d;
+		for(Double score:pieceScores) {
+			totalScore+=score;
+		}
+		return totalScore;
 	}
 }

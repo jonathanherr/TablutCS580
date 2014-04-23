@@ -26,8 +26,8 @@ public class Hnefatafl {
 	static final String WHITE_NAME = "white";
 	static final String BLACK_NAME = "black";
 	static final String KING_NAME = "king";
-	int boardwidth;
-	int boardheight;
+	static int boardwidth;
+	static int boardheight;
 	char blank='_';
 	char black='b';
 	char white='w';
@@ -128,7 +128,7 @@ public class Hnefatafl {
 		readConfig(reloadConfig);
 		
 	}
-	public String getStateString(String padding,int[][] board) {
+	public static String getStateString(String padding,int[][] board) {
 		String state=padding+"  ";
 		for(int i=0;i<boardwidth;i++){
 			state+=i+" ";
