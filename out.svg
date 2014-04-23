@@ -1,0 +1,194 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width="730" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<line x1="365" y1="87" x2="87" y2="312" style="stroke:black; stroke-width:2px;" />
+<line x1="365" y1="87" x2="272" y2="312" style="stroke:black; stroke-width:2px;" />
+<line x1="365" y1="87" x2="457" y2="312" style="stroke:black; stroke-width:2px;" />
+<line x1="365" y1="87" x2="642" y2="312" style="stroke:black; stroke-width:2px;" />
+<rect x="556" y="226" width="173" height="173" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="563" y="238" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="563" y="250" style="font-family:terminal;font-size:12px;">
+  0 x _ b _ _ W _ b x 
+</text>
+<text x="563" y="262" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ b _ _ 
+</text>
+<text x="563" y="274" style="font-family:terminal;font-size:12px;">
+  2 _ b _ _ w _ _ _ b 
+</text>
+<text x="563" y="286" style="font-family:terminal;font-size:12px;">
+  3 b _ _ _ w _ _ _ _ 
+</text>
+<text x="563" y="298" style="font-family:terminal;font-size:12px;">
+  4 b b w w k _ w b _ 
+</text>
+<text x="563" y="310" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="563" y="322" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ b _ b _ _ _ 
+</text>
+<text x="563" y="334" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ b b 
+</text>
+<text x="563" y="346" style="font-family:terminal;font-size:12px;">
+  8 x _ _ _ b _ _ _ x 
+</text>
+<text x="563" y="358" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="563" y="370" style="font-family:terminal;font-size:12px;">
+10.520
+</text>
+<rect x="278" y="1" width="173" height="173" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="285" y="13" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="285" y="25" style="font-family:terminal;font-size:12px;">
+  0 x _ b _ _ _ _ b x 
+</text>
+<text x="285" y="37" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ b _ _ 
+</text>
+<text x="285" y="49" style="font-family:terminal;font-size:12px;">
+  2 _ b _ _ w _ _ _ b 
+</text>
+<text x="285" y="61" style="font-family:terminal;font-size:12px;">
+  3 b _ _ _ w _ _ _ _ 
+</text>
+<text x="285" y="73" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b _ 
+</text>
+<text x="285" y="85" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="285" y="97" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ b _ b _ _ _ 
+</text>
+<text x="285" y="109" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ b b 
+</text>
+<text x="285" y="121" style="font-family:terminal;font-size:12px;">
+  8 x _ _ _ b _ _ _ x 
+</text>
+<text x="285" y="133" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="285" y="145" style="font-family:terminal;font-size:12px;">
+10.520
+</text>
+<rect x="186" y="226" width="173" height="173" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="193" y="238" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="193" y="250" style="font-family:terminal;font-size:12px;">
+  0 x _ b _ _ _ _ b x 
+</text>
+<text x="193" y="262" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ b _ _ 
+</text>
+<text x="193" y="274" style="font-family:terminal;font-size:12px;">
+  2 _ b _ _ w _ _ _ b 
+</text>
+<text x="193" y="286" style="font-family:terminal;font-size:12px;">
+  3 b _ _ _ w _ _ _ _ 
+</text>
+<text x="193" y="298" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w b _ 
+</text>
+<text x="193" y="310" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="193" y="322" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ b _ b _ _ _ 
+</text>
+<text x="193" y="334" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ b b 
+</text>
+<text x="193" y="346" style="font-family:terminal;font-size:12px;">
+  8 x _ W _ b _ _ _ x 
+</text>
+<text x="193" y="358" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="193" y="370" style="font-family:terminal;font-size:12px;">
+10.520
+</text>
+<rect x="371" y="226" width="173" height="173" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="378" y="238" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="378" y="250" style="font-family:terminal;font-size:12px;">
+  0 x _ b W _ _ _ b x 
+</text>
+<text x="378" y="262" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ b _ _ 
+</text>
+<text x="378" y="274" style="font-family:terminal;font-size:12px;">
+  2 _ b _ _ w _ _ _ b 
+</text>
+<text x="378" y="286" style="font-family:terminal;font-size:12px;">
+  3 b _ _ _ w _ _ _ _ 
+</text>
+<text x="378" y="298" style="font-family:terminal;font-size:12px;">
+  4 b b w _ k w w b _ 
+</text>
+<text x="378" y="310" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="378" y="322" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ b _ b _ _ _ 
+</text>
+<text x="378" y="334" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ b b 
+</text>
+<text x="378" y="346" style="font-family:terminal;font-size:12px;">
+  8 x _ _ _ b _ _ _ x 
+</text>
+<text x="378" y="358" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="378" y="370" style="font-family:terminal;font-size:12px;">
+10.520
+</text>
+<rect x="1" y="226" width="173" height="173" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="8" y="238" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="8" y="250" style="font-family:terminal;font-size:12px;">
+  0 x _ b _ _ _ _ b x 
+</text>
+<text x="8" y="262" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ b _ _ 
+</text>
+<text x="8" y="274" style="font-family:terminal;font-size:12px;">
+  2 _ b _ _ w _ _ _ b 
+</text>
+<text x="8" y="286" style="font-family:terminal;font-size:12px;">
+  3 b _ _ _ _ _ _ _ W 
+</text>
+<text x="8" y="298" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b _ 
+</text>
+<text x="8" y="310" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="8" y="322" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ b _ b _ _ _ 
+</text>
+<text x="8" y="334" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ b b 
+</text>
+<text x="8" y="346" style="font-family:terminal;font-size:12px;">
+  8 x _ _ _ b _ _ _ x 
+</text>
+<text x="8" y="358" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="8" y="370" style="font-family:terminal;font-size:12px;">
+10.520
+</text>
+</svg>
+
