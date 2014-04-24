@@ -13,6 +13,7 @@ public class TreeNode{
 	static int nodeid=0;
 	private int id;
 	private String color;
+	private int level=0;
 	boolean max; //every node is either a max or a min node from the perspective of the current player
 	public void setColor(String c) {
 		this.color=c;
@@ -72,5 +73,11 @@ public class TreeNode{
 	}
 	public void setLinks(ArrayList<TreeLink> links) {
 		this.links = links;
+	}
+	public int getLevel() {
+		return level;
+	}
+	public void setLevel(int level) {
+		this.level = level;
 	}
 }

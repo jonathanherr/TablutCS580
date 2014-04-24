@@ -14,7 +14,7 @@ import net.jonathanherr.gmu.minimax.TreeNode;
  */
 public class MiniMaxPlayer extends Player {
 	MiniMaxTree tree;
-	int searchDepth=1; //plies to search
+	int searchDepth=3; //plies to search
 	int minMoveSize=4; //mechanism to restrict game to large movements, for testing. Set to 1 for normal movement.
 	int currentDepth=0;
 	public MiniMaxPlayer(Hnefatafl game, ArrayList<Piece> pieces) {
@@ -94,10 +94,10 @@ public class MiniMaxPlayer extends Player {
 	 */
 	private void generateStates(BoardState state, ArrayList<Piece> pieces, TreeNode parent) {
 		BoardState movestate=null;
-		int totalMoves=0;
+		int totalMoves=0,availMoves=0;
 		for(Piece piece:pieces) {
 			for(Direction moveDir:Direction.values()) {
-				int availMoves=piece.availLength(moveDir,game,state.board);
+				availMoves=piece.availLength(moveDir,game,state.board);
 				
 				//System.out.println(availMoves + " for " + piece.name + " piece at " + piece.getRow()+","+piece.getCol() + " in direction " + moveDir.toString());
 				totalMoves+=availMoves;
@@ -110,7 +110,7 @@ public class MiniMaxPlayer extends Player {
 					//Double stateScore=game.scoreBoard(this, movestate);
 					TreeNode node=new TreeNode(movestate);
 					node.setColor(piece.name);
-					
+					node.setLevel(parent.getLevel()+1);
 					parent.addChild(node);
 					availMoves-=1;
 				}
@@ -119,17 +119,16 @@ public class MiniMaxPlayer extends Player {
 		/**
 		 * Call self recursively to generate more levels
 		 */
-		if(searchDepth>0) {
-			searchDepth-=1;
-			for(TreeLink link:parent.getChildren()) {
+		for(TreeLink link:parent.getChildren()) {
+			if(link.getChild().getLevel()<searchDepth){
 				BoardState childState=link.getChild().getState();
 				if(link.getChild().getColor().equals(game.WHITE_NAME))
 					generateStates(childState,childState.getBlackpieces(),link.getChild());
 				else
 					generateStates(childState,childState.getWhitepieces(),link.getChild());
-					
 			}
 		}
+		
 	}
 	/**
 	 * For the time being, call the basic evaluation method

@@ -22,7 +22,7 @@ public class MiniMaxTree {
 		this.player=player;
 		scoreTree(root);
 		DrawTree.write(this);
-		player.printTree(root);
+		//player.printTree(root);
 		Move bestMove=null;
 		
 		

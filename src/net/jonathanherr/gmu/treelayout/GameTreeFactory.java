@@ -9,8 +9,8 @@ import net.jonathanherr.gmu.minimax.TreeLink;
 import net.jonathanherr.gmu.minimax.TreeNode;
 
 public class GameTreeFactory {
-	static int width=175;
-	static int height=175;
+	static int width=165;
+	static int height=185;
 
 	public static TreeForTreeLayout<TextInBox> createGameTree(MiniMaxTree gametree){
 		
@@ -23,7 +23,7 @@ public class GameTreeFactory {
 	private static void addChildren(TreeNode node, TextInBox nodeBox,
 			DefaultTreeForTreeLayout<TextInBox> tree) {
 		for(TreeLink link:node.getChildren()){
-			TextInBox box=new TextInBox(Hnefatafl.getStateString("  ",link.getChild().getBoard())+"\n"+String.format("%.3f",link.getChild().getScore()), width, height);
+			TextInBox box=new TextInBox(Hnefatafl.getStateString("  ",link.getChild().getBoard())+"\n"+String.format("%.6f",link.getChild().getScore())+"\n"+link.getChild().getColor()+"\n"+link.getChild().getState().getMove().getPiece().getRow()+","+link.getChild().getState().getMove().getPiece().getCol() + "->" + link.getChild().getState().getMove().getDirection().toString() + " " + link.getChild().getState().getMove().getLength()+"\nchildren:"+link.getChild().getChildren().size() , width, height);
 			tree.addChild(nodeBox, box);
 			addChildren(link.getChild(),box,tree);
 		}

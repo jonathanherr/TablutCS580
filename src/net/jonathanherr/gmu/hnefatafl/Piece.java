@@ -33,10 +33,10 @@ public class Piece {
 		Piece p = new Piece(row,col,value);
 		return p;
 	}
-	int getRow(){
+	public int getRow(){
 		return row;
 	}
-	int getCol(){
+	public int getCol(){
 		return col;
 	}
 	public void setPosition(int row, int col) {
