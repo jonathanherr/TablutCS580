@@ -99,6 +99,25 @@ Player {
 		
 		return totalScore;
 	}
+	/**
+	 * Evaluate opponent score
+	 * @param state
+	 * @return
+	 */
+	public double evaluateOpponent(BoardState state) {
+		ArrayList<Double> pieceScores=new ArrayList<>(); //for debug/tracking, not necessary
+		if(this.getColor().equals("white"))
+			evaluateBlack(state, pieceScores);
+		else
+			evaluateWhite(state,pieceScores);
+		double totalScore=0.0d;
+		
+		for(Double score:pieceScores) {
+			totalScore+=score;
+		}
+		return totalScore;
+	}
+	//TODO: must also evaluate opponent pieces b/c if say, the king is close to the corner and player is black, that board is lower value than another
 	private void evaluateBlack(BoardState board, ArrayList<Double> pieceScores) {
 		for(Piece piece:board.getBlackpieces()) {
 			double score=0.0d;
@@ -112,11 +131,12 @@ Player {
 		//for white, each piece, except king, accumulates points based on several factors, proximity to king, proximity to exit nodes and proximity to opponents
 		//total score for board is sum of white piece scores. all scores normalized by board width.
 		for(Piece piece:board.getWhitepieces()) {
-			if(!piece.name.equals(Hnefatafl.KING_NAME)) {
+			if(!piece.getName().equals(Hnefatafl.KING_NAME)) {
 				double score=0.0d;
 				score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get(0);
 				score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get(1);
 				score+=(1.0d/(double) distanceFromOpponent(board,game.getBlackpieces(), piece))*featureWeights.get(2);
+				System.out.println(score);
 				pieceScores.add(score);
 			}
 			else {
@@ -155,21 +175,5 @@ Player {
 	public String getColor() {
 		return color;
 	}
-	/**
-	 * Evaluate opponent score
-	 * @param state
-	 * @return
-	 */
-	public double evaluateOpponent(BoardState state) {
-		ArrayList<Double> pieceScores=new ArrayList<>(); //for debug/tracking, not necessary
-		if(this.getColor().equals("white"))
-			evaluateBlack(state, pieceScores);
-		else
-			evaluateWhite(state,pieceScores);
-		double totalScore=0.0d;
-		for(Double score:pieceScores) {
-			totalScore+=score;
-		}
-		return totalScore;
-	}
+	
 }

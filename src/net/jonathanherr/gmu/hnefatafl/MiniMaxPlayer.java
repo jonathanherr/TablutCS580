@@ -14,8 +14,8 @@ import net.jonathanherr.gmu.minimax.TreeNode;
  */
 public class MiniMaxPlayer extends Player {
 	MiniMaxTree tree;
-	int searchDepth=3; //plies to search
-	int minMoveSize=4; //mechanism to restrict game to large movements, for testing. Set to 1 for normal movement.
+	int searchDepth=2; //plies to search
+	int minMoveSize=2; //mechanism to restrict game to large movements, for testing. Set to 1 for normal movement.
 	int currentDepth=0;
 	public MiniMaxPlayer(Hnefatafl game, ArrayList<Piece> pieces) {
 		super(game, pieces, "Minimax");
@@ -27,7 +27,7 @@ public class MiniMaxPlayer extends Player {
 	public Move turn() {
 		BoardState currentState=new BoardState(game.board, game.getBlackpieces(), game.getWhitepieces());
 		TreeNode node=new TreeNode(currentState);
-		node.setColor(this.pieces.get(0).name);
+		node.setColor(this.pieces.get(0).getName());
 		tree.setRoot(node);
 		
 		generateStates(currentState,currentState.getWhitepieces(),tree.root);
@@ -109,7 +109,7 @@ public class MiniMaxPlayer extends Player {
 					movestate.setMove(move);
 					//Double stateScore=game.scoreBoard(this, movestate);
 					TreeNode node=new TreeNode(movestate);
-					node.setColor(piece.name);
+					node.setColor(piece.getName());
 					node.setLevel(parent.getLevel()+1);
 					parent.addChild(node);
 					availMoves-=1;

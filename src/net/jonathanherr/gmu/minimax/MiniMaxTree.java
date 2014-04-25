@@ -12,7 +12,6 @@ public class MiniMaxTree {
 	}
 	public void setRoot(TreeNode node) {
 		this.root=node;
-		this.root.setName(0);
 		
 	}
 	/**
@@ -40,7 +39,7 @@ public class MiniMaxTree {
 		}
 		double maxScore=Double.NEGATIVE_INFINITY,minScore=Double.POSITIVE_INFINITY;
 		for(TreeLink link:node.getChildren()) {
-			if(node.max){
+			if(node.isMax()){
 				if(link.getChild().getScore()>maxScore)
 					maxScore=link.getChild().getScore();
 			}
@@ -48,22 +47,30 @@ public class MiniMaxTree {
 				if(link.getChild().getScore()<minScore)
 					minScore=link.getChild().getScore();
 		}
-		if(node.max)
+		if(node.isMax())
 			node.setScore(maxScore);
 		else
 			node.setScore(minScore);
 	
 	}
 	private void evaluate(TreeNode node) {
-		System.out.println("Evaluating " + node.getColor() + " node for " + player.getColor() + " player,  which is a max node?" + node.max);
-		if(this.player.getColor().equals("black") && node.max)
+		System.out.println(node.getId());
+		System.out.println("Evaluating " + node.getColor() + " node for " + player.getColor() + " player,  which is a max node?" + node.isMax());
+		if(this.player.getColor().equals(node.getMove().getPiece().getName())){
 			node.setScore(this.player.evaluate(node.getState()));
-		else if(this.player.getColor().equals("black") && !node.max)
+		}
+		else{
 			node.setScore(this.player.evaluateOpponent(node.getState()));
-		else if(this.player.getColor().equals("white") && node.max)
+		}
+		/*if(this.player.getColor().equals("black") && node.isMax())
 			node.setScore(this.player.evaluate(node.getState()));
-		else if(this.player.getColor().equals("white") && !node.max)			
+		else if(this.player.getColor().equals("black") && !node.isMax())
 			node.setScore(this.player.evaluateOpponent(node.getState()));
+		else if(this.player.getColor().equals("white") && node.isMax())
+			node.setScore(this.player.evaluate(node.getState()));
+		else if(this.player.getColor().equals("white") && !node.isMax())			
+			node.setScore(this.player.evaluateOpponent(node.getState()));
+		*/
 	}
 }
 	

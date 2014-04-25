@@ -16,18 +16,18 @@ public class Piece {
 	/*
 	 * black/white/king 
 	 */
-	String name; 
+	private String name; 
 	
 	Piece(int row, int col, int value){
 		this.row=row;
 		this.col=col;
 		this.value=value;
 		if((char)value=='b')
-			name="black";
+			setName("black");
 		else if((char)value=='w')
-			name="white";
+			setName("white");
 		else
-			name="king";
+			setName("king");
 	}
 	public Piece copy() {
 		Piece p = new Piece(row,col,value);
@@ -63,5 +63,11 @@ public class Piece {
 			}
 		}
 		return avail;
+	}
+	public String getName() {
+		return name;
+	}
+	void setName(String name) {
+		this.name = name;
 	}
 }

@@ -377,7 +377,7 @@ public class Hnefatafl {
 			board[move.getPiece().getRow()][move.getPiece().getCol()]=blank;
 			move.getPiece().setPosition(newrow,newcol);
 			board[newrow][newcol]=move.getPiece().toChar();
-			if(move.getPiece().name.equals(KING_NAME)) {
+			if(move.getPiece().getName().equals(KING_NAME)) {
 				kingLocation[0]=newrow;
 				kingLocation[1]=newcol;
 			}
@@ -438,15 +438,15 @@ public class Hnefatafl {
 				colInc=dir.value;
 			
 			neighbor=this.getPieceAt(startrow+=rowInc, startcol+=colInc);
-			while(neighbor!=null && !neighbor.name.equals(movedPiece.name) &&  (!(movedPiece.name.equals(WHITE_NAME) && neighbor.name.equals(KING_NAME))) && !(neighbor.name.equals(KING_NAME) && neighbor.row==throne[0] && neighbor.col==throne[1])){
+			while(neighbor!=null && !neighbor.getName().equals(movedPiece.getName()) &&  (!(movedPiece.getName().equals(WHITE_NAME) && neighbor.getName().equals(KING_NAME))) && !(neighbor.getName().equals(KING_NAME) && neighbor.row==throne[0] && neighbor.col==throne[1])){
 				neighbors.add(neighbor);
 				neighbor=this.getPieceAt(startrow+=rowInc, startcol+=colInc); //returns null if no piece exists at given point. 	
 			}
 			
 			//capture in two cases, we hit an empty square, and that square is a corner(escape) cell or we have surrounded opponents on two sides
 			if((neighbor!=null && 
-					((neighbor.name.equals(movedPiece.name) || (neighbor.name.equals(WHITE_NAME) && movedPiece.name.equals(KING_NAME))) 
-					|| neighbor.name.equals(KING_NAME) && movedPiece.name.equals(WHITE_NAME))) 
+					((neighbor.getName().equals(movedPiece.getName()) || (neighbor.getName().equals(WHITE_NAME) && movedPiece.getName().equals(KING_NAME))) 
+					|| neighbor.getName().equals(KING_NAME) && movedPiece.getName().equals(WHITE_NAME))) 
 					|| (neighbor==null && startrow<boardwidth && startcol<boardheight && getStateAt(startrow,startcol)==escape) 
 					&& !neighbors.isEmpty())
 			{
@@ -467,14 +467,14 @@ public class Hnefatafl {
 	private void win(Piece takingPiece,Piece takenPiece, Result result) {
 		
 		if(takenPiece!=null){
-			if(takenPiece.name.equals(KING_NAME)){
-				System.out.println(takingPiece.name + " wins by capturing white's king");
+			if(takenPiece.getName().equals(KING_NAME)){
+				System.out.println(takingPiece.getName() + " wins by capturing white's king");
 				this.winner=BLACK_NAME;
 				winResult=Result.KINGCAP;				
 			}
 		}
 		else{
-			if(takingPiece.name.equals(WHITE_NAME) || takingPiece.name.equals(KING_NAME)){
+			if(takingPiece.getName().equals(WHITE_NAME) || takingPiece.getName().equals(KING_NAME)){
 				System.out.println("White wins by " + result);
 				this.winner=WHITE_NAME;
 				winResult=result;
@@ -532,23 +532,23 @@ public class Hnefatafl {
 	public boolean isValid(Piece piece, int currow, int curcol, Direction dir, int destrow, int destcol,int[][] curboard) {
 		boolean valid=true;
 		//check that destination is not the throne(legal to pass through the throne)
-		if(this.throne[0]==destrow && this.throne[1]==destcol && !piece.name.equals(KING_NAME) )
+		if(this.throne[0]==destrow && this.throne[1]==destcol && !piece.getName().equals(KING_NAME) )
 			valid=false;
 		//check that destination is not a corner square
-		if(destrow==0 && destcol==0 && !piece.name.equals(KING_NAME))
+		if(destrow==0 && destcol==0 && !piece.getName().equals(KING_NAME))
 			valid=false;
-		if(destrow==0 && destcol==boardwidth-1 && !piece.name.equals(KING_NAME))
+		if(destrow==0 && destcol==boardwidth-1 && !piece.getName().equals(KING_NAME))
 			valid=false;
-		if(destrow==boardheight-1 && destcol==0 && !piece.name.equals(KING_NAME))
+		if(destrow==boardheight-1 && destcol==0 && !piece.getName().equals(KING_NAME))
 			valid=false;
-		if(destrow==boardheight-1 && destcol==boardwidth-1 && !piece.name.equals(KING_NAME))
+		if(destrow==boardheight-1 && destcol==boardwidth-1 && !piece.getName().equals(KING_NAME))
 			valid=false;
 		//check that spaces between current and dest spots are empty
 		if( destrow>=0 && destcol>=0 && destrow<curboard.length && destcol<curboard[destrow].length){
 			if(dir==Direction.UP){
 				for(int row=currow+dir.value;row>=destrow;row+=dir.value){
 					int cellValue=curboard[row][curcol];
-					if(cellValue!=(int)blank && !(cellValue==(int)escape && piece.name.equals(KING_NAME))){						
+					if(cellValue!=(int)blank && !(cellValue==(int)escape && piece.getName().equals(KING_NAME))){						
 						valid=false;
 					}
 				}
@@ -556,7 +556,7 @@ public class Hnefatafl {
 			else if(dir==Direction.DOWN){
 				for(int row=currow+dir.value;row<=destrow;row+=dir.value){
 					int cellValue = curboard[row][curcol];
-					if(cellValue!=(int)blank && !(cellValue==(int)escape && piece.name.equals(KING_NAME))){
+					if(cellValue!=(int)blank && !(cellValue==(int)escape && piece.getName().equals(KING_NAME))){
 						valid=false;
 					}
 				}
@@ -564,7 +564,7 @@ public class Hnefatafl {
 			else if(dir==Direction.LEFT){
 				for(int col=curcol+dir.value;col>=destcol;col+=dir.value){
 					int cellValue = curboard[currow][col];
-					if(cellValue!=(int)blank && !(cellValue==(int)escape && piece.name.equals(KING_NAME))){
+					if(cellValue!=(int)blank && !(cellValue==(int)escape && piece.getName().equals(KING_NAME))){
 						valid=false;
 					}
 				}
@@ -572,7 +572,7 @@ public class Hnefatafl {
 			else if(dir==Direction.RIGHT){
 				for(int col=curcol+dir.value;col<=destcol;col+=dir.value){
 					int cellValue = curboard[currow][col];
-					if(cellValue!=(int)blank && !(cellValue==(int)escape && piece.name.equals(KING_NAME))){
+					if(cellValue!=(int)blank && !(cellValue==(int)escape && piece.getName().equals(KING_NAME))){
 						valid=false;
 					}
 				}

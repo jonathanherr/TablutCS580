@@ -14,7 +14,7 @@ public class TreeNode{
 	private int id;
 	private String color;
 	private int level=0;
-	boolean max; //every node is either a max or a min node from the perspective of the current player
+	private boolean max; //every node is either a max or a min node from the perspective of the current player
 	public void setColor(String c) {
 		this.color=c;
 	}
@@ -26,8 +26,8 @@ public class TreeNode{
 		setBoard(state.getBoard());
 		this.state=state;
 		nodeid+=1;
-		id=nodeid;
-		max=true;
+		setId(nodeid);
+		setMax(true);
 
 	}
 	public Move getMove(){
@@ -36,22 +36,20 @@ public class TreeNode{
 	public void addChild(TreeNode node) {
 		TreeLink link=new TreeLink(this,node);
 		getLinks().add(link);
-		if(this.max)
-			node.max=false;
+		if(this.isMax())
+			node.setMax(false);
 		else
-			node.max=true;
+			node.setMax(true);
 	}
 	public ArrayList<TreeLink> getChildren() {
 		return this.getLinks();
 	}
-	public void setName(int id) {
-		//this.setNodeid(id);
-	}
+	
 	public Integer getNodeid() {
-		return id;
+		return getId();
 	}
 	public void setNodeid(int id) {
-		this.id = id;
+		this.setId(id);
 	}
 	public BoardState getState() {
 		return state;
@@ -79,5 +77,17 @@ public class TreeNode{
 	}
 	public void setLevel(int level) {
 		this.level = level;
+	}
+	public boolean isMax() {
+		return max;
+	}
+	public void setMax(boolean max) {
+		this.max = max;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 }
