@@ -109,7 +109,6 @@ public class MiniMaxPlayer extends Player {
 		for(Piece piece:pieces) {
 			for(Direction moveDir:Direction.values()) {
 				availMoves=piece.availLength(moveDir,game,state.board);
-				//TODO: reset board to parent board whenever we reivist parent. looks like we may be using same board throughout levels
 				totalMoves+=availMoves;
 				
 				while (availMoves>=minMoveSize) {
@@ -122,15 +121,20 @@ public class MiniMaxPlayer extends Player {
 					Board.copyBoard(state.getBoard(), board);
 					Piece statePiece=null;
 					ArrayList<Piece> statePieces=null;
+					
+					/**
+					 * Get a copy of the piece from the state list of pieces, which is a reference back to the real set of pieces and must be the one ultimated passed to the treenode with the move object and state.
+					 */
 					if(piece.getName().equals(Board.BLACK))
-						statePieces=blackPieces;
+						statePieces=state.getBlackpieces();
 					else
-						statePieces=whitePieces;
+						statePieces=state.getWhitepieces();
 					for(Piece bpiece:statePieces){
 						if(bpiece.row==piece.row && bpiece.col==piece.col)
 							statePiece=bpiece;
 					}
-					Move move=new Move(statePiece,moveDir,availMoves);
+					//when we do the simulated move, use a copy of the piece so that we don't update it's position in the 'real' set since we don't know which node the player will choose
+					Move move=new Move(piece.copy(),moveDir,availMoves);
 					
 					Board simBoard=new Board(game);
 					simBoard.setBoard(board);
@@ -143,7 +147,7 @@ public class MiniMaxPlayer extends Player {
 					//System.out.println(simBoard.toStateString());
 					
 					gameState=new BoardState(simBoard.getBoardGrid(), simBoard.getBlackpieces(), simBoard.getWhitepieces());
-					gameState.setMove(new Move(statePiece,moveDir,availMoves));
+					gameState.setMove(new Move(statePiece,moveDir,availMoves)); //when we create the state's move object based on what was selected, use the piece that is the original piece so that it won't have been updated and is the object from the game board's state.
 					gameState.winner=simBoard.winner;
 					gameState.gameOver=simBoard.gameOver;
 					

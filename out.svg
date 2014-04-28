@@ -58,50 +58,50 @@
 <line x1="8132" y1="327" x2="8307" y2="562" style="stroke:black; stroke-width:2px;" />
 <line x1="8132" y1="327" x2="8482" y2="562" style="stroke:black; stroke-width:2px;" />
 <line x1="8132" y1="327" x2="8657" y2="562" style="stroke:black; stroke-width:2px;" />
-<rect x="3676" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="3683" y="483" style="font-family:terminal;font-size:12px;">
+<rect x="1226" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="1233" y="483" style="font-family:terminal;font-size:12px;">
     0 1 2 3 4 5 6 7 8 
 </text>
-<text x="3683" y="495" style="font-family:terminal;font-size:12px;">
+<text x="1233" y="495" style="font-family:terminal;font-size:12px;">
   0 x _ _ b b b _ _ x 
 </text>
-<text x="3683" y="507" style="font-family:terminal;font-size:12px;">
+<text x="1233" y="507" style="font-family:terminal;font-size:12px;">
   1 b _ _ _ _ _ _ _ _ 
 </text>
-<text x="3683" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
+<text x="1233" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ _ _ _ _ w 
 </text>
-<text x="3683" y="531" style="font-family:terminal;font-size:12px;">
+<text x="1233" y="531" style="font-family:terminal;font-size:12px;">
   3 _ b _ _ w _ _ _ b 
 </text>
-<text x="3683" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w b b 
+<text x="1233" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
 </text>
-<text x="3683" y="555" style="font-family:terminal;font-size:12px;">
+<text x="1233" y="555" style="font-family:terminal;font-size:12px;">
   5 b _ _ _ w _ b _ _ 
 </text>
-<text x="3683" y="567" style="font-family:terminal;font-size:12px;">
+<text x="1233" y="567" style="font-family:terminal;font-size:12px;">
   6 _ _ _ _ w _ _ _ _ 
 </text>
-<text x="3683" y="579" style="font-family:terminal;font-size:12px;">
+<text x="1233" y="579" style="font-family:terminal;font-size:12px;">
   7 _ _ _ _ b _ _ _ _ 
 </text>
-<text x="3683" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ w b b b _ _ x 
+<text x="1233" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
 </text>
-<text x="3683" y="603" style="font-family:terminal;font-size:12px;">
+<text x="1233" y="603" style="font-family:terminal;font-size:12px;">
 
 </text>
-<text x="3683" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+<text x="1233" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
 </text>
-<text x="3683" y="627" style="font-family:terminal;font-size:12px;">
+<text x="1233" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
-<text x="3683" y="639" style="font-family:terminal;font-size:12px;">
-1,0->LEFT 4
+<text x="1233" y="639" style="font-family:terminal;font-size:12px;">
+1,4->LEFT 4
 </text>
-<text x="3683" y="651" style="font-family:terminal;font-size:12px;">
+<text x="1233" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
 <rect x="3851" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
@@ -139,1662 +139,15 @@ children:0
 
 </text>
 <text x="3858" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+10.371575
 </text>
 <text x="3858" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
 <text x="3858" y="639" style="font-family:terminal;font-size:12px;">
-1,8->RIGHT 4
+1,4->RIGHT 4
 </text>
 <text x="3858" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="4551" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="4558" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="4558" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="4558" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4558" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4558" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="4558" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w b b 
-</text>
-<text x="4558" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="4558" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4558" y="579" style="font-family:terminal;font-size:12px;">
-  7 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="4558" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ w b b b _ _ x 
-</text>
-<text x="4558" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="4558" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="4558" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="4558" y="639" style="font-family:terminal;font-size:12px;">
-7,0->LEFT 4
-</text>
-<text x="4558" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="4726" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="4733" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="4733" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="4733" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4733" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4733" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="4733" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w b b 
-</text>
-<text x="4733" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="4733" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4733" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="4733" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ w b b b _ _ x 
-</text>
-<text x="4733" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="4733" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="4733" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="4733" y="639" style="font-family:terminal;font-size:12px;">
-7,8->RIGHT 4
-</text>
-<text x="4733" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="6651" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="6658" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="6658" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="6658" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="6658" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="6658" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="6658" y="543" style="font-family:terminal;font-size:12px;">
-  4 b _ w w k w w b b 
-</text>
-<text x="6658" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="6658" y="567" style="font-family:terminal;font-size:12px;">
-  6 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="6658" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="6658" y="591" style="font-family:terminal;font-size:12px;">
-  8 x b _ b b b _ _ x 
-</text>
-<text x="6658" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="6658" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="6658" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="6658" y="639" style="font-family:terminal;font-size:12px;">
-8,1->DOWN 4
-</text>
-<text x="6658" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="4288" y="1" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="4295" y="13" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="4295" y="25" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="4295" y="37" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4295" y="49" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4295" y="61" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="4295" y="73" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="4295" y="85" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="4295" y="97" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4295" y="109" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4295" y="121" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="4295" y="133" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="4295" y="145" style="font-family:terminal;font-size:12px;">
-10.967 max?true
-</text>
-<rect x="4201" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="4208" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="4208" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ b x 
-</text>
-<text x="4208" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4208" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4208" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="4208" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w _ b 
-</text>
-<text x="4208" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="4208" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4208" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4208" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ w b b b _ _ x 
-</text>
-<text x="4208" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="4208" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="4208" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="4208" y="639" style="font-family:terminal;font-size:12px;">
-0,7->UP 4
-</text>
-<text x="4208" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="2101" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="2108" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="2108" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="2108" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="2108" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="2108" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="2108" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="2108" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="2108" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="2108" y="579" style="font-family:terminal;font-size:12px;">
-  7 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="2108" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="2108" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="2108" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="2108" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="2108" y="639" style="font-family:terminal;font-size:12px;">
-7,0->LEFT 4
-</text>
-<text x="2108" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="5251" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="5258" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="5258" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b w _ x 
-</text>
-<text x="5258" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="5258" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5258" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="5258" y="543" style="font-family:terminal;font-size:12px;">
-  4 b _ w w k w _ b b 
-</text>
-<text x="5258" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="5258" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5258" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="5258" y="591" style="font-family:terminal;font-size:12px;">
-  8 x b _ b b b _ _ x 
-</text>
-<text x="5258" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="5258" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="5258" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="5258" y="639" style="font-family:terminal;font-size:12px;">
-8,1->DOWN 4
-</text>
-<text x="5258" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="6476" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="6483" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="6483" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="6483" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="6483" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="6483" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="6483" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="6483" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="6483" y="567" style="font-family:terminal;font-size:12px;">
-  6 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="6483" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="6483" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="6483" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="6483" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="6483" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="6483" y="639" style="font-family:terminal;font-size:12px;">
-1,8->RIGHT 4
-</text>
-<text x="6483" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="3151" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="3158" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="3158" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ w b b b _ _ x 
-</text>
-<text x="3158" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="3158" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="3158" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="3158" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w _ b 
-</text>
-<text x="3158" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="3158" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="3158" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="3158" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ b x 
-</text>
-<text x="3158" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="3158" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="3158" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="3158" y="639" style="font-family:terminal;font-size:12px;">
-8,7->DOWN 4
-</text>
-<text x="3158" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="4901" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="4908" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="4908" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b w _ x 
-</text>
-<text x="4908" y="507" style="font-family:terminal;font-size:12px;">
-  1 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="4908" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4908" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="4908" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w _ b b 
-</text>
-<text x="4908" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="4908" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4908" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4908" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="4908" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="4908" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="4908" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="4908" y="639" style="font-family:terminal;font-size:12px;">
-1,0->LEFT 4
-</text>
-<text x="4908" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="7351" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="7358" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="7358" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="7358" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="7358" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="7358" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="7358" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="7358" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="7358" y="567" style="font-family:terminal;font-size:12px;">
-  6 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="7358" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="7358" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="7358" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="7358" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="7358" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="7358" y="639" style="font-family:terminal;font-size:12px;">
-7,8->RIGHT 4
-</text>
-<text x="7358" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="3501" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="3508" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="3508" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ w b b b _ _ x 
-</text>
-<text x="3508" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="3508" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="3508" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="3508" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w b b 
-</text>
-<text x="3508" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="3508" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="3508" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="3508" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="3508" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="3508" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="3508" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="3508" y="639" style="font-family:terminal;font-size:12px;">
-7,8->RIGHT 4
-</text>
-<text x="3508" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="8051" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="8058" y="248" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="8058" y="260" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="8058" y="272" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="8058" y="284" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="8058" y="296" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="8058" y="308" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="8058" y="320" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="8058" y="332" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="8058" y="344" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="8058" y="356" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="8058" y="368" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="8058" y="380" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="8058" y="392" style="font-family:terminal;font-size:12px;">
-white max?false
-</text>
-<text x="8058" y="404" style="font-family:terminal;font-size:12px;">
-6,8->RIGHT 4
-</text>
-<text x="8058" y="416" style="font-family:terminal;font-size:12px;">
-children:7
-</text>
-<rect x="5426" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="5433" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="5433" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ b x 
-</text>
-<text x="5433" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="5433" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5433" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="5433" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w _ _ b 
-</text>
-<text x="5433" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="5433" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5433" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="5433" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="5433" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="5433" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="5433" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="5433" y="639" style="font-family:terminal;font-size:12px;">
-0,7->UP 4
-</text>
-<text x="5433" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="351" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="358" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="358" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="358" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="358" y="519" style="font-family:terminal;font-size:12px;">
-  2 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="358" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="358" y="543" style="font-family:terminal;font-size:12px;">
-  4 b _ w w k w w b b 
-</text>
-<text x="358" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="358" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="358" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="358" y="591" style="font-family:terminal;font-size:12px;">
-  8 x b _ b b b _ _ x 
-</text>
-<text x="358" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="358" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="358" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="358" y="639" style="font-family:terminal;font-size:12px;">
-8,1->DOWN 4
-</text>
-<text x="358" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="876" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="883" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="883" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="883" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="883" y="519" style="font-family:terminal;font-size:12px;">
-  2 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="883" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="883" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="883" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="883" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="883" y="579" style="font-family:terminal;font-size:12px;">
-  7 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="883" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="883" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="883" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="883" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="883" y="639" style="font-family:terminal;font-size:12px;">
-7,0->LEFT 4
-</text>
-<text x="883" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="701" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="708" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="708" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="708" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="708" y="519" style="font-family:terminal;font-size:12px;">
-  2 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="708" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="708" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w _ b 
-</text>
-<text x="708" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="708" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="708" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="708" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ b x 
-</text>
-<text x="708" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="708" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="708" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="708" y="639" style="font-family:terminal;font-size:12px;">
-8,7->DOWN 4
-</text>
-<text x="708" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="6126" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="6133" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="6133" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b w _ x 
-</text>
-<text x="6133" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="6133" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="6133" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="6133" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w _ b b 
-</text>
-<text x="6133" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="6133" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="6133" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="6133" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="6133" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="6133" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="6133" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="6133" y="639" style="font-family:terminal;font-size:12px;">
-7,8->RIGHT 4
-</text>
-<text x="6133" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="7526" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="7533" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="7533" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="7533" y="507" style="font-family:terminal;font-size:12px;">
-  1 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="7533" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="7533" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="7533" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="7533" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="7533" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="7533" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="7533" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="7533" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="7533" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="7533" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="7533" y="639" style="font-family:terminal;font-size:12px;">
-1,0->LEFT 4
-</text>
-<text x="7533" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="8051" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="8058" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="8058" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ b x 
-</text>
-<text x="8058" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="8058" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="8058" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="8058" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w _ b 
-</text>
-<text x="8058" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="8058" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="8058" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="8058" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="8058" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="8058" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="8058" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="8058" y="639" style="font-family:terminal;font-size:12px;">
-0,7->UP 4
-</text>
-<text x="8058" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="1226" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="1233" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="1233" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="1233" y="507" style="font-family:terminal;font-size:12px;">
-  1 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="1233" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="1233" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="1233" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="1233" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="1233" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="1233" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="1233" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="1233" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="1233" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="1233" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="1233" y="639" style="font-family:terminal;font-size:12px;">
-1,0->LEFT 4
-</text>
-<text x="1233" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="7876" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="7883" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="7883" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="7883" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="7883" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="7883" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="7883" y="543" style="font-family:terminal;font-size:12px;">
-  4 b _ w w k w w b b 
-</text>
-<text x="7883" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="7883" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="7883" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="7883" y="591" style="font-family:terminal;font-size:12px;">
-  8 x b _ b b b _ _ x 
-</text>
-<text x="7883" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="7883" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="7883" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="7883" y="639" style="font-family:terminal;font-size:12px;">
-8,1->DOWN 4
-</text>
-<text x="7883" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="8401" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="8408" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="8408" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="8408" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="8408" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="8408" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="8408" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="8408" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="8408" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="8408" y="579" style="font-family:terminal;font-size:12px;">
-  7 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="8408" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="8408" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="8408" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="8408" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="8408" y="639" style="font-family:terminal;font-size:12px;">
-7,0->LEFT 4
-</text>
-<text x="8408" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="526" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="533" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="533" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ b x 
-</text>
-<text x="533" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="533" y="519" style="font-family:terminal;font-size:12px;">
-  2 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="533" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="533" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w _ b 
-</text>
-<text x="533" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="533" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="533" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="533" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="533" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="533" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="533" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="533" y="639" style="font-family:terminal;font-size:12px;">
-0,7->UP 4
-</text>
-<text x="533" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="5776" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="5783" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="5783" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b w _ x 
-</text>
-<text x="5783" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ b _ _ 
-</text>
-<text x="5783" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5783" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="5783" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w _ b b 
-</text>
-<text x="5783" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ _ _ _ 
-</text>
-<text x="5783" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5783" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="5783" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="5783" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="5783" y="615" style="font-family:terminal;font-size:12px;">
-10.359314
-</text>
-<text x="5783" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="5783" y="639" style="font-family:terminal;font-size:12px;">
-1,6->UP 4
-</text>
-<text x="5783" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="526" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="533" y="248" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="533" y="260" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="533" y="272" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="533" y="284" style="font-family:terminal;font-size:12px;">
-  2 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="533" y="296" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="533" y="308" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="533" y="320" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="533" y="332" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="533" y="344" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="533" y="356" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="533" y="368" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="533" y="380" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="533" y="392" style="font-family:terminal;font-size:12px;">
-white max?false
-</text>
-<text x="533" y="404" style="font-family:terminal;font-size:12px;">
-2,0->LEFT 4
-</text>
-<text x="533" y="416" style="font-family:terminal;font-size:12px;">
-children:7
-</text>
-<rect x="2976" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="2983" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="2983" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ w b b b _ b x 
-</text>
-<text x="2983" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="2983" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="2983" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="2983" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w _ b 
-</text>
-<text x="2983" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="2983" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="2983" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="2983" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="2983" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="2983" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="2983" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="2983" y="639" style="font-family:terminal;font-size:12px;">
-0,7->UP 4
-</text>
-<text x="2983" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="7001" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="7008" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="7008" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="7008" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="7008" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="7008" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="7008" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w _ b 
-</text>
-<text x="7008" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="7008" y="567" style="font-family:terminal;font-size:12px;">
-  6 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="7008" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="7008" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ b x 
-</text>
-<text x="7008" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="7008" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="7008" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="7008" y="639" style="font-family:terminal;font-size:12px;">
-8,7->DOWN 4
-</text>
-<text x="7008" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="4201" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="4208" y="248" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="4208" y="260" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="4208" y="272" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4208" y="284" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4208" y="296" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="4208" y="308" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w b b 
-</text>
-<text x="4208" y="320" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="4208" y="332" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4208" y="344" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4208" y="356" style="font-family:terminal;font-size:12px;">
-  8 x _ w b b b _ _ x 
-</text>
-<text x="4208" y="368" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="4208" y="380" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="4208" y="392" style="font-family:terminal;font-size:12px;">
-white max?false
-</text>
-<text x="4208" y="404" style="font-family:terminal;font-size:12px;">
-8,2->DOWN 4
-</text>
-<text x="4208" y="416" style="font-family:terminal;font-size:12px;">
-children:7
-</text>
-<rect x="7176" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="7183" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="7183" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="7183" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="7183" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="7183" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="7183" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="7183" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="7183" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ _ _ _ _ _ 
-</text>
-<text x="7183" y="579" style="font-family:terminal;font-size:12px;">
-  7 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="7183" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="7183" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="7183" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="7183" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="7183" y="639" style="font-family:terminal;font-size:12px;">
-7,0->LEFT 4
-</text>
-<text x="7183" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="1401" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="1408" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="1408" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="1408" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="1408" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ _ _ _ _ _ 
-</text>
-<text x="1408" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="1408" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="1408" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="1408" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="1408" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="1408" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="1408" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="1408" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="1408" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="1408" y="639" style="font-family:terminal;font-size:12px;">
-1,8->RIGHT 4
-</text>
-<text x="1408" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="6826" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="6833" y="248" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="6833" y="260" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="6833" y="272" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="6833" y="284" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="6833" y="296" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="6833" y="308" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="6833" y="320" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="6833" y="332" style="font-family:terminal;font-size:12px;">
-  6 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="6833" y="344" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="6833" y="356" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="6833" y="368" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="6833" y="380" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="6833" y="392" style="font-family:terminal;font-size:12px;">
-white max?false
-</text>
-<text x="6833" y="404" style="font-family:terminal;font-size:12px;">
-6,0->LEFT 4
-</text>
-<text x="6833" y="416" style="font-family:terminal;font-size:12px;">
-children:7
-</text>
-<rect x="1" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="8" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="8" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="8" y="507" style="font-family:terminal;font-size:12px;">
-  1 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="8" y="519" style="font-family:terminal;font-size:12px;">
-  2 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="8" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="8" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="8" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="8" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="8" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="8" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="8" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="8" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="8" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="8" y="639" style="font-family:terminal;font-size:12px;">
-1,0->LEFT 4
-</text>
-<text x="8" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="176" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="183" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="183" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="183" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="183" y="519" style="font-family:terminal;font-size:12px;">
-  2 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="183" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="183" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="183" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="183" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="183" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="183" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="183" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="183" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="183" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="183" y="639" style="font-family:terminal;font-size:12px;">
-1,8->RIGHT 4
-</text>
-<text x="183" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="4026" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="4033" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="4033" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="4033" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4033" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4033" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="4033" y="543" style="font-family:terminal;font-size:12px;">
-  4 b _ _ w k w w b b 
-</text>
-<text x="4033" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="4033" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="4033" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="4033" y="591" style="font-family:terminal;font-size:12px;">
-  8 x b _ b b b _ _ x 
-</text>
-<text x="4033" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="4033" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="4033" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="4033" y="639" style="font-family:terminal;font-size:12px;">
-8,1->DOWN 4
-</text>
-<text x="4033" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="2276" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="2283" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="2283" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="2283" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="2283" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="2283" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="2283" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="2283" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="2283" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="2283" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="2283" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="2283" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="2283" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="2283" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="2283" y="639" style="font-family:terminal;font-size:12px;">
-7,8->RIGHT 4
-</text>
-<text x="2283" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
 <rect x="2801" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
@@ -1832,429 +185,383 @@ children:0
 
 </text>
 <text x="2808" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+10.371575
 </text>
 <text x="2808" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
 <text x="2808" y="639" style="font-family:terminal;font-size:12px;">
-8,1->DOWN 4
+4,1->DOWN 4
 </text>
 <text x="2808" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
-<rect x="4376" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="4383" y="483" style="font-family:terminal;font-size:12px;">
+<rect x="2276" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="2283" y="483" style="font-family:terminal;font-size:12px;">
     0 1 2 3 4 5 6 7 8 
 </text>
-<text x="4383" y="495" style="font-family:terminal;font-size:12px;">
+<text x="2283" y="495" style="font-family:terminal;font-size:12px;">
   0 x _ _ b b b _ _ x 
 </text>
-<text x="4383" y="507" style="font-family:terminal;font-size:12px;">
+<text x="2283" y="507" style="font-family:terminal;font-size:12px;">
   1 _ _ _ _ b _ _ _ _ 
 </text>
-<text x="4383" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
+<text x="2283" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ _ _ _ _ w 
 </text>
-<text x="4383" y="531" style="font-family:terminal;font-size:12px;">
+<text x="2283" y="531" style="font-family:terminal;font-size:12px;">
   3 _ b _ _ w _ _ _ b 
 </text>
-<text x="4383" y="543" style="font-family:terminal;font-size:12px;">
+<text x="2283" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="2283" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="2283" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="2283" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="2283" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="2283" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="2283" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="2283" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="2283" y="639" style="font-family:terminal;font-size:12px;">
+7,4->RIGHT 4
+</text>
+<text x="2283" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="3501" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="3508" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="3508" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ w b b b _ _ x 
+</text>
+<text x="3508" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="3508" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="3508" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="3508" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w b b 
+</text>
+<text x="3508" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="3508" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="3508" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="3508" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="3508" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="3508" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="3508" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="3508" y="639" style="font-family:terminal;font-size:12px;">
+7,4->RIGHT 4
+</text>
+<text x="3508" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="7351" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="7358" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="7358" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="7358" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="7358" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="7358" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="7358" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="7358" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="7358" y="567" style="font-family:terminal;font-size:12px;">
+  6 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="7358" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="7358" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="7358" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="7358" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="7358" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="7358" y="639" style="font-family:terminal;font-size:12px;">
+7,4->RIGHT 4
+</text>
+<text x="7358" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="2976" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="2983" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="2983" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ w b b b _ b x 
+</text>
+<text x="2983" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="2983" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="2983" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="2983" y="543" style="font-family:terminal;font-size:12px;">
   4 b b _ w k w w _ b 
 </text>
-<text x="4383" y="555" style="font-family:terminal;font-size:12px;">
+<text x="2983" y="555" style="font-family:terminal;font-size:12px;">
   5 b _ _ _ w _ b _ _ 
 </text>
-<text x="4383" y="567" style="font-family:terminal;font-size:12px;">
+<text x="2983" y="567" style="font-family:terminal;font-size:12px;">
   6 _ _ _ _ w _ _ _ _ 
 </text>
-<text x="4383" y="579" style="font-family:terminal;font-size:12px;">
+<text x="2983" y="579" style="font-family:terminal;font-size:12px;">
   7 _ _ _ _ b _ _ _ _ 
 </text>
-<text x="4383" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ w b b b _ b x 
-</text>
-<text x="4383" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="4383" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="4383" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="4383" y="639" style="font-family:terminal;font-size:12px;">
-8,7->DOWN 4
-</text>
-<text x="4383" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="7701" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="7708" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="7708" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="7708" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="7708" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="7708" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="7708" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="7708" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="7708" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="7708" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="7708" y="591" style="font-family:terminal;font-size:12px;">
+<text x="2983" y="591" style="font-family:terminal;font-size:12px;">
   8 x _ _ b b b _ _ x 
 </text>
-<text x="7708" y="603" style="font-family:terminal;font-size:12px;">
+<text x="2983" y="603" style="font-family:terminal;font-size:12px;">
 
 </text>
-<text x="7708" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+<text x="2983" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
 </text>
-<text x="7708" y="627" style="font-family:terminal;font-size:12px;">
+<text x="2983" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
-<text x="7708" y="639" style="font-family:terminal;font-size:12px;">
-1,8->RIGHT 4
+<text x="2983" y="639" style="font-family:terminal;font-size:12px;">
+4,7->UP 4
 </text>
-<text x="7708" y="651" style="font-family:terminal;font-size:12px;">
+<text x="2983" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
-<rect x="5951" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="5958" y="483" style="font-family:terminal;font-size:12px;">
+<rect x="4201" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="4208" y="483" style="font-family:terminal;font-size:12px;">
     0 1 2 3 4 5 6 7 8 
 </text>
-<text x="5958" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b w _ x 
-</text>
-<text x="5958" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="5958" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5958" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="5958" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w _ b b 
-</text>
-<text x="5958" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="5958" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5958" y="579" style="font-family:terminal;font-size:12px;">
-  7 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="5958" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="5958" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="5958" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="5958" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="5958" y="639" style="font-family:terminal;font-size:12px;">
-7,0->LEFT 4
-</text>
-<text x="5958" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="1751" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="1758" y="248" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="1758" y="260" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="1758" y="272" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="1758" y="284" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="1758" y="296" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="1758" y="308" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="1758" y="320" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="1758" y="332" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="1758" y="344" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="1758" y="356" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="1758" y="368" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="1758" y="380" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="1758" y="392" style="font-family:terminal;font-size:12px;">
-white max?false
-</text>
-<text x="1758" y="404" style="font-family:terminal;font-size:12px;">
-2,8->RIGHT 4
-</text>
-<text x="1758" y="416" style="font-family:terminal;font-size:12px;">
-children:7
-</text>
-<rect x="5076" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="5083" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="5083" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b w _ x 
-</text>
-<text x="5083" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="5083" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5083" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="5083" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w _ b b 
-</text>
-<text x="5083" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="5083" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="5083" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="5083" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="5083" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="5083" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="5083" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="5083" y="639" style="font-family:terminal;font-size:12px;">
-1,8->RIGHT 4
-</text>
-<text x="5083" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="1751" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="1758" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="1758" y="495" style="font-family:terminal;font-size:12px;">
+<text x="4208" y="495" style="font-family:terminal;font-size:12px;">
   0 x _ _ b b b _ b x 
 </text>
-<text x="1758" y="507" style="font-family:terminal;font-size:12px;">
+<text x="4208" y="507" style="font-family:terminal;font-size:12px;">
   1 _ _ _ _ b _ _ _ _ 
 </text>
-<text x="1758" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="1758" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="1758" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w _ b 
-</text>
-<text x="1758" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="1758" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="1758" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="1758" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="1758" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="1758" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="1758" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="1758" y="639" style="font-family:terminal;font-size:12px;">
-0,7->UP 4
-</text>
-<text x="1758" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="1051" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="1058" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="1058" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="1058" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="1058" y="519" style="font-family:terminal;font-size:12px;">
-  2 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="1058" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="1058" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
-</text>
-<text x="1058" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="1058" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="1058" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="1058" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="1058" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="1058" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="1058" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="1058" y="639" style="font-family:terminal;font-size:12px;">
-7,8->RIGHT 4
-</text>
-<text x="1058" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="1926" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="1933" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="1933" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="1933" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="1933" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ _ _ _ _ w 
-</text>
-<text x="1933" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="1933" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w _ b 
-</text>
-<text x="1933" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="1933" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="1933" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="1933" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ b x 
-</text>
-<text x="1933" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="1933" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="1933" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="1933" y="639" style="font-family:terminal;font-size:12px;">
-8,7->DOWN 4
-</text>
-<text x="1933" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="8576" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="8583" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="8583" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
-</text>
-<text x="8583" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="8583" y="519" style="font-family:terminal;font-size:12px;">
+<text x="4208" y="519" style="font-family:terminal;font-size:12px;">
   2 _ _ _ _ w _ _ _ _ 
 </text>
-<text x="8583" y="531" style="font-family:terminal;font-size:12px;">
+<text x="4208" y="531" style="font-family:terminal;font-size:12px;">
   3 _ b _ _ w _ _ _ b 
 </text>
-<text x="8583" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
+<text x="4208" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w _ b 
 </text>
-<text x="8583" y="555" style="font-family:terminal;font-size:12px;">
+<text x="4208" y="555" style="font-family:terminal;font-size:12px;">
   5 b _ _ _ w _ b _ _ 
 </text>
-<text x="8583" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ _ _ _ _ w 
+<text x="4208" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
 </text>
-<text x="8583" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ _ _ _ _ b 
+<text x="4208" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
 </text>
-<text x="8583" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
+<text x="4208" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ w b b b _ _ x 
 </text>
-<text x="8583" y="603" style="font-family:terminal;font-size:12px;">
+<text x="4208" y="603" style="font-family:terminal;font-size:12px;">
 
 </text>
-<text x="8583" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+<text x="4208" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
 </text>
-<text x="8583" y="627" style="font-family:terminal;font-size:12px;">
+<text x="4208" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
-<text x="8583" y="639" style="font-family:terminal;font-size:12px;">
-7,8->RIGHT 4
+<text x="4208" y="639" style="font-family:terminal;font-size:12px;">
+4,7->UP 4
 </text>
-<text x="8583" y="651" style="font-family:terminal;font-size:12px;">
+<text x="4208" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="7001" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="7008" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="7008" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="7008" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="7008" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="7008" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="7008" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w _ b 
+</text>
+<text x="7008" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="7008" y="567" style="font-family:terminal;font-size:12px;">
+  6 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="7008" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="7008" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ b x 
+</text>
+<text x="7008" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="7008" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="7008" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="7008" y="639" style="font-family:terminal;font-size:12px;">
+4,7->DOWN 4
+</text>
+<text x="7008" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="2451" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="2458" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="2458" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ w b b b _ _ x 
+</text>
+<text x="2458" y="507" style="font-family:terminal;font-size:12px;">
+  1 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="2458" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="2458" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="2458" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w b b 
+</text>
+<text x="2458" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="2458" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="2458" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="2458" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="2458" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="2458" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="2458" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="2458" y="639" style="font-family:terminal;font-size:12px;">
+1,4->LEFT 4
+</text>
+<text x="2458" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="4726" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="4733" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="4733" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="4733" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="4733" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4733" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="4733" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w b b 
+</text>
+<text x="4733" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="4733" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4733" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="4733" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ w b b b _ _ x 
+</text>
+<text x="4733" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="4733" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="4733" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="4733" y="639" style="font-family:terminal;font-size:12px;">
+7,4->RIGHT 4
+</text>
+<text x="4733" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
 <rect x="6826" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
@@ -2292,15 +599,153 @@ children:0
 
 </text>
 <text x="6833" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+10.371575
 </text>
 <text x="6833" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
 <text x="6833" y="639" style="font-family:terminal;font-size:12px;">
-0,7->UP 4
+4,7->UP 4
 </text>
 <text x="6833" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="526" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="533" y="248" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="533" y="260" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="533" y="272" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="533" y="284" style="font-family:terminal;font-size:12px;">
+  2 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="533" y="296" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="533" y="308" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="533" y="320" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="533" y="332" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="533" y="344" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="533" y="356" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="533" y="368" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="533" y="380" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="533" y="392" style="font-family:terminal;font-size:12px;">
+white max?false
+</text>
+<text x="533" y="404" style="font-family:terminal;font-size:12px;">
+2,4->LEFT 4
+</text>
+<text x="533" y="416" style="font-family:terminal;font-size:12px;">
+children:7
+</text>
+<rect x="1" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="8" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="8" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="8" y="507" style="font-family:terminal;font-size:12px;">
+  1 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="8" y="519" style="font-family:terminal;font-size:12px;">
+  2 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="8" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="8" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="8" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="8" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="8" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="8" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="8" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="8" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="8" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="8" y="639" style="font-family:terminal;font-size:12px;">
+1,4->LEFT 4
+</text>
+<text x="8" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="5776" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="5783" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="5783" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b w _ x 
+</text>
+<text x="5783" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ b _ _ 
+</text>
+<text x="5783" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5783" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="5783" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w _ b b 
+</text>
+<text x="5783" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ _ _ _ 
+</text>
+<text x="5783" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5783" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="5783" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="5783" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="5783" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="5783" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="5783" y="639" style="font-family:terminal;font-size:12px;">
+5,6->UP 4
+</text>
+<text x="5783" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
 <rect x="5601" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
@@ -2338,13 +783,13 @@ children:0
 
 </text>
 <text x="5608" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+10.371575
 </text>
 <text x="5608" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
 <text x="5608" y="639" style="font-family:terminal;font-size:12px;">
-8,7->DOWN 4
+4,7->DOWN 4
 </text>
 <text x="5608" y="651" style="font-family:terminal;font-size:12px;">
 children:0
@@ -2384,107 +829,797 @@ children:0
 
 </text>
 <text x="8233" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+10.371575
 </text>
 <text x="8233" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
 <text x="8233" y="639" style="font-family:terminal;font-size:12px;">
-8,7->DOWN 4
+4,7->DOWN 4
 </text>
 <text x="8233" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
-<rect x="6301" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="6308" y="483" style="font-family:terminal;font-size:12px;">
+<rect x="4901" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="4908" y="483" style="font-family:terminal;font-size:12px;">
     0 1 2 3 4 5 6 7 8 
 </text>
-<text x="6308" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ _ b b b _ _ x 
+<text x="4908" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b w _ x 
 </text>
-<text x="6308" y="507" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="507" style="font-family:terminal;font-size:12px;">
   1 b _ _ _ _ _ _ _ _ 
 </text>
-<text x="6308" y="519" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="519" style="font-family:terminal;font-size:12px;">
   2 _ _ _ _ w _ _ _ _ 
 </text>
-<text x="6308" y="531" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="531" style="font-family:terminal;font-size:12px;">
   3 _ b _ _ w _ _ _ b 
 </text>
-<text x="6308" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b w w k w w b b 
+<text x="4908" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w _ b b 
 </text>
-<text x="6308" y="555" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="555" style="font-family:terminal;font-size:12px;">
   5 b _ _ _ w _ b _ _ 
 </text>
-<text x="6308" y="567" style="font-family:terminal;font-size:12px;">
-  6 w _ _ _ _ _ _ _ _ 
-</text>
-<text x="6308" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="6308" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="6308" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="6308" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="6308" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="6308" y="639" style="font-family:terminal;font-size:12px;">
-1,0->LEFT 4
-</text>
-<text x="6308" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="2626" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="2633" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="2633" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ w b b b _ _ x 
-</text>
-<text x="2633" y="507" style="font-family:terminal;font-size:12px;">
-  1 _ _ _ _ _ _ _ _ b 
-</text>
-<text x="2633" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="2633" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="2633" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w b b 
-</text>
-<text x="2633" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="2633" y="567" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="567" style="font-family:terminal;font-size:12px;">
   6 _ _ _ _ w _ _ _ _ 
 </text>
-<text x="2633" y="579" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="579" style="font-family:terminal;font-size:12px;">
   7 _ _ _ _ b _ _ _ _ 
 </text>
-<text x="2633" y="591" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="591" style="font-family:terminal;font-size:12px;">
   8 x _ _ b b b _ _ x 
 </text>
-<text x="2633" y="603" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="603" style="font-family:terminal;font-size:12px;">
 
 </text>
-<text x="2633" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+<text x="4908" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
 </text>
-<text x="2633" y="627" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
-<text x="2633" y="639" style="font-family:terminal;font-size:12px;">
-1,8->RIGHT 4
+<text x="4908" y="639" style="font-family:terminal;font-size:12px;">
+1,4->LEFT 4
 </text>
-<text x="2633" y="651" style="font-family:terminal;font-size:12px;">
+<text x="4908" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="176" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="183" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="183" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="183" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="183" y="519" style="font-family:terminal;font-size:12px;">
+  2 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="183" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="183" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="183" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="183" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="183" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="183" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="183" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="183" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="183" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="183" y="639" style="font-family:terminal;font-size:12px;">
+1,4->RIGHT 4
+</text>
+<text x="183" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="1751" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="1758" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="1758" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ b x 
+</text>
+<text x="1758" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1758" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="1758" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="1758" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w _ b 
+</text>
+<text x="1758" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="1758" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="1758" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1758" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="1758" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="1758" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="1758" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="1758" y="639" style="font-family:terminal;font-size:12px;">
+4,7->UP 4
+</text>
+<text x="1758" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="8401" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="8408" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="8408" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="8408" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="8408" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="8408" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="8408" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="8408" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="8408" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="8408" y="579" style="font-family:terminal;font-size:12px;">
+  7 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="8408" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="8408" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="8408" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="8408" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="8408" y="639" style="font-family:terminal;font-size:12px;">
+7,4->LEFT 4
+</text>
+<text x="8408" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="701" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="708" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="708" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="708" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="708" y="519" style="font-family:terminal;font-size:12px;">
+  2 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="708" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="708" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w _ b 
+</text>
+<text x="708" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="708" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="708" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="708" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ b x 
+</text>
+<text x="708" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="708" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="708" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="708" y="639" style="font-family:terminal;font-size:12px;">
+4,7->DOWN 4
+</text>
+<text x="708" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="7701" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="7708" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="7708" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="7708" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="7708" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="7708" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="7708" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="7708" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="7708" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="7708" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="7708" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="7708" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="7708" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="7708" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="7708" y="639" style="font-family:terminal;font-size:12px;">
+1,4->RIGHT 4
+</text>
+<text x="7708" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="5076" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="5083" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="5083" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b w _ x 
+</text>
+<text x="5083" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="5083" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5083" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="5083" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w _ b b 
+</text>
+<text x="5083" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="5083" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5083" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="5083" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="5083" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="5083" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="5083" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="5083" y="639" style="font-family:terminal;font-size:12px;">
+1,4->RIGHT 4
+</text>
+<text x="5083" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="5951" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="5958" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="5958" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b w _ x 
+</text>
+<text x="5958" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="5958" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5958" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="5958" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w _ b b 
+</text>
+<text x="5958" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="5958" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5958" y="579" style="font-family:terminal;font-size:12px;">
+  7 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="5958" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="5958" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="5958" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="5958" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="5958" y="639" style="font-family:terminal;font-size:12px;">
+7,4->LEFT 4
+</text>
+<text x="5958" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="526" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="533" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="533" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ b x 
+</text>
+<text x="533" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="533" y="519" style="font-family:terminal;font-size:12px;">
+  2 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="533" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="533" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w _ b 
+</text>
+<text x="533" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="533" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="533" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="533" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="533" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="533" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="533" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="533" y="639" style="font-family:terminal;font-size:12px;">
+4,7->UP 4
+</text>
+<text x="533" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="8051" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="8058" y="248" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="8058" y="260" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="8058" y="272" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="8058" y="284" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="8058" y="296" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="8058" y="308" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="8058" y="320" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="8058" y="332" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="8058" y="344" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="8058" y="356" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="8058" y="368" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="8058" y="380" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="8058" y="392" style="font-family:terminal;font-size:12px;">
+white max?false
+</text>
+<text x="8058" y="404" style="font-family:terminal;font-size:12px;">
+6,4->RIGHT 4
+</text>
+<text x="8058" y="416" style="font-family:terminal;font-size:12px;">
+children:7
+</text>
+<rect x="1576" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="1583" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="1583" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="1583" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1583" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="1583" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="1583" y="543" style="font-family:terminal;font-size:12px;">
+  4 b _ w w k w w b b 
+</text>
+<text x="1583" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="1583" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="1583" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1583" y="591" style="font-family:terminal;font-size:12px;">
+  8 x b _ b b b _ _ x 
+</text>
+<text x="1583" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="1583" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="1583" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="1583" y="639" style="font-family:terminal;font-size:12px;">
+4,1->DOWN 4
+</text>
+<text x="1583" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="1051" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="1058" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="1058" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="1058" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1058" y="519" style="font-family:terminal;font-size:12px;">
+  2 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="1058" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="1058" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="1058" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="1058" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="1058" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="1058" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="1058" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="1058" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="1058" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="1058" y="639" style="font-family:terminal;font-size:12px;">
+7,4->RIGHT 4
+</text>
+<text x="1058" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="8576" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="8583" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="8583" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="8583" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="8583" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="8583" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="8583" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="8583" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="8583" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="8583" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="8583" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="8583" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="8583" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="8583" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="8583" y="639" style="font-family:terminal;font-size:12px;">
+7,4->RIGHT 4
+</text>
+<text x="8583" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="7876" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="7883" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="7883" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="7883" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="7883" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="7883" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="7883" y="543" style="font-family:terminal;font-size:12px;">
+  4 b _ w w k w w b b 
+</text>
+<text x="7883" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="7883" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="7883" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="7883" y="591" style="font-family:terminal;font-size:12px;">
+  8 x b _ b b b _ _ x 
+</text>
+<text x="7883" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="7883" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="7883" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="7883" y="639" style="font-family:terminal;font-size:12px;">
+4,1->DOWN 4
+</text>
+<text x="7883" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="6651" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="6658" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="6658" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="6658" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="6658" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="6658" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="6658" y="543" style="font-family:terminal;font-size:12px;">
+  4 b _ w w k w w b b 
+</text>
+<text x="6658" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="6658" y="567" style="font-family:terminal;font-size:12px;">
+  6 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="6658" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="6658" y="591" style="font-family:terminal;font-size:12px;">
+  8 x b _ b b b _ _ x 
+</text>
+<text x="6658" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="6658" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="6658" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="6658" y="639" style="font-family:terminal;font-size:12px;">
+4,1->DOWN 4
+</text>
+<text x="6658" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="6826" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="6833" y="248" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="6833" y="260" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="6833" y="272" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="6833" y="284" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="6833" y="296" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="6833" y="308" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="6833" y="320" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="6833" y="332" style="font-family:terminal;font-size:12px;">
+  6 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="6833" y="344" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="6833" y="356" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="6833" y="368" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="6833" y="380" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="6833" y="392" style="font-family:terminal;font-size:12px;">
+white max?false
+</text>
+<text x="6833" y="404" style="font-family:terminal;font-size:12px;">
+6,4->LEFT 4
+</text>
+<text x="6833" y="416" style="font-family:terminal;font-size:12px;">
+children:7
+</text>
+<rect x="2101" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="2108" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="2108" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="2108" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="2108" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="2108" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="2108" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="2108" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="2108" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="2108" y="579" style="font-family:terminal;font-size:12px;">
+  7 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="2108" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="2108" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="2108" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="2108" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="2108" y="639" style="font-family:terminal;font-size:12px;">
+7,4->LEFT 4
+</text>
+<text x="2108" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
 <rect x="5513" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
@@ -2522,107 +1657,61 @@ children:0
 
 </text>
 <text x="5520" y="380" style="font-family:terminal;font-size:12px;">
-10.359314
+10.371575
 </text>
 <text x="5520" y="392" style="font-family:terminal;font-size:12px;">
 white max?false
 </text>
 <text x="5520" y="404" style="font-family:terminal;font-size:12px;">
-0,6->UP 4
+4,6->UP 4
 </text>
 <text x="5520" y="416" style="font-family:terminal;font-size:12px;">
 children:8
 </text>
-<rect x="2451" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="2458" y="483" style="font-family:terminal;font-size:12px;">
+<rect x="4551" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="4558" y="483" style="font-family:terminal;font-size:12px;">
     0 1 2 3 4 5 6 7 8 
 </text>
-<text x="2458" y="495" style="font-family:terminal;font-size:12px;">
-  0 x _ w b b b _ _ x 
-</text>
-<text x="2458" y="507" style="font-family:terminal;font-size:12px;">
-  1 b _ _ _ _ _ _ _ _ 
-</text>
-<text x="2458" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="2458" y="531" style="font-family:terminal;font-size:12px;">
-  3 _ b _ _ w _ _ _ b 
-</text>
-<text x="2458" y="543" style="font-family:terminal;font-size:12px;">
-  4 b b _ w k w w b b 
-</text>
-<text x="2458" y="555" style="font-family:terminal;font-size:12px;">
-  5 b _ _ _ w _ b _ _ 
-</text>
-<text x="2458" y="567" style="font-family:terminal;font-size:12px;">
-  6 _ _ _ _ w _ _ _ _ 
-</text>
-<text x="2458" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
-</text>
-<text x="2458" y="591" style="font-family:terminal;font-size:12px;">
-  8 x _ _ b b b _ _ x 
-</text>
-<text x="2458" y="603" style="font-family:terminal;font-size:12px;">
-
-</text>
-<text x="2458" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
-</text>
-<text x="2458" y="627" style="font-family:terminal;font-size:12px;">
-black max?true
-</text>
-<text x="2458" y="639" style="font-family:terminal;font-size:12px;">
-1,0->LEFT 4
-</text>
-<text x="2458" y="651" style="font-family:terminal;font-size:12px;">
-children:0
-</text>
-<rect x="1576" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
-<text x="1583" y="483" style="font-family:terminal;font-size:12px;">
-    0 1 2 3 4 5 6 7 8 
-</text>
-<text x="1583" y="495" style="font-family:terminal;font-size:12px;">
+<text x="4558" y="495" style="font-family:terminal;font-size:12px;">
   0 x _ _ b b b _ _ x 
 </text>
-<text x="1583" y="507" style="font-family:terminal;font-size:12px;">
+<text x="4558" y="507" style="font-family:terminal;font-size:12px;">
   1 _ _ _ _ b _ _ _ _ 
 </text>
-<text x="1583" y="519" style="font-family:terminal;font-size:12px;">
-  2 _ _ _ _ _ _ _ _ w 
+<text x="4558" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
 </text>
-<text x="1583" y="531" style="font-family:terminal;font-size:12px;">
+<text x="4558" y="531" style="font-family:terminal;font-size:12px;">
   3 _ b _ _ w _ _ _ b 
 </text>
-<text x="1583" y="543" style="font-family:terminal;font-size:12px;">
-  4 b _ w w k w w b b 
+<text x="4558" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w b b 
 </text>
-<text x="1583" y="555" style="font-family:terminal;font-size:12px;">
+<text x="4558" y="555" style="font-family:terminal;font-size:12px;">
   5 b _ _ _ w _ b _ _ 
 </text>
-<text x="1583" y="567" style="font-family:terminal;font-size:12px;">
+<text x="4558" y="567" style="font-family:terminal;font-size:12px;">
   6 _ _ _ _ w _ _ _ _ 
 </text>
-<text x="1583" y="579" style="font-family:terminal;font-size:12px;">
-  7 _ _ _ _ b _ _ _ _ 
+<text x="4558" y="579" style="font-family:terminal;font-size:12px;">
+  7 b _ _ _ _ _ _ _ _ 
 </text>
-<text x="1583" y="591" style="font-family:terminal;font-size:12px;">
-  8 x b _ b b b _ _ x 
+<text x="4558" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ w b b b _ _ x 
 </text>
-<text x="1583" y="603" style="font-family:terminal;font-size:12px;">
+<text x="4558" y="603" style="font-family:terminal;font-size:12px;">
 
 </text>
-<text x="1583" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+<text x="4558" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
 </text>
-<text x="1583" y="627" style="font-family:terminal;font-size:12px;">
+<text x="4558" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
-<text x="1583" y="639" style="font-family:terminal;font-size:12px;">
-8,1->DOWN 4
+<text x="4558" y="639" style="font-family:terminal;font-size:12px;">
+7,4->LEFT 4
 </text>
-<text x="1583" y="651" style="font-family:terminal;font-size:12px;">
+<text x="4558" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
 <rect x="2976" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
@@ -2660,16 +1749,881 @@ children:0
 
 </text>
 <text x="2983" y="380" style="font-family:terminal;font-size:12px;">
-10.966669
+10.371575
 </text>
 <text x="2983" y="392" style="font-family:terminal;font-size:12px;">
 white max?false
 </text>
 <text x="2983" y="404" style="font-family:terminal;font-size:12px;">
-0,2->UP 4
+4,2->UP 4
 </text>
 <text x="2983" y="416" style="font-family:terminal;font-size:12px;">
 children:7
+</text>
+<rect x="3151" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="3158" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="3158" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ w b b b _ _ x 
+</text>
+<text x="3158" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="3158" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="3158" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="3158" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w _ b 
+</text>
+<text x="3158" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="3158" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="3158" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="3158" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ b x 
+</text>
+<text x="3158" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="3158" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="3158" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="3158" y="639" style="font-family:terminal;font-size:12px;">
+4,7->DOWN 4
+</text>
+<text x="3158" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="5426" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="5433" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="5433" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b w b x 
+</text>
+<text x="5433" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="5433" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5433" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="5433" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w _ _ b 
+</text>
+<text x="5433" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="5433" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5433" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="5433" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="5433" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="5433" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="5433" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="5433" y="639" style="font-family:terminal;font-size:12px;">
+4,7->UP 4
+</text>
+<text x="5433" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="4288" y="1" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="4295" y="13" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="4295" y="25" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="4295" y="37" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="4295" y="49" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4295" y="61" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="4295" y="73" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="4295" y="85" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="4295" y="97" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4295" y="109" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="4295" y="121" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="4295" y="133" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="4295" y="145" style="font-family:terminal;font-size:12px;">
+10.372 max?true
+</text>
+<rect x="1401" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="1408" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="1408" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="1408" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="1408" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="1408" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="1408" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="1408" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="1408" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="1408" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1408" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="1408" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="1408" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="1408" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="1408" y="639" style="font-family:terminal;font-size:12px;">
+1,4->RIGHT 4
+</text>
+<text x="1408" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="7526" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="7533" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="7533" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="7533" y="507" style="font-family:terminal;font-size:12px;">
+  1 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="7533" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="7533" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="7533" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="7533" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="7533" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="7533" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="7533" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="7533" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="7533" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="7533" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="7533" y="639" style="font-family:terminal;font-size:12px;">
+1,4->LEFT 4
+</text>
+<text x="7533" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="6476" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="6483" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="6483" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="6483" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="6483" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="6483" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="6483" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="6483" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="6483" y="567" style="font-family:terminal;font-size:12px;">
+  6 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="6483" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="6483" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="6483" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="6483" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="6483" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="6483" y="639" style="font-family:terminal;font-size:12px;">
+1,4->RIGHT 4
+</text>
+<text x="6483" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="6301" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="6308" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="6308" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="6308" y="507" style="font-family:terminal;font-size:12px;">
+  1 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="6308" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="6308" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="6308" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="6308" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="6308" y="567" style="font-family:terminal;font-size:12px;">
+  6 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="6308" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="6308" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="6308" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="6308" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="6308" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="6308" y="639" style="font-family:terminal;font-size:12px;">
+1,4->LEFT 4
+</text>
+<text x="6308" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="351" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="358" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="358" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="358" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="358" y="519" style="font-family:terminal;font-size:12px;">
+  2 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="358" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="358" y="543" style="font-family:terminal;font-size:12px;">
+  4 b _ w w k w w b b 
+</text>
+<text x="358" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="358" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="358" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="358" y="591" style="font-family:terminal;font-size:12px;">
+  8 x b _ b b b _ _ x 
+</text>
+<text x="358" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="358" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="358" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="358" y="639" style="font-family:terminal;font-size:12px;">
+4,1->DOWN 4
+</text>
+<text x="358" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="4201" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="4208" y="248" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="4208" y="260" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="4208" y="272" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="4208" y="284" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4208" y="296" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="4208" y="308" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w b b 
+</text>
+<text x="4208" y="320" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="4208" y="332" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4208" y="344" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="4208" y="356" style="font-family:terminal;font-size:12px;">
+  8 x _ w b b b _ _ x 
+</text>
+<text x="4208" y="368" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="4208" y="380" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="4208" y="392" style="font-family:terminal;font-size:12px;">
+white max?false
+</text>
+<text x="4208" y="404" style="font-family:terminal;font-size:12px;">
+4,2->DOWN 4
+</text>
+<text x="4208" y="416" style="font-family:terminal;font-size:12px;">
+children:7
+</text>
+<rect x="5251" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="5258" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="5258" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b w _ x 
+</text>
+<text x="5258" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="5258" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5258" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="5258" y="543" style="font-family:terminal;font-size:12px;">
+  4 b _ w w k w _ b b 
+</text>
+<text x="5258" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="5258" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="5258" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="5258" y="591" style="font-family:terminal;font-size:12px;">
+  8 x b _ b b b _ _ x 
+</text>
+<text x="5258" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="5258" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="5258" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="5258" y="639" style="font-family:terminal;font-size:12px;">
+4,1->DOWN 4
+</text>
+<text x="5258" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="6126" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="6133" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="6133" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b w _ x 
+</text>
+<text x="6133" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="6133" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="6133" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="6133" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w _ b b 
+</text>
+<text x="6133" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="6133" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="6133" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="6133" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="6133" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="6133" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="6133" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="6133" y="639" style="font-family:terminal;font-size:12px;">
+7,4->RIGHT 4
+</text>
+<text x="6133" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="3676" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="3683" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="3683" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="3683" y="507" style="font-family:terminal;font-size:12px;">
+  1 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="3683" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="3683" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="3683" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w b b 
+</text>
+<text x="3683" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="3683" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="3683" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="3683" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ w b b b _ _ x 
+</text>
+<text x="3683" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="3683" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="3683" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="3683" y="639" style="font-family:terminal;font-size:12px;">
+1,4->LEFT 4
+</text>
+<text x="3683" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="2626" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="2633" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="2633" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ w b b b _ _ x 
+</text>
+<text x="2633" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ _ _ _ _ b 
+</text>
+<text x="2633" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="2633" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="2633" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w b b 
+</text>
+<text x="2633" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="2633" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="2633" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="2633" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="2633" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="2633" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="2633" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="2633" y="639" style="font-family:terminal;font-size:12px;">
+1,4->RIGHT 4
+</text>
+<text x="2633" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="8051" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="8058" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="8058" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ b x 
+</text>
+<text x="8058" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="8058" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="8058" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="8058" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w _ b 
+</text>
+<text x="8058" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="8058" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="8058" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="8058" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="8058" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="8058" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="8058" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="8058" y="639" style="font-family:terminal;font-size:12px;">
+4,7->UP 4
+</text>
+<text x="8058" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="1751" y="236" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="1758" y="248" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="1758" y="260" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="1758" y="272" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1758" y="284" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="1758" y="296" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="1758" y="308" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="1758" y="320" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="1758" y="332" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="1758" y="344" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1758" y="356" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="1758" y="368" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="1758" y="380" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="1758" y="392" style="font-family:terminal;font-size:12px;">
+white max?false
+</text>
+<text x="1758" y="404" style="font-family:terminal;font-size:12px;">
+2,4->RIGHT 4
+</text>
+<text x="1758" y="416" style="font-family:terminal;font-size:12px;">
+children:7
+</text>
+<rect x="876" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="883" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="883" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="883" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="883" y="519" style="font-family:terminal;font-size:12px;">
+  2 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="883" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="883" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="883" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="883" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="883" y="579" style="font-family:terminal;font-size:12px;">
+  7 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="883" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="883" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="883" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="883" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="883" y="639" style="font-family:terminal;font-size:12px;">
+7,4->LEFT 4
+</text>
+<text x="883" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="1926" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="1933" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="1933" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="1933" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1933" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ _ _ _ _ w 
+</text>
+<text x="1933" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="1933" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w _ b 
+</text>
+<text x="1933" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="1933" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="1933" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="1933" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ b x 
+</text>
+<text x="1933" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="1933" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="1933" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="1933" y="639" style="font-family:terminal;font-size:12px;">
+4,7->DOWN 4
+</text>
+<text x="1933" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="7176" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="7183" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="7183" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="7183" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="7183" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="7183" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="7183" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b w w k w w b b 
+</text>
+<text x="7183" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="7183" y="567" style="font-family:terminal;font-size:12px;">
+  6 w _ _ _ _ _ _ _ _ 
+</text>
+<text x="7183" y="579" style="font-family:terminal;font-size:12px;">
+  7 b _ _ _ _ _ _ _ _ 
+</text>
+<text x="7183" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ _ b b b _ _ x 
+</text>
+<text x="7183" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="7183" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="7183" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="7183" y="639" style="font-family:terminal;font-size:12px;">
+7,4->LEFT 4
+</text>
+<text x="7183" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="4026" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="4033" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="4033" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="4033" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="4033" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4033" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="4033" y="543" style="font-family:terminal;font-size:12px;">
+  4 b _ _ w k w w b b 
+</text>
+<text x="4033" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="4033" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4033" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="4033" y="591" style="font-family:terminal;font-size:12px;">
+  8 x b w b b b _ _ x 
+</text>
+<text x="4033" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="4033" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="4033" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="4033" y="639" style="font-family:terminal;font-size:12px;">
+4,1->DOWN 4
+</text>
+<text x="4033" y="651" style="font-family:terminal;font-size:12px;">
+children:0
 </text>
 <rect x="3326" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
 <text x="3333" y="483" style="font-family:terminal;font-size:12px;">
@@ -2706,15 +2660,61 @@ children:7
 
 </text>
 <text x="3333" y="615" style="font-family:terminal;font-size:12px;">
-10.966669
+10.371575
 </text>
 <text x="3333" y="627" style="font-family:terminal;font-size:12px;">
 black max?true
 </text>
 <text x="3333" y="639" style="font-family:terminal;font-size:12px;">
-7,0->LEFT 4
+7,4->LEFT 4
 </text>
 <text x="3333" y="651" style="font-family:terminal;font-size:12px;">
+children:0
+</text>
+<rect x="4376" y="471" width="163" height="183" style="fill:orange; stroke:rgb(0,0,0);" rx="10"/>
+<text x="4383" y="483" style="font-family:terminal;font-size:12px;">
+    0 1 2 3 4 5 6 7 8 
+</text>
+<text x="4383" y="495" style="font-family:terminal;font-size:12px;">
+  0 x _ _ b b b _ _ x 
+</text>
+<text x="4383" y="507" style="font-family:terminal;font-size:12px;">
+  1 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="4383" y="519" style="font-family:terminal;font-size:12px;">
+  2 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4383" y="531" style="font-family:terminal;font-size:12px;">
+  3 _ b _ _ w _ _ _ b 
+</text>
+<text x="4383" y="543" style="font-family:terminal;font-size:12px;">
+  4 b b _ w k w w _ b 
+</text>
+<text x="4383" y="555" style="font-family:terminal;font-size:12px;">
+  5 b _ _ _ w _ b _ _ 
+</text>
+<text x="4383" y="567" style="font-family:terminal;font-size:12px;">
+  6 _ _ _ _ w _ _ _ _ 
+</text>
+<text x="4383" y="579" style="font-family:terminal;font-size:12px;">
+  7 _ _ _ _ b _ _ _ _ 
+</text>
+<text x="4383" y="591" style="font-family:terminal;font-size:12px;">
+  8 x _ w b b b _ b x 
+</text>
+<text x="4383" y="603" style="font-family:terminal;font-size:12px;">
+
+</text>
+<text x="4383" y="615" style="font-family:terminal;font-size:12px;">
+10.371575
+</text>
+<text x="4383" y="627" style="font-family:terminal;font-size:12px;">
+black max?true
+</text>
+<text x="4383" y="639" style="font-family:terminal;font-size:12px;">
+4,7->DOWN 4
+</text>
+<text x="4383" y="651" style="font-family:terminal;font-size:12px;">
 children:0
 </text>
 </svg>
