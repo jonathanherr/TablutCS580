@@ -1,6 +1,6 @@
 package net.jonathanherr.gmu.hnefatafl;
 
-import net.jonathanherr.gmu.hnefatafl.Hnefatafl.Direction;
+import net.jonathanherr.gmu.hnefatafl.Board.Direction;
 
 /**
  * Represents a single piece on the board, a white, black or king piece. Contains position, ascii value for display, and side 'name' value.
@@ -46,18 +46,18 @@ public class Piece {
 	public int toChar(){
 		return ((char)value);
 	}
-	public int availLength(Direction dir, Hnefatafl board,int[][] curboard){
+	public int availLength(Direction dir, Hnefatafl game,int[][] curboard){
 		int avail=0;
 		if(dir==Direction.UP || dir==Direction.DOWN){
 			for(int i=1;i<9;i++){
-				if(board.isValid(this,row,col,dir,row+(dir.value*i),col,curboard)){
+				if(game.getBoard().isValid(this,row,col,dir,row+(dir.value*i),col,curboard)){
 					avail+=1;
 				}
 			}
 		}
 		else if(dir==Direction.LEFT || dir==Direction.RIGHT){
 			for(int i=1;i<9;i++){
-				if(board.isValid(this,row,col,dir,row,col+(dir.value*i),curboard)){
+				if(game.getBoard().isValid(this,row,col,dir,row,col+(dir.value*i),curboard)){
 					avail+=1;
 				}
 			}

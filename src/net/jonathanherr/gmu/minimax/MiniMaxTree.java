@@ -22,10 +22,8 @@ public class MiniMaxTree {
 		scoreTree(root);
 		DrawTree.write(this);
 		//player.printTree(root);
-		Move bestMove=null;
-		
-		
-		return bestMove;
+		System.out.println(player.getColor() + " is moving " + root.getBestChild().getMove().getLength() + " steps " + root.getBestChild().getMove().getDirection() + " from " + root.getBestChild().getMove().getPiece().getRow() + "," + root.getBestChild().getMove().getPiece().getCol());
+		return root.getBestChild().getMove();
 	}
 		
 	private void scoreTree(TreeNode node) {
@@ -38,15 +36,21 @@ public class MiniMaxTree {
 				evaluate(link.getChild());
 		}
 		double maxScore=Double.NEGATIVE_INFINITY,minScore=Double.POSITIVE_INFINITY;
+		TreeNode bestChild=null;
 		for(TreeLink link:node.getChildren()) {
 			if(node.isMax()){
-				if(link.getChild().getScore()>maxScore)
+				if(link.getChild().getScore()>maxScore){
 					maxScore=link.getChild().getScore();
+					bestChild=link.getChild();
+				}
 			}
 			else
-				if(link.getChild().getScore()<minScore)
+				if(link.getChild().getScore()<minScore){
 					minScore=link.getChild().getScore();
+					bestChild=link.getChild();
+				}
 		}
+		node.setBestChild(bestChild);
 		if(node.isMax())
 			node.setScore(maxScore);
 		else
@@ -54,23 +58,13 @@ public class MiniMaxTree {
 	
 	}
 	private void evaluate(TreeNode node) {
-		System.out.println(node.getId());
-		System.out.println("Evaluating " + node.getColor() + " node for " + player.getColor() + " player,  which is a max node?" + node.isMax());
 		if(this.player.getColor().equals(node.getMove().getPiece().getName())){
 			node.setScore(this.player.evaluate(node.getState()));
 		}
 		else{
 			node.setScore(this.player.evaluateOpponent(node.getState()));
 		}
-		/*if(this.player.getColor().equals("black") && node.isMax())
-			node.setScore(this.player.evaluate(node.getState()));
-		else if(this.player.getColor().equals("black") && !node.isMax())
-			node.setScore(this.player.evaluateOpponent(node.getState()));
-		else if(this.player.getColor().equals("white") && node.isMax())
-			node.setScore(this.player.evaluate(node.getState()));
-		else if(this.player.getColor().equals("white") && !node.isMax())			
-			node.setScore(this.player.evaluateOpponent(node.getState()));
-		*/
+		
 	}
 }
 	

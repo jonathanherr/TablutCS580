@@ -3,7 +3,7 @@ package net.jonathanherr.gmu.hnefatafl;
 import java.util.ArrayList;
 import java.util.Random;
 
-import net.jonathanherr.gmu.hnefatafl.Hnefatafl.Direction;
+import net.jonathanherr.gmu.hnefatafl.Board.Direction;
 
 /**
  * Simple random player which chooses a random piece, a random direction, and a random move length until a valid move is picked. 
@@ -25,9 +25,9 @@ public class RandomPlayer extends Player {
 			Piece movePiece=pieces.get(rand.nextInt(pieces.size()));
 			int moveLength=0;
 			int dirCount=0;
-			while(moveLength==0 && dirCount<1){
+			while(moveLength==0 && dirCount<4){
 				Direction moveDir=Direction.getDirection(rand.nextInt(4));
-				int availLength=movePiece.availLength(moveDir, game,game.board);
+				int availLength=movePiece.availLength(moveDir, game,game.getBoard().board);
 				if(availLength>0){
 					moveLength=rand.nextInt(Math.max(availLength-1,1))+1;
 					Move move=new Move(movePiece,moveDir,moveLength);

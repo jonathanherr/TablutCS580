@@ -77,12 +77,12 @@ public class GUI extends JFrame {
 	
 	public static void main (String[] args) throws InterruptedException {
 		Hnefatafl game=new Hnefatafl();
-		GUI gui=new GUI(game.board);
+		GUI gui=new GUI(game.getBoard().board);
 		gui.setVisible(true);
 		game.setGUI(gui);
-		System.out.println(game.toStateString());
-		RandomPlayer black=new RandomPlayer(game, game.blackpieces);
-		RandomPlayer white = new RandomPlayer(game,game.whitepieces);
+		System.out.println(game.getBoard().toStateString());
+		RandomPlayer black=new RandomPlayer(game, game.getBoard().getBlackpieces());
+		RandomPlayer white = new RandomPlayer(game,game.getBoard().getWhitepieces());
 		game.play(white, black, 2000, 5000,200);
 	    
 	    // Show the frame

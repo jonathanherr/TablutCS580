@@ -1,7 +1,6 @@
 import net.jonathanherr.gmu.hnefatafl.Black;
+import net.jonathanherr.gmu.hnefatafl.Board.Direction;
 import net.jonathanherr.gmu.hnefatafl.Hnefatafl;
-import net.jonathanherr.gmu.hnefatafl.Hnefatafl.Direction;
-import net.jonathanherr.gmu.hnefatafl.King;
 import net.jonathanherr.gmu.hnefatafl.Move;
 import net.jonathanherr.gmu.hnefatafl.Piece;
 import net.jonathanherr.gmu.hnefatafl.RandomPlayer;
@@ -21,8 +20,8 @@ public class testCaptures {
 	public void setup(){
 		System.out.println("setup");
 		game=new Hnefatafl();
-		black=new RandomPlayer(game, game.getBlackpieces());
-		white = new RandomPlayer(game,game.getWhitepieces());
+		black=new RandomPlayer(game, game.getBoard().getBlackpieces());
+		white = new RandomPlayer(game,game.getBoard().getWhitepieces());
 		game.setBlackPlayer(black);
 		game.setWhitePlayer(white);
 	}
@@ -155,10 +154,10 @@ public class testCaptures {
 				+ "_ _ _ _ _ _ _ _ _ \n"
 				+ "_ _ _ _ _ _ _ _ _ \n"
 				+ "x _ _ _ _ _ _ k x \n";
-		 	game.loadState(board);
-		 	Piece piece=game.getPieceAt(8, 7);
+		 	game.getBoard().loadState(board);
+		 	Piece piece=game.getBoard().getPieceAt(8, 7);
 		    Move move=new Move(piece, Direction.RIGHT, 1);
-		    game.move(white, move);
+		    game.getBoard().move(white, move);
 			Assert.assertTrue("white should win game.",game.isGameOver());
 		
 		
@@ -196,15 +195,15 @@ public class testCaptures {
 				+ "_ _ _ _ _ _ _ _ _ \n"
 				+ "_ _ _ _ _ _ _ _ _ \n"
 				+ "x _ _ _ _ _ _ _ x \n";
-		    game.loadState(board);
-		    Move move=new Move(game.getPieceAt(5, 4), Direction.RIGHT, 1);
-		    Move kingMove=new Move(game.getPieceAt(4,6),Direction.DOWN,1);
+		    game.getBoard().loadState(board);
+		    Move move=new Move(game.getBoard().getPieceAt(5, 4), Direction.RIGHT, 1);
+		    Move kingMove=new Move(game.getBoard().getPieceAt(4,6),Direction.DOWN,1);
 		    
-		    System.out.println(game.toStateString());			
-			game.move(white, kingMove);
-			System.out.println(game.toStateString());			
-			game.move(black, move);
-			System.out.println(game.toStateString());			
+		    System.out.println(game.getBoard().toStateString());			
+			game.getBoard().move(white, kingMove);
+			System.out.println(game.getBoard().toStateString());			
+			game.getBoard().move(black, move);
+			System.out.println(game.getBoard().toStateString());			
 			
 			System.out.println("white captures:"+white.getCaptures());
 			System.out.println("black captures:"+black.getCaptures());
@@ -216,10 +215,10 @@ public class testCaptures {
 
 
 	private void testMove(Move move) {
-		game.loadState(board);
-		System.out.println(game.toStateString());
+		game.getBoard().loadState(board);
+		System.out.println(game.getBoard().toStateString());
 		
-		game.move(black, move);
+		game.getBoard().move(black, move);
 	}
 	@Test
 	public void testBlackCapture() throws InterruptedException {

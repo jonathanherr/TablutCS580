@@ -1,38 +1,30 @@
 package net.jonathanherr.gmu.minimax;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 import net.jonathanherr.gmu.hnefatafl.BoardState;
 import net.jonathanherr.gmu.hnefatafl.Move;
 
 public class TreeNode{
-	private int[][] board;
-	private ArrayList<TreeLink> links;
+	static int nodeid=0;
+	
+	private LinkedList<TreeLink> links;
 	private double score;
 	private BoardState state;
-	static int nodeid=0;
 	private int id;
 	private String color;
 	private int level=0;
 	private boolean max; //every node is either a max or a min node from the perspective of the current player
-	public void setColor(String c) {
-		this.color=c;
-	}
-	public String getColor() {
-		return color;
-	}
+	private TreeNode bestChild; //highest/lowest scored child for following best path through tree
+	
 	public TreeNode(BoardState state) {
-		setLinks(new ArrayList<TreeLink>());
-		setBoard(state.getBoard());
+		setLinks(new LinkedList<TreeLink>());
 		this.state=state;
 		nodeid+=1;
 		setId(nodeid);
 		setMax(true);
-
 	}
-	public Move getMove(){
-		return state.getMove();
-	}
+	
 	public void addChild(TreeNode node) {
 		TreeLink link=new TreeLink(this,node);
 		getLinks().add(link);
@@ -41,10 +33,14 @@ public class TreeNode{
 		else
 			node.setMax(true);
 	}
-	public ArrayList<TreeLink> getChildren() {
+	
+	
+	public LinkedList<TreeLink> getChildren() {
 		return this.getLinks();
 	}
-	
+	public Move getMove(){
+		return state.getMove();
+	}
 	public Integer getNodeid() {
 		return getId();
 	}
@@ -61,15 +57,18 @@ public class TreeNode{
 		this.score = score;
 	}
 	public int[][] getBoard() {
-		return board;
+		return state.getBoard();
 	}
-	public void setBoard(int[][] board) {
-		this.board = board;
+	public void setColor(String c) {
+		this.color=c;
 	}
-	public ArrayList<TreeLink> getLinks() {
+	public String getColor() {
+		return color;
+	}
+	public LinkedList<TreeLink> getLinks() {
 		return links;
 	}
-	public void setLinks(ArrayList<TreeLink> links) {
+	public void setLinks(LinkedList<TreeLink> links) {
 		this.links = links;
 	}
 	public int getLevel() {
@@ -89,5 +88,12 @@ public class TreeNode{
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public void setBestChild(TreeNode bestChild) {
+		this.bestChild=bestChild;
+	}
+
+	public TreeNode getBestChild() {
+		return bestChild;
 	}
 }

@@ -10,6 +10,8 @@ import java.util.ArrayList;
 public class BoardState {
 	ArrayList<Piece> blackPieces;
 	ArrayList<Piece> whitePieces;
+	boolean gameOver=false;
+	String winner="";
 	int[][] board;
 	private Move move; //the move that created this state
 	
@@ -17,6 +19,7 @@ public class BoardState {
 			ArrayList<Piece> whitePieces) {
 		super();
 		this.board = board;
+		//TODO: possible memory saving change - calculate piece positions upon request by reading board state - slower probably
 		this.blackPieces = blackPieces;
 		this.whitePieces = whitePieces;
 	}

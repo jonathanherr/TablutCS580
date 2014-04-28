@@ -1,6 +1,6 @@
 package net.jonathanherr.gmu.hnefatafl;
 
-import net.jonathanherr.gmu.hnefatafl.Hnefatafl.Direction;
+import net.jonathanherr.gmu.hnefatafl.Board.Direction;
 
 public class Move {
 	private Piece piece;
