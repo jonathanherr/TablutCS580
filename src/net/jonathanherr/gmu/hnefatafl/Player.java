@@ -79,6 +79,8 @@ Player {
 	 *  Distance from Opponent - boards where black is nearest white pieces are higher value b/c of increased captures
 	 *  Distance from King - boards where black piece is near king are higher value for capturing king
 	 *  Distance from corner - black blocks corners for higher value boards
+	 *  
+	 *  Additionally, any board won by the other player, is given neg infinity score for that player and positive for the winner.
 	 * @param player
 	 * @return
 	 */
@@ -95,7 +97,7 @@ Player {
 		for(Double score:pieceScores) {
 			totalScore+=score;
 		}
-		System.out.println("Score:" + totalScore);
+		//System.out.println("Score:" + totalScore);
 		//System.out.println(game.getStateString("", board.board));
 		
 		return totalScore;
@@ -124,6 +126,16 @@ Player {
 	//TODO: must also evaluate opponent pieces b/c if say, the king is close to the corner and player is black, that board is lower value than another
 	private void evaluateBlack(BoardState board, ArrayList<Double> pieceScores) {
 		
+		if(board.gameOver && board.winner.equals("white"))
+		{
+			pieceScores.add(Double.NEGATIVE_INFINITY);
+			return;
+		}
+		else if(board.gameOver && board.winner.equals("black"))
+		{
+			pieceScores.add(Double.POSITIVE_INFINITY);
+			return;
+		}
 		
 		for(Piece piece:board.getBlackpieces()) {
 			double score=0.0d;
@@ -136,10 +148,21 @@ Player {
 		
 		
 		
+		
 	}
 	private void evaluateWhite(BoardState board, ArrayList<Double> pieceScores) {
 		//for white, each piece, except king, accumulates points based on several factors, proximity to king, proximity to exit nodes and proximity to opponents
 		//total score for board is sum of white piece scores. all scores normalized by board width.
+		if(board.gameOver && board.winner.equals("white"))
+		{
+			pieceScores.add(Double.POSITIVE_INFINITY);
+			return;
+		}
+		else if(board.gameOver && board.winner.equals("black"))
+		{
+			pieceScores.add(Double.NEGATIVE_INFINITY);
+			return;
+		}
 		for(Piece piece:board.getWhitepieces()) {
 			if(!piece.getName().equals(Board.KING_NAME)) {
 				double score=0.0d;

@@ -195,7 +195,7 @@ public class Hnefatafl {
 				if(debug){
 					
 					System.out.println("Game:" + gameNum + "\tturn:"+turns);
-					System.out.println("Board Score White:" + white.evaluate(new BoardState(getBoard().getBoardGrid(), getBoard().getBlackpieces(), getBoard().getWhitepieces())));
+					System.out.println("Board Score White:" + white.evaluate(new BoardState(getBoard().getBoardGrid(),getBoard().getBlackpieces(),getBoard().getWhitepieces())));
 					System.out.println("Board Score Black:" + black.evaluate(new BoardState(getBoard().getBoardGrid(),getBoard().getBlackpieces(),getBoard().getWhitepieces())));
 					System.out.println(getBoard().toStateString());
 				}				
@@ -215,7 +215,11 @@ public class Hnefatafl {
 	 * @param rounds
 	 */
 	public void tournament(int rounds){
-		
+		int blackWins=0;
+		int whiteWins=0;
+		for(int round=0;round<rounds;round++){
+			
+		}
 	}
 	/**
 	 * Main entry, runs a default number of games between two RandomPlayer players. 
@@ -235,7 +239,7 @@ public class Hnefatafl {
 		System.out.println(game.getBoard().toStateString());
 		RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
 		MiniMaxPlayer white = new MiniMaxPlayer(game,game.getBoard().whitepieces);
-		game.play(white, black, 1, 5,0);
+		game.play(white, black, 10, 150,0);
 		
 		for(Outcome result:black.games){
 			System.out.println(result);

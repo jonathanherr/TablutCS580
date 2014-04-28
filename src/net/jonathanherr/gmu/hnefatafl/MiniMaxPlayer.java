@@ -15,8 +15,8 @@ import net.jonathanherr.gmu.minimax.TreeNode;
  */
 public class MiniMaxPlayer extends Player {
 	MiniMaxTree tree;
-	int searchDepth=2; //plies to search
-	int minMoveSize=4; //mechanism to restrict game to large movements, for testing. Set to 1 for normal movement.
+	int searchDepth=3; //plies to search
+	int minMoveSize=1; //mechanism to restrict game to large movements, for testing. Set to 1 for normal movement.
 	int currentDepth=0;
 	public MiniMaxPlayer(Hnefatafl game, ArrayList<Piece> pieces) {
 		super(game, pieces, "Minimax");

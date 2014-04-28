@@ -23,7 +23,7 @@ public class MiniMaxTree {
 	public Move choose(MiniMaxPlayer player,String color) {
 		this.player=player;
 		scoreTree(root);
-		DrawTree.write(this);
+		//DrawTree.write(this);
 		//player.printTree(root);
 		System.out.println(player.getColor() + " is moving " + root.getBestChild().getMove().getLength() + " steps " + root.getBestChild().getMove().getDirection() + " from " + root.getBestChild().getMove().getPiece().getRow() + "," + root.getBestChild().getMove().getPiece().getCol());
 		return root.getBestChild().getMove();
