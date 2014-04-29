@@ -20,7 +20,7 @@ public class RandomPlayer extends Player {
 	/**
 	 * Choose a random piece, a random length, and a random direction, and use that to move. Read board to choose valid, legal moves. 
 	 */
-	public Move turn(){
+	public Move turn(int turnNumber){
 		if(pieces.size()>0){
 			Piece movePiece=pieces.get(rand.nextInt(pieces.size()));
 			int moveLength=0;

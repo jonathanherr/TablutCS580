@@ -157,7 +157,7 @@ public class Hnefatafl {
 			double start=System.nanoTime();
 			while(turns<maxturns){
 				System.out.println("White's turn. Turn " + (turns+1));
-				Move whitemove=white.turn();
+				Move whitemove=white.turn(turns);
 				if(whitemove!=null)
 					getBoard().move(white,whitemove);
 				gameOver=getBoard().gameOver;
@@ -235,17 +235,29 @@ public class Hnefatafl {
 		
 		
 	}
+	/**
+	 * Start a game with one minimax player and one random player. 
+	 * @param game
+	 * @throws InterruptedException
+	 */
 	private static void playMinimax(Hnefatafl game) throws InterruptedException {
 		System.out.println(game.getBoard().toStateString());
 		RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
 		MiniMaxPlayer white = new MiniMaxPlayer(game,game.getBoard().whitepieces);
 		game.play(white, black, 10, 150,0);
 		
-		for(Outcome result:black.games){
-			System.out.println(result);
-		}
-		for(Outcome result:white.games){
-			System.out.println(result);
+		try {
+			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results.txt")));
+			for(Outcome result:black.games){
+				bw.write(result.toString());
+			}
+			for(Outcome result:white.games){
+				bw.write(result.toString());
+			}
+			bw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	private static void playRandom(Hnefatafl game) throws InterruptedException {

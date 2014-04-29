@@ -33,7 +33,7 @@ public class DrawTree {
          dialog.setVisible(true);
  }
 
- public static void write(MiniMaxTree tree){
+ public static void write(MiniMaxTree tree,int turn){
 	 // Generate the SVG and write it to System.out
 	 TreeForTreeLayout<TextInBox> gameTreeLayout = GameTreeFactory.createGameTree(tree);
 	 
@@ -52,7 +52,7 @@ public class DrawTree {
 	 SVGForTextInBoxTree generator = new SVGForTextInBoxTree(treeLayout);
     BufferedWriter bw;
 	try {
-		bw = new BufferedWriter(new FileWriter(new File("out.svg")));
+		bw = new BufferedWriter(new FileWriter(new File("out_"+turn+".svg")));
 		bw.write(generator.getSVG());
 		bw.close();
 	} catch (IOException e) {

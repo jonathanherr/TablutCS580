@@ -54,8 +54,11 @@ public class SVGForTextInBoxTree {
         private void generateBox(StringBuilder result, TextInBox textInBox) {
                 // draw the box in the background
                 Rectangle2D.Double box = getBoundsOfNode(textInBox);
+                String color="orange";
+                if(textInBox.on)
+                	color="blue";
                 result.append(SVGUtil.rect(box.x + 1, box.y + 1, box.width - 2, box.height - 2,
-                                "fill:orange; stroke:rgb(0,0,0);", "rx=\"10\""));
+                                "fill:"+color+"; stroke:rgb(0,0,0);", "rx=\"10\""));
 
                 // draw the text on top of the box (possibly multiple lines)
                 String[] lines = textInBox.text.split("\n");

@@ -20,10 +20,10 @@ public class MiniMaxTree {
 	/**
 	 * Score the leaves and propagate scores upward based on minimax
 	 */
-	public Move choose(MiniMaxPlayer player,String color) {
+	public Move choose(MiniMaxPlayer player,String color, int turnNumber) {
 		this.player=player;
 		scoreTree(root);
-		//DrawTree.write(this);
+		DrawTree.write(this,turnNumber);
 		//player.printTree(root);
 		System.out.println(player.getColor() + " is moving " + root.getBestChild().getMove().getLength() + " steps " + root.getBestChild().getMove().getDirection() + " from " + root.getBestChild().getMove().getPiece().getRow() + "," + root.getBestChild().getMove().getPiece().getCol());
 		return root.getBestChild().getMove();

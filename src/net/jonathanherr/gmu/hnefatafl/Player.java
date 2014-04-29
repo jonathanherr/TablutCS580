@@ -209,5 +209,9 @@ Player {
 	public String getColor() {
 		return color;
 	}
+	public Move turn(int turnNumber) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }
