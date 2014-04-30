@@ -31,7 +31,8 @@ public class RandomPlayer extends Player {
 				if(availLength>0){
 					moveLength=rand.nextInt(Math.max(availLength-1,1))+1;
 					Move move=new Move(movePiece,moveDir,moveLength);
-					System.out.println(this.getPieceColor() + " moves from " + movePiece.getRow()+","+movePiece.getCol() + " " + moveDir.toString() + " " + moveLength);
+					System.out.println(this.getPieceColor() + " is moving " + moveLength + " steps " +  moveDir.toString() + " from " + movePiece.getRow() + "," + movePiece.getCol());
+
 					moves.add(move);
 					return move;
 				}

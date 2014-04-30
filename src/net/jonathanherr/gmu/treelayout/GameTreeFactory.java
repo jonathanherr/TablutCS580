@@ -11,10 +11,12 @@ import net.jonathanherr.gmu.minimax.TreeNode;
 public class GameTreeFactory {
 	static int width=165;
 	static int height=185;
-
+	static boolean drawBoard=false;
 	public static TreeForTreeLayout<TextInBox> createGameTree(MiniMaxTree gametree){
-		
-		TextInBox root = new TextInBox(Board.getStateString("  ",gametree.root.getBoard())+"\n"+String.format("%.3f",gametree.root.getScore()) + " max?" + String.valueOf(gametree.root.isMax()), width, height);
+		String board="";
+		if(drawBoard)
+			board=Board.getStateString("  ",gametree.root.getBoard());
+		TextInBox root = new TextInBox(board+"\n"+String.format("%.3f",gametree.root.getScore()) + " max?" + String.valueOf(gametree.root.isMax()), width, height);
 		DefaultTreeForTreeLayout<TextInBox> tree = new DefaultTreeForTreeLayout<TextInBox>(root);
 		root.on=true;
 		addChildren(gametree.root, root, tree);

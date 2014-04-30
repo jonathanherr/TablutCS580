@@ -14,6 +14,8 @@ public class MiniMaxTree {
 		
 	}
 	public void setRoot(TreeNode node) {
+		if(root!=null && root.getChildren()!=null)
+			root.getChildren().clear();
 		this.root=node;
 		
 	}
@@ -22,13 +24,33 @@ public class MiniMaxTree {
 	 */
 	public Move choose(MiniMaxPlayer player,String color, int turnNumber) {
 		this.player=player;
+		player.found=0;
 		scoreTree(root);
-		DrawTree.write(this,turnNumber);
+		
+		System.out.println("states found in table:" + player.found);
+		//DrawTree.write(this,turnNumber);
 		//player.printTree(root);
+		System.out.println("best node score is " + root.getBestChild().getScore());
 		System.out.println(player.getColor() + " is moving " + root.getBestChild().getMove().getLength() + " steps " + root.getBestChild().getMove().getDirection() + " from " + root.getBestChild().getMove().getPiece().getRow() + "," + root.getBestChild().getMove().getPiece().getCol());
 		return root.getBestChild().getMove();
 	}
+	private double alphabeta(TreeNode node, double alpha, double beta) {
+		if(node.getChildren().size()==0) {
+			return evaluate(node);
+		}
+		if(node.isMax()) {
+			for(TreeLink link:node.getChildren()) {
+				
+			}
+			return alpha;
+		}
+		else {
 		
+			return beta;
+		}
+		
+			
+	}
 	private void scoreTree(TreeNode node) {
 		//DFS for leaf node, propagate back up
 		for(TreeLink link:node.getChildren()) {
@@ -41,9 +63,10 @@ public class MiniMaxTree {
 		double maxScore=Double.NEGATIVE_INFINITY,minScore=Double.POSITIVE_INFINITY;
 		TreeNode bestChild=null;
 		ArrayList<TreeNode> bestChildren=new ArrayList<TreeNode>();
+		
 		for(TreeLink link:node.getChildren()) {
 			if(node.isMax()){
-				if(link.getChild().getScore()>=maxScore){
+				if(link.getChild().getScore()>maxScore){
 					maxScore=link.getChild().getScore();
 					bestChild=link.getChild();
 					bestChildren.clear();
@@ -76,12 +99,16 @@ public class MiniMaxTree {
 			node.setScore(minScore);
 	
 	}
-	private void evaluate(TreeNode node) {
+	private double evaluate(TreeNode node) {
 		if(this.player.getColor().equals(node.getMove().getPiece().getName())){
-			node.setScore(this.player.evaluate(node.getState()));
+			double score=this.player.evaluate(node.getState());
+			node.setScore(score);
+			return score;
 		}
 		else{
-			node.setScore(this.player.evaluateOpponent(node.getState()));
+			double score=this.player.evaluateOpponent(node.getState());
+			node.setScore(score);
+			return score;
 		}
 		
 	}

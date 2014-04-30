@@ -10,15 +10,18 @@ import java.util.ArrayList;
 public class BoardState {
 	ArrayList<Piece> blackPieces;
 	ArrayList<Piece> whitePieces;
-	boolean gameOver=false;
+	private boolean gameOver=false;
 	String winner="";
 	int[][] board;
 	private Move move; //the move that created this state
+	public String statestring;
+	
 	
 	public BoardState(int[][] board, ArrayList<Piece> blackPieces,
 			ArrayList<Piece> whitePieces) {
 		super();
 		this.board = board;
+		//statestring=Board.getStateString("", board);
 		//TODO: possible memory saving change - calculate piece positions upon request by reading board state - slower probably
 		this.blackPieces = blackPieces;
 		this.whitePieces = whitePieces;
@@ -36,12 +39,10 @@ public class BoardState {
 	}
 	public int[] getKingLocation() {
 		int[] pos=new int[2];
-		for(int row=0;row<board.length;row++) {
-			for(int col=0;col<board[row].length;col++) {
-				if(board[row][col]==(int)'k') {
-					pos[0]=row;
-					pos[1]=col;
-				}
+		for(Piece piece:whitePieces) {
+			if(piece.value==(int)'k') {
+				pos[0]=piece.row;
+				pos[1]=piece.col;
 			}
 		}
 		return pos;
@@ -51,6 +52,14 @@ public class BoardState {
 	}
 	public void setMove(Move move) {
 		this.move=move;
+	}
+
+	public boolean isGameOver() {
+		return gameOver;
+	}
+
+	public void setGameOver(boolean gameOver) {
+		this.gameOver = gameOver;
 	}
 	
 }

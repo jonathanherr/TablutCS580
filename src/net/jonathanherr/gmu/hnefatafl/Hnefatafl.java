@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 
 import net.jonathanherr.gmu.hnefatafl.Player.Result;
@@ -77,6 +78,9 @@ public class Hnefatafl {
 		gameOver=false;
 		winner="";
 		board.reset();
+		board.gameOver=false;
+		board.winner="";
+		board.winResult=null;
 		readConfig(reloadConfig);
 		
 	}
@@ -146,8 +150,9 @@ public class Hnefatafl {
 	 */
 	public void play(Player white, Player black, int games, int maxturns, int delay) throws InterruptedException{
 		boolean debug=true;
-		white.setColor(getBoard().WHITE);
-		black.setColor(getBoard().BLACK);
+		getBoard().debug=debug;
+		white.setColor(Board.WHITE);
+		black.setColor(Board.BLACK);
 		this.setWhitePlayer(white);
 		this.setBlackPlayer(black);
 		for(int gameNum=0;gameNum<games;gameNum++){
@@ -165,7 +170,7 @@ public class Hnefatafl {
 				winResult=getBoard().winResult;
 				if(!gameOver) {
 					System.out.println("Black's turn. Turn " + (turns+1));
-					Move blackmove=black.turn();
+					Move blackmove=black.turn(turns);
 					if(blackmove!=null)
 						getBoard().move(black,blackmove);
 					gameOver=getBoard().gameOver;
@@ -174,16 +179,15 @@ public class Hnefatafl {
 				}
 				if(gameOver){
 					double end=System.nanoTime();
-					if(turns<3){
-						System.out.println(this.getBoard().toStateString());
-					}
-					if(winner.equals(getBoard().BLACK)){
-						white.addPlayedGame(gameid,false,getBoard().WHITE, turns, end-start,Result.LOSS);
-						black.addPlayedGame(gameid,true,getBoard().BLACK,turns,end-start,winResult);
+					
+					if(winner.equals(Board.BLACK)){
+						white.addPlayedGame(gameid,false,Board.WHITE, turns, end-start,Result.LOSS);
+						black.addPlayedGame(gameid,true,Board.BLACK,turns,end-start,winResult);
 					}
 					else{
-						black.addPlayedGame(gameid,false,getBoard().BLACK, turns, end-start,Result.LOSS);
-						white.addPlayedGame(gameid,true,getBoard().WHITE,turns,end-start,winResult);						
+						
+						black.addPlayedGame(gameid,false,Board.BLACK, turns, end-start,Result.LOSS);
+						white.addPlayedGame(gameid,true,Board.WHITE,turns,end-start,winResult);						
 					}
 					break;
 				}
@@ -195,15 +199,13 @@ public class Hnefatafl {
 				if(debug){
 					
 					System.out.println("Game:" + gameNum + "\tturn:"+turns);
-					System.out.println("Board Score White:" + white.evaluate(new BoardState(getBoard().getBoardGrid(),getBoard().getBlackpieces(),getBoard().getWhitepieces())));
-					System.out.println("Board Score Black:" + black.evaluate(new BoardState(getBoard().getBoardGrid(),getBoard().getBlackpieces(),getBoard().getWhitepieces())));
 					System.out.println(getBoard().toStateString());
 				}				
 			}
 			if(!gameOver){ //we ran out of turns
 				double end=System.nanoTime();
-				black.addPlayedGame(gameid, false, getBoard().BLACK, turns, end-start, Result.DRAW);
-				white.addPlayedGame(gameid, false, getBoard().WHITE, turns, end-start, Result.DRAW);
+				black.addPlayedGame(gameid, false, Board.BLACK, turns, end-start, Result.DRAW);
+				white.addPlayedGame(gameid, false, Board.WHITE, turns, end-start, Result.DRAW);
 			}
 			
 			//this.getBoard().saveState();
@@ -214,7 +216,7 @@ public class Hnefatafl {
 	 * tournament runner runs games and tracks statistics. 
 	 * @param rounds
 	 */
-	public void tournament(int rounds){
+	public void tournament(int rounds, Player white, Player black){
 		int blackWins=0;
 		int whiteWins=0;
 		for(int round=0;round<rounds;round++){
@@ -229,8 +231,11 @@ public class Hnefatafl {
 	public static void main(String... args) throws InterruptedException{
 		
 		Hnefatafl game=new Hnefatafl();
-		
-		playMinimax(game);
+		int searchDepth=3;
+		if(args.length>0)
+			searchDepth=Integer.valueOf(args[0]);
+		System.out.println("Playing minimax vs random with minimax depth of " + searchDepth);
+		playMinimax(game,searchDepth);
 		//playRandom(game);
 		
 		
@@ -240,14 +245,28 @@ public class Hnefatafl {
 	 * @param game
 	 * @throws InterruptedException
 	 */
-	private static void playMinimax(Hnefatafl game) throws InterruptedException {
+	private static void playMinimax(Hnefatafl game, int depth) throws InterruptedException {
 		System.out.println(game.getBoard().toStateString());
-		RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
+		//RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
+		NoopPlayer black = new NoopPlayer(game, game.getBoard().blackpieces,"noop");
+		ArrayList<Double> featureWeights=new ArrayList<Double>();
+		
 		MiniMaxPlayer white = new MiniMaxPlayer(game,game.getBoard().whitepieces);
-		game.play(white, black, 10, 150,0);
+		white.searchDepth=depth;
+		
+		for(int i=0;i<white.featureCount;i++)
+			featureWeights.add(1.0);
+		featureWeights.set(0, 10.0d);
+		featureWeights.set(4, 10.0d);
+		white.setFeatureWeights(featureWeights);
+		
+		int games=20;
+		int turns=150;
+		int delay=0;
+		game.play(white, black, games, turns,delay);
 		
 		try {
-			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results.txt")));
+			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_minimax_"+games+"_"+turns+".txt")));
 			for(Outcome result:black.games){
 				bw.write(result.toString());
 			}

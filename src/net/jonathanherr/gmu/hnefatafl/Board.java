@@ -35,6 +35,7 @@ public class Board {
 	String winner;
 	Result winResult;
 	boolean gameOver;
+	public boolean debug=false;
 	
 	public Board(Hnefatafl game){
 		this.game=game;
@@ -201,7 +202,7 @@ public class Board {
 				kingLocation[1]=newcol;
 			}
 			//System.out.println(this.toStateString());
-			findCaptures(move);
+			takeCaptures(move);
 			checkKingWin();
 			return true;
 		}
@@ -333,13 +334,32 @@ public class Board {
 				kingLoc[1]=piece.getCol();
 				for(int[] node:escapeNodes){
 					if(node[0]==kingLoc[0] && node[1]==kingLoc[1]){
-						System.out.println("White Wins");
+						if(debug)
+							System.out.println("White Wins");
 						win(piece,null,Result.KINGESCAPE);	
 					}
 				}				
 			}
 		}
 		
+	}
+	/**
+	 * Look at board and determine if there is a path to escape.
+	 * @param piece
+	 * @return
+	 */
+	public boolean kingHasPathToEscape(Piece piece) {
+		if(piece.getName().equals(KING_NAME)) {
+			for(int[] node:escapeNodes){
+				if(node[0]==piece.getRow()) { //in same row together, just check if empty in between columns
+					
+				}
+				else if(node[1]==piece.getCol()) { //in same col togheter, check if empty between rows
+					
+				}
+			}
+		}
+		return false;
 	}
 	/**
 	 * Cleanup after win condition is met, declare winner, set winner field and gameover flag. output final board state. 
@@ -351,7 +371,8 @@ public class Board {
 		
 		if(takenPiece!=null){
 			if(takenPiece.getName().equals(KING_NAME)){
-				System.out.println(takingPiece.getName() + " wins by capturing white's king");
+				if(debug)
+					System.out.println(takingPiece.getName() + " wins by capturing white's king");
 				getBoardGrid();
 				winner=Board.BLACK;
 				winResult=Result.KINGCAP;				
@@ -359,13 +380,15 @@ public class Board {
 		}
 		else{
 			if(takingPiece.getName().equals(WHITE) || takingPiece.getName().equals(KING_NAME)){
-				System.out.println("White wins by " + result);
+				if(debug)
+					System.out.println("White wins by " + result);
 				getBoardGrid();
 				this.winner=Board.WHITE;
 				winResult=result;
 			}
 			else{
-				System.out.println("Black wins by " + result);
+				if(debug)
+					System.out.println("Black wins by " + result);
 				getBoardGrid();
 				this.winner=Board.BLACK;
 				winResult=result;
@@ -376,6 +399,42 @@ public class Board {
 		
 		
 				
+	}
+	
+	public ArrayList<Piece> findCaptures(Piece piece) {
+		ArrayList<Piece> neighbors=new ArrayList<>();
+		ArrayList<Piece> captures=new ArrayList<>();
+		//look around piece to see if any piece nearby is an opponent, if so, go in that direction until a wall or another piece of the same color is found
+		//looking for a capture situation.
+		for(Direction dir:Direction.values()){
+			Piece neighbor=null;
+			neighbors.clear();
+			int rowInc=0,colInc=0,startrow=piece.getRow(),startcol=piece.getCol();
+			if(dir==Direction.UP || dir==Direction.DOWN)
+				rowInc=dir.value;
+			else if(dir==Direction.LEFT || dir==Direction.RIGHT)
+				colInc=dir.value;
+			
+			neighbor=this.getPieceAt(startrow+=rowInc, startcol+=colInc);
+			while(neighbor!=null && !neighbor.getName().equals(piece.getName()) &&  (!(piece.getName().equals(WHITE) 
+					&& neighbor.getName().equals(KING_NAME))) && !(neighbor.getName().equals(KING_NAME) 
+							&& neighbor.row==throne[0] && neighbor.col==throne[1])){
+				neighbors.add(neighbor);
+				neighbor=this.getPieceAt(startrow+=rowInc, startcol+=colInc); //returns null if no piece exists at given point. 	
+			}
+			//capture in two cases, we hit an empty square, and that square is a corner(escape) cell or we have surrounded opponents on two sides
+			if((neighbor!=null && 
+					((neighbor.getName().equals(piece.getName()) || (neighbor.getName().equals(WHITE) && piece.getName().equals(KING_NAME))) 
+					|| neighbor.getName().equals(KING_NAME) && piece.getName().equals(WHITE))) 
+					|| (neighbor==null && startrow<boardwidth && startcol<boardheight && getStateAt(startrow,startcol)==escape) 
+					&& !neighbors.isEmpty())
+			{
+				for(Piece opponentPiece: neighbors){
+					captures.add(opponentPiece);						
+				}
+			}
+		}
+		return captures;
 	}
 	/**
 	 * Captures must be deliberate so we only look for captures on a move.
@@ -389,39 +448,15 @@ public class Board {
 	 * 
 	 * @param move
 	 */
-	private void findCaptures(Move move){
+	private void takeCaptures(Move move){
 		Piece movedPiece=move.getPiece();
-		//look around piece to see if any piece nearby is an opponent, if so, go in that direction until a wall or another piece of the same color is found
-		//looking for a capture situation.
-		ArrayList<Piece> neighbors=new ArrayList<>();
-		for(Direction dir:Direction.values()){
-			Piece neighbor=null;
-			neighbors.clear();
-			int rowInc=0,colInc=0,startrow=movedPiece.getRow(),startcol=movedPiece.getCol();
-			if(dir==Direction.UP || dir==Direction.DOWN)
-				rowInc=dir.value;
-			else if(dir==Direction.LEFT || dir==Direction.RIGHT)
-				colInc=dir.value;
-			
-			neighbor=this.getPieceAt(startrow+=rowInc, startcol+=colInc);
-			while(neighbor!=null && !neighbor.getName().equals(movedPiece.getName()) &&  (!(movedPiece.getName().equals(WHITE) && neighbor.getName().equals(KING_NAME))) && !(neighbor.getName().equals(KING_NAME) && neighbor.row==throne[0] && neighbor.col==throne[1])){
-				neighbors.add(neighbor);
-				neighbor=this.getPieceAt(startrow+=rowInc, startcol+=colInc); //returns null if no piece exists at given point. 	
-			}
-			
-			//capture in two cases, we hit an empty square, and that square is a corner(escape) cell or we have surrounded opponents on two sides
-			if((neighbor!=null && 
-					((neighbor.getName().equals(movedPiece.getName()) || (neighbor.getName().equals(WHITE) && movedPiece.getName().equals(KING_NAME))) 
-					|| neighbor.getName().equals(KING_NAME) && movedPiece.getName().equals(WHITE))) 
-					|| (neighbor==null && startrow<boardwidth && startcol<boardheight && getStateAt(startrow,startcol)==escape) 
-					&& !neighbors.isEmpty())
-			{
-				for(Piece opponentPiece: neighbors){
-					take(movedPiece,opponentPiece);							
-				}
-			}
+		ArrayList<Piece> captures=findCaptures(movedPiece);
+		for(Piece opponentPiece: captures){
+			if(debug)
+				System.out.println(movedPiece.getName() + " takes " + opponentPiece.getName() + " at " + opponentPiece.getRow()+","+opponentPiece.getCol());
+			take(movedPiece,opponentPiece);							
 		}
-		
+	
 		
 	}
 
@@ -546,22 +581,24 @@ public class Board {
 		
 	}
 	public static String getStateString(String padding,int[][] board) {
-		String state=padding+"  ";
+		StringBuilder state=new StringBuilder();
+		state.append(padding+"  ");
+		
 		for(int i=0;i<boardwidth;i++){
-			state+=i+" ";
+			state.append(i+" ");
 		}
-		state+="\n"+padding+"0 ";
+		state.append("\n"+padding+"0 ");
 		
 		for(int row=0;row<boardwidth;row++){
 			for(int col=0;col<boardheight;col++){
-				state+=(char)board[row][col];
-				state+=" ";
+				state.append((char)board[row][col]);
+				state.append(" ");
 			}
 			if(row+1<boardwidth)
-			state+="\n"+padding+(row+1)+" ";
+			state.append("\n"+padding+(row+1)+" ");
 		}
-		state+="\n";
-		return state;
+		state.append("\n");
+		return state.toString();
 	}
 	/**
 	 * Output current board state as ascii grid of board matrix
