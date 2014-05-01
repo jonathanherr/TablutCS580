@@ -93,6 +93,7 @@ Player {
 	 * @return
 	 */
 	public int found=0;
+	private boolean debug=false;
 	public double evaluate(BoardState board) {
 		
 		ArrayList<Double> pieceScores=new ArrayList<>(); //for debug/tracking, not necessary
@@ -187,9 +188,16 @@ Player {
 			pieceScores.add(Double.NEGATIVE_INFINITY);
 			return;
 		}
+		if(this.debug)
+			System.out.println("scoring this:\n"+ Board.getStateString("", board.board));
 		for(Piece piece:board.getWhitepieces()) {
 			if(!piece.getName().equals(Board.KING_NAME)) {
 				double score=0.0d;
+				if(this.debug) {
+				System.out.println(piece.getRow() + ","+piece.getCol()+ " distance from corner:" + distanceFromCorner(piece));
+				System.out.println(piece.getRow() + ","+piece.getCol()+ " distance from king:" + distanceFromKing(board, piece));
+				System.out.println(piece.getRow() + ","+piece.getCol()+ " distance from opponent:" + distanceFromOpponent(board,game.getBoard().getBlackpieces(), piece));
+				}
 				score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get(0);
 				score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get(1);
 				score+=(1.0d/(double) distanceFromOpponent(board,game.getBoard().getBlackpieces(), piece))*featureWeights.get(2);
@@ -197,6 +205,9 @@ Player {
 			}
 			else {
 				pieceScores.add((1.0d/(double)distanceFromCorner(piece))*featureWeights.get(4));
+				if(pathToExit(board, piece)) {
+					pieceScores.add(25*featureWeights.get(6));
+				}
 			}
 			if(inCapture(board,piece)) {
 				pieceScores.add(5*featureWeights.get(5));

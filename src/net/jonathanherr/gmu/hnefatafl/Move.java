@@ -24,4 +24,8 @@ public class Move {
 		this.length=length;
 	}
 	
+	public String toString() {
+		return piece.getName() + " moving from " + piece.getRow()+","+piece.getCol() + " " + direction.toString() + " " + length;
+	}
+	
 }

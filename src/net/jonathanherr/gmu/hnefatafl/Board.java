@@ -195,6 +195,7 @@ public class Board {
 		}
 		if(this.isValid(move,newrow,newcol)){
 			board[move.getPiece().getRow()][move.getPiece().getCol()]=blank;
+			//this.getPieceAt(move.getPiece().getRow(), move.getPiece().getCol()).setPosition(newrow, newcol);
 			move.getPiece().setPosition(newrow,newcol);
 			board[newrow][newcol]=move.getPiece().toChar();
 			if(move.getPiece().getName().equals(KING_NAME)) {
@@ -228,14 +229,15 @@ public class Board {
 	 * @return
 	 */
 	public Piece getPieceAt(int row, int col){
-		for(Piece piece:blackpieces){
-			if(piece.getRow()==row && piece.getCol()==col)
-				return piece;
-		}
+		
 		for(Piece piece:whitepieces){
 			if(piece.getRow()==row && piece.getCol()==col){
 				return piece;
 			}
+		}
+		for(Piece piece:blackpieces){
+			if(piece.getRow()==row && piece.getCol()==col)
+				return piece;
 		}
 		return null;
 	}
@@ -451,6 +453,7 @@ public class Board {
 	private void takeCaptures(Move move){
 		Piece movedPiece=move.getPiece();
 		ArrayList<Piece> captures=findCaptures(movedPiece);
+		
 		for(Piece opponentPiece: captures){
 			if(debug)
 				System.out.println(movedPiece.getName() + " takes " + opponentPiece.getName() + " at " + opponentPiece.getRow()+","+opponentPiece.getCol());

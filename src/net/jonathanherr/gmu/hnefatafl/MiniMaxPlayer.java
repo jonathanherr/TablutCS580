@@ -113,9 +113,10 @@ public class MiniMaxPlayer extends Player {
 	private void generateStates(BoardState state, ArrayList<Piece> pieces, TreeNode parent) {
 		BoardState gameState=null;
 		int availMoves=0;
-		//TODO: calculate branching factor and record time spent on each turn
+		//TODO: calculate branching factor
+		int pieceIndex=0;
 		for(Piece piece:pieces) {
-			if(piece!=null)
+			if(piece!=null) {
 				for(Direction moveDir:Direction.values()) {
 					//TODO: figure out why availMoves is wrong(gave 4 instead of 3)
 					availMoves=piece.availLength(moveDir,game,state.board);
@@ -126,51 +127,42 @@ public class MiniMaxPlayer extends Player {
 						int[][] board = new int[Board.boardwidth][Board.boardheight];
 						ArrayList<Piece> blackPieces=new ArrayList<Piece>();
 						ArrayList<Piece> whitePieces=new ArrayList<Piece>();
-						if(piece.getName().equals(Board.BLACK))
-							Board.deepCopy(state.getBlackpieces(), blackPieces);
-						else
-							Board.deepCopy(state.getWhitepieces(), whitePieces);
 						
 						Board.copyBoard(state.getBoard(), board);
-						
-						Piece statePiece=null;
-						ArrayList<Piece> statePieces=null;
-						/**
-						 * Get a copy of the piece from the state list of pieces, which is a reference back to the real set of pieces and must be the one ultimately passed to the treenode with the move object and state.
-						 */
-						if(piece.getName().equals(Board.BLACK))
-							statePieces=state.getBlackpieces();
-						else
-							statePieces=state.getWhitepieces();
-						for(Piece bpiece:statePieces){
-							if(bpiece.row==piece.row && bpiece.col==piece.col)
-								statePiece=bpiece;
-						}
 						//when we do the simulated move, use a copy of the piece so that we don't update it's position in the 'real' set since we don't know which node the player will choose
-						Move move=new Move(piece.copy(),moveDir,availMoves);
-						
+						Move move=null;
 						Board simBoard=new Board(game);
 						simBoard.debug=false; //don't want output from simulated moves
 						simBoard.setBoard(board);
 						//System.out.println("before state move from " + piece.getRow()+","+piece.getCol() + " " + move.getDirection() + " " + move.getLength());
 						//System.out.println(simBoard.toStateString());
 						if(piece.getName().equals(Board.BLACK)) {
+							Board.deepCopy(state.getBlackpieces(), blackPieces);
 							simBoard.setBlackpieces(blackPieces);
 							simBoard.setWhitepieces(state.getWhitepieces());
+							move=new Move(blackPieces.get(pieceIndex),moveDir,availMoves);
+							
 						}
 						else {
+							Board.deepCopy(state.getWhitepieces(), whitePieces);
 							simBoard.setWhitepieces(whitePieces);
 							simBoard.setBlackpieces(state.getBlackpieces());
+							move=new Move(whitePieces.get(pieceIndex),moveDir,availMoves);							
 						}
+						
 						simBoard.move(this, move);
 						//System.out.println("after state move to " + statePiece.getRow()+","+statePiece.getCol() + " " + move.getDirection() + " " + move.getLength());
 						//System.out.println(simBoard.toStateString());
 						
 						gameState=new BoardState(simBoard.getBoardGrid(), simBoard.getBlackpieces(), simBoard.getWhitepieces());
-						gameState.setMove(new Move(statePiece,moveDir,availMoves)); //when we create the state's move object based on what was selected, use the piece that is the original piece so that it won't have been updated and is the object from the game board's state.
+						gameState.setMove(new Move(piece,moveDir,availMoves)); //when we create the state's move object based on what was selected, use the piece that is the original piece so that it won't have been updated and is the object from the game board's state.
 						gameState.winner=simBoard.winner;
 						gameState.setGameOver(simBoard.gameOver);
-						
+						if(simBoard.debug) {
+							System.out.println(move.toString());
+							
+							System.out.println("move score:" +this.evaluate(gameState) );
+						}
 						TreeNode node=new TreeNode(gameState);
 						node.setColor(piece.getName());
 						node.setLevel(parent.getLevel()+1);
@@ -178,7 +170,8 @@ public class MiniMaxPlayer extends Player {
 						availMoves-=1;
 					}
 				}
-			
+			}
+			pieceIndex+=1;
 		}
 		
 		/**
@@ -194,6 +187,9 @@ public class MiniMaxPlayer extends Player {
 					generateStates(childState,childState.getWhitepieces(),link.getChild());
 			}
 		}
+		
+	}
+	private void generateStates2(BoardState state, ArrayList<Piece> pieces, TreeNode parent) {
 		
 	}
 	/**

@@ -260,7 +260,7 @@ public class Hnefatafl {
 		featureWeights.set(4, 10.0d);
 		white.setFeatureWeights(featureWeights);
 		
-		int games=20;
+		int games=200;
 		int turns=150;
 		int delay=0;
 		game.play(white, black, games, turns,delay);
