@@ -212,7 +212,30 @@ public class testCaptures {
 		
 		
 	}
-
+	@Test
+	public void testKingCaptureOnThrone() throws InterruptedException {
+		 board=
+				  "x _ _ _ _ _ _ _ x \n"
+				+ "_ _ _ _ _ _ _ _ _ \n"
+				+ "_ _ _ _ _ _ _ _ _ \n"
+				+ "_ _ _ _ w _ _ _ _ \n"
+				+ "_ _ _ w k w _ _ _ \n"
+				+ "_ _ _ _ _ _ _ _ b \n"
+				+ "_ _ _ _ _ _ _ _ _ \n"
+				+ "_ _ _ _ _ _ _ _ _ \n"
+				+ "x _ _ _ _ _ _ _ x \n";
+		    game.getBoard().loadState(board);
+		    Move move=new Move(game.getBoard().getPieceAt(5, 8), Direction.LEFT, 4);
+		    
+		    System.out.println(game.getBoard().toStateString());			
+			game.getBoard().move(black, move);
+			System.out.println(game.getBoard().toStateString());			
+			
+			System.out.println("black captures:"+black.getCaptures());
+			Assert.assertTrue("black should have 0 captures", black.getCaptures()==0);
+			Assert.assertTrue("black should not win game.",!game.isGameOver());
+		
+	}
 
 	private void testMove(Move move) {
 		game.getBoard().loadState(board);

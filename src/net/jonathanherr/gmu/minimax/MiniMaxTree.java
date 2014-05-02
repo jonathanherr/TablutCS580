@@ -10,6 +10,8 @@ import net.jonathanherr.gmu.hnefatafl.Move;
 public class MiniMaxTree {
 	public TreeNode root;
 	private MiniMaxPlayer player;
+	public boolean useAlphaBeta=true;
+	private int nodesScored=0;
 	public MiniMaxTree() {
 		
 	}
@@ -22,34 +24,104 @@ public class MiniMaxTree {
 	/**
 	 * Score the leaves and propagate scores upward based on minimax
 	 */
-	public Move choose(MiniMaxPlayer player,String color, int turnNumber) {
+	public Move choose(MiniMaxPlayer player, int turnNumber, int depth) {
 		this.player=player;
-		player.found=0;
-		scoreTree(root);
+		nodesScored=0;
+		if(!useAlphaBeta)
+			minimax(root,depth,true);
+		else
+			alphabeta(root,depth,Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY,true);
+		System.out.println("Scored " + nodesScored + " nodes");
+		ArrayList<TreeNode> bestChoices=new ArrayList<>();
+		for(TreeLink link:root.getChildren()) {
+			if(link.getChild().getScore()==root.getScore())
+				bestChoices.add(link.getChild());
+		}
+		TreeNode bestChoice=bestChoices.get(new Random().nextInt(bestChoices.size()));
 		
-		System.out.println("states found in table:" + player.found);
+		
 		//DrawTree.write(this,turnNumber);
 		//player.printTree(root);
-		System.out.println("best node score is " + root.getBestChild().getScore());
-		System.out.println(player.getColor() + " is moving " + root.getBestChild().getMove().getLength() + " steps " + root.getBestChild().getMove().getDirection() + " from " + root.getBestChild().getMove().getPiece().getRow() + "," + root.getBestChild().getMove().getPiece().getCol());
-		return root.getBestChild().getMove();
+		System.out.println("best node score is " + bestChoice.getScore());
+		System.out.println(player.getColor() + " is moving " + bestChoice.getMove().getLength() + 
+				" steps " + bestChoice.getMove().getDirection() + " from " + bestChoice.getMove().getPiece().getRow() +
+				"," + bestChoice.getMove().getPiece().getCol());
+		return bestChoice.getMove();
 	}
-	private double alphabeta(TreeNode node, double alpha, double beta) {
-		if(node.getChildren().size()==0) {
-			return evaluate(node);
+	/**
+	 * alphabeta pruning implementation of minimax
+	 * @param node - current node
+	 * @param depth - cutoff
+	 * @param alpha - alpha value
+	 * @param beta - beta value
+	 * @param maximizingPlayer - whether we are on a max or min node
+	 * @return best score
+	 */
+	private double alphabeta(TreeNode node,int depth, double alpha, double beta, boolean maximizingPlayer) {
+		if(depth==0 || node.getChildren().size()==0) {
+			double bestValue=evaluate(node);
+			node.setScore(bestValue);
+			nodesScored+=1;
+			return bestValue;
 		}
-		if(node.isMax()) {
+		if(maximizingPlayer) {
 			for(TreeLink link:node.getChildren()) {
-				
+				nodesScored+=1;
+				alpha=Math.max(alpha,alphabeta(link.getChild(),depth-1,alpha,beta,false));
+				if(beta<=alpha)
+					break;
 			}
+			node.setScore(alpha);
 			return alpha;
 		}
 		else {
-		
+			for(TreeLink link:node.getChildren()) {
+				nodesScored+=1;
+				beta=Math.min(beta,alphabeta(link.getChild(),depth-1,alpha,beta,true));	
+				if(beta<=alpha)
+					break;
+			}
+			node.setScore(beta);
 			return beta;
 		}
 		
 			
+	}
+	/**
+	 * Standard minimax
+	 * @param node - the node to be evaluated
+	 * @param depth - the depth at which to stop for evaluation - cutoff
+	 * @param maximizingPlayer - whether or not the caller is the maximizing player
+	 * @return the preferred node which represents the best score from tree
+	 */
+	private double minimax(TreeNode node, int depth, boolean maximizingPlayer) {
+		if(depth==0 || node.getChildren().size()==0) {
+			double bestValue=evaluate(node);
+			node.setScore(bestValue);
+			nodesScored+=1;
+			return node.getScore();
+		}
+		if(maximizingPlayer) {
+			double bestValue=Double.NEGATIVE_INFINITY;
+			for(TreeLink link:node.getChildren()) {
+				nodesScored+=1;
+				double val=minimax(link.getChild(),depth-1,false);
+				bestValue=Math.max(bestValue,val);
+			}
+			node.setScore(bestValue);
+			
+			return bestValue;
+		}
+		else {
+			double bestValue=Double.POSITIVE_INFINITY;
+			for(TreeLink link:node.getChildren()) {
+				nodesScored+=1;
+				double val=minimax(link.getChild(),depth-1,true);
+				bestValue=Math.min(bestValue,val);	
+			}
+			node.setScore(bestValue);
+			return bestValue;
+		}
 	}
 	private void scoreTree(TreeNode node) {
 		//DFS for leaf node, propagate back up

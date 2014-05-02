@@ -42,7 +42,7 @@ public class MiniMaxPlayer extends Player {
 		generateStates(currentState,pieces,tree.root);
 		System.out.println("Generated states:" + totalMoves);
 		//printTree(node);
-		Move chosenMove= tree.choose(this,this.getPieceColor(),turnNumber);
+		Move chosenMove= tree.choose(this,turnNumber,searchDepth);
 		long end=System.nanoTime();
 		System.out.println(this.getColor() + " turn time:"+((end-start)/1000000000.0d)+"(s)");
 		
@@ -189,9 +189,7 @@ public class MiniMaxPlayer extends Player {
 		}
 		
 	}
-	private void generateStates2(BoardState state, ArrayList<Piece> pieces, TreeNode parent) {
-		
-	}
+	
 	/**
 	 * For the time being, call the basic evaluation method
 	 */

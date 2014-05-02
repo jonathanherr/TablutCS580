@@ -202,7 +202,7 @@ public class Board {
 				kingLocation[0]=newrow;
 				kingLocation[1]=newcol;
 			}
-			//System.out.println(this.toStateString());
+			System.out.println(this.toStateString());
 			takeCaptures(move);
 			checkKingWin();
 			return true;
@@ -402,7 +402,11 @@ public class Board {
 		
 				
 	}
-	
+	/**
+	 * Search for captures and return list of pieces to be captured
+	 * @param piece
+	 * @return
+	 */
 	public ArrayList<Piece> findCaptures(Piece piece) {
 		ArrayList<Piece> neighbors=new ArrayList<>();
 		ArrayList<Piece> captures=new ArrayList<>();
@@ -421,6 +425,8 @@ public class Board {
 			while(neighbor!=null && !neighbor.getName().equals(piece.getName()) &&  (!(piece.getName().equals(WHITE) 
 					&& neighbor.getName().equals(KING_NAME))) && !(neighbor.getName().equals(KING_NAME) 
 							&& neighbor.row==throne[0] && neighbor.col==throne[1])){
+				if(neighbor.getName().equals(KING_NAME) && neighbor.row==throne[0] && neighbor.col==throne[1])
+					System.out.println("catching king at home");
 				neighbors.add(neighbor);
 				neighbor=this.getPieceAt(startrow+=rowInc, startcol+=colInc); //returns null if no piece exists at given point. 	
 			}

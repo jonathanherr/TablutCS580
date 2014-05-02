@@ -248,9 +248,9 @@ public class Hnefatafl {
 	private static void playMinimax(Hnefatafl game, int depth) throws InterruptedException {
 		System.out.println(game.getBoard().toStateString());
 		//RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
-		NoopPlayer black = new NoopPlayer(game, game.getBoard().blackpieces,"noop");
+		//NoopPlayer black = new NoopPlayer(game, game.getBoard().blackpieces,"noop");
 		ArrayList<Double> featureWeights=new ArrayList<Double>();
-		
+		MiniMaxPlayer black = new MiniMaxPlayer(game, game.getBoard().blackpieces);
 		MiniMaxPlayer white = new MiniMaxPlayer(game,game.getBoard().whitepieces);
 		white.searchDepth=depth;
 		
@@ -260,8 +260,8 @@ public class Hnefatafl {
 		featureWeights.set(4, 10.0d);
 		white.setFeatureWeights(featureWeights);
 		
-		int games=200;
-		int turns=150;
+		int games=1;
+		int turns=50;
 		int delay=0;
 		game.play(white, black, games, turns,delay);
 		

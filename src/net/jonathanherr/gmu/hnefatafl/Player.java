@@ -97,33 +97,17 @@ Player {
 	public double evaluate(BoardState board) {
 		
 		ArrayList<Double> pieceScores=new ArrayList<>(); //for debug/tracking, not necessary
-		//String boardstring=board.statestring;
 		if(this.getPieceColor().equals(Board.WHITE)) {
-			//pieceScores=transposeTable.get(boardstring);
-			//if(pieceScores==null) {
-			//	pieceScores=new ArrayList<>();
-				evaluateWhite(board, pieceScores);
-			//	transposeTable.put(boardstring, pieceScores);
-			//}
-			//else {
-			//	found+=1;
-			//}
-			
+			evaluateWhite(board, pieceScores);
 		}
 		else if(this.getPieceColor().equals(Board.BLACK)) {
-			//if(!transposeTable.containsKey(boardstring)) {
-				evaluateBlack(board, pieceScores);
-			//	transposeTable.put(boardstring, pieceScores);
-			//}
-			//else
-			//	pieceScores=transposeTable.get(boardstring);
+			evaluateBlack(board, pieceScores);
 		}
 		
 		double totalScore=0.0d;
 		for(Double score:pieceScores) {
 			totalScore+=score;
 		}
-		//System.out.println("Score:" + totalScore);
 		
 		return totalScore;
 	}
@@ -148,7 +132,6 @@ Player {
 		
 		return totalScore;
 	}
-	//TODO: must also evaluate opponent pieces b/c if say, the king is close to the corner and player is black, that board is lower value than another
 	private void evaluateBlack(BoardState board, ArrayList<Double> pieceScores) {
 		
 		if(board.isGameOver() && board.winner.equals("white"))
@@ -206,11 +189,11 @@ Player {
 			else {
 				pieceScores.add((1.0d/(double)distanceFromCorner(piece))*featureWeights.get(4));
 				if(pathToExit(board, piece)) {
-					pieceScores.add(25*featureWeights.get(6));
+					pieceScores.add(1*featureWeights.get(6));
 				}
 			}
 			if(inCapture(board,piece)) {
-				pieceScores.add(5*featureWeights.get(5));
+				pieceScores.add(1*featureWeights.get(5));
 			}
 		}
 		pieceScores.add(board.getWhitepieces().size()*featureWeights.get(3)); //overall board position scores go in the last field of the piecescores list
