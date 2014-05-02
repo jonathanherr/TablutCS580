@@ -1,12 +1,19 @@
 package net.jonathanherr.gmu.hnefatafl;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import net.jonathanherr.gmu.hnefatafl.Board.Direction;
 import net.jonathanherr.gmu.minimax.MiniMaxTree;
 import net.jonathanherr.gmu.minimax.TreeLink;
 import net.jonathanherr.gmu.minimax.TreeNode;
+
+import com.google.common.io.Files;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.Expose;
 /**
  * Player generates a decision tree and applies minimax algorithm to states based on evaluation of tree value at depth defined by searchDepth property. 
  * 
@@ -15,7 +22,9 @@ import net.jonathanherr.gmu.minimax.TreeNode;
  */
 public class MiniMaxPlayer extends Player {
 	MiniMaxTree tree;
+	@Expose
 	int searchDepth=3; //plies to search
+	@Expose
 	int minMoveSize=1; //mechanism to restrict game to large movements, for testing. Set to 1 for normal movement.
 	int currentDepth=0;
 	public MiniMaxPlayer(Hnefatafl game, ArrayList<Piece> pieces) {
@@ -30,22 +39,17 @@ public class MiniMaxPlayer extends Player {
 		long start=System.nanoTime();
 		BoardState currentState=new BoardState(game.getBoard().board, game.getBoard().getBlackpieces(), game.getBoard().getWhitepieces());
 		TreeNode node=new TreeNode(currentState);
-		System.out.println(game.getBoard().toStateString());
+		//System.out.println(game.getBoard().toStateString());
 		node.setColor(this.pieces.get(0).getName());
-		tree.setRoot(node);
-		ArrayList<Piece> pieces;
-		if(this.getColor().equals(Board.BLACK))
-			pieces=currentState.getBlackpieces();
-		else
-			pieces=currentState.getWhitepieces();
+		tree.setRoot(node);		
 		totalMoves=0;
-		generateStates(currentState,pieces,tree.root);
+		generateStates(currentState,this.pieces,tree.root);
 		System.out.println("Generated states:" + totalMoves);
 		//printTree(node);
 		Move chosenMove= tree.choose(this,turnNumber,searchDepth);
 		long end=System.nanoTime();
 		System.out.println(this.getColor() + " turn time:"+((end-start)/1000000000.0d)+"(s)");
-		
+		this.moves.add(chosenMove);
 		return chosenMove;
 	}
 	/**
@@ -124,29 +128,31 @@ public class MiniMaxPlayer extends Player {
 					
 					while (availMoves>=minMoveSize) {
 						//generate a state for each step in this direction
-						int[][] board = new int[Board.boardwidth][Board.boardheight];
+						int[][] boardGrid = new int[Board.boardwidth][Board.boardheight];
 						ArrayList<Piece> blackPieces=new ArrayList<Piece>();
 						ArrayList<Piece> whitePieces=new ArrayList<Piece>();
 						
-						Board.copyBoard(state.getBoard(), board);
+						Board.copyBoard(state.getBoard(), boardGrid);
 						//when we do the simulated move, use a copy of the piece so that we don't update it's position in the 'real' set since we don't know which node the player will choose
 						Move move=null;
-						Board simBoard=new Board(game);
+						Board simBoard=new Board();
 						simBoard.debug=false; //don't want output from simulated moves
-						simBoard.setBoard(board);
+						simBoard.setBoard(boardGrid);
 						//System.out.println("before state move from " + piece.getRow()+","+piece.getCol() + " " + move.getDirection() + " " + move.getLength());
 						//System.out.println(simBoard.toStateString());
+						Board.deepCopy(state.getBlackpieces(), blackPieces);
+						Board.deepCopy(state.getWhitepieces(), whitePieces);
 						if(piece.getName().equals(Board.BLACK)) {
-							Board.deepCopy(state.getBlackpieces(), blackPieces);
+							
 							simBoard.setBlackpieces(blackPieces);
-							simBoard.setWhitepieces(state.getWhitepieces());
+							simBoard.setWhitepieces(whitePieces);
 							move=new Move(blackPieces.get(pieceIndex),moveDir,availMoves);
 							
 						}
 						else {
-							Board.deepCopy(state.getWhitepieces(), whitePieces);
+							
 							simBoard.setWhitepieces(whitePieces);
-							simBoard.setBlackpieces(state.getBlackpieces());
+							simBoard.setBlackpieces(blackPieces);
 							move=new Move(whitePieces.get(pieceIndex),moveDir,availMoves);							
 						}
 						
@@ -189,7 +195,12 @@ public class MiniMaxPlayer extends Player {
 		}
 		
 	}
-	
+		
+	public static Player openPlayer(String path) throws IOException{
+		Gson gson=new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+		String json = Files.toString(new File(path), Charset.forName("UTF-8"));
+		return gson.fromJson(json, MiniMaxPlayer.class);		
+	}
 	/**
 	 * For the time being, call the basic evaluation method
 	 */

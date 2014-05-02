@@ -8,7 +8,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Random;
+
+import com.google.common.collect.ImmutableMap;
 
 import net.jonathanherr.gmu.hnefatafl.Player.Result;
 
@@ -35,6 +38,7 @@ public class Hnefatafl {
 	private Player whitePlayer;
 	private Player blackPlayer;
 	private Board board;
+	private String setupfile;
 	
 	/**
 	 * Accessors
@@ -66,8 +70,10 @@ public class Hnefatafl {
 	 * Constructor - reset the board to initial state as read from config file. 
 	 */
 	public Hnefatafl(){
-		board=new Board(this);
+		board=new Board();
+		setupfile="setup7x7.cfg";
 		reset(true);
+		
 	}
 
 	/**
@@ -94,7 +100,7 @@ public class Hnefatafl {
 		String boardstate="";
 		try {
 			if(reloadConfig){
-				BufferedReader props=new BufferedReader(new FileReader(new File("setup.cfg")));
+				BufferedReader props=new BufferedReader(new FileReader(new File(this.setupfile)));
 				String header=props.readLine();
 				String[] fields=header.split(",");
 				for(String field:fields){
@@ -165,6 +171,7 @@ public class Hnefatafl {
 				Move whitemove=white.turn(turns);
 				if(whitemove!=null)
 					getBoard().move(white,whitemove);
+				this.whitePlayer.captures+=getBoard().getWhiteCaptures();
 				gameOver=getBoard().gameOver;
 				winner=getBoard().winner;
 				winResult=getBoard().winResult;
@@ -173,6 +180,7 @@ public class Hnefatafl {
 					Move blackmove=black.turn(turns);
 					if(blackmove!=null)
 						getBoard().move(black,blackmove);
+					blackPlayer.captures+=getBoard().getBlackCaptures();
 					gameOver=getBoard().gameOver;
 					winner=getBoard().winner;
 					winResult=getBoard().winResult;
@@ -210,6 +218,16 @@ public class Hnefatafl {
 			
 			//this.getBoard().saveState();
 		}
+		this.getWhitePlayer().save("minimax_white.plr");
+		this.getBlackPlayer().save("minimax_black.plr");
+		try {
+			this.setWhitePlayer(Player.openPlayer("minimax_white.plr"));
+			this.setBlackPlayer(Player.openPlayer("minimax_black.plr"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 	/**
@@ -247,21 +265,21 @@ public class Hnefatafl {
 	 */
 	private static void playMinimax(Hnefatafl game, int depth) throws InterruptedException {
 		System.out.println(game.getBoard().toStateString());
-		//RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
+		RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
 		//NoopPlayer black = new NoopPlayer(game, game.getBoard().blackpieces,"noop");
-		ArrayList<Double> featureWeights=new ArrayList<Double>();
-		MiniMaxPlayer black = new MiniMaxPlayer(game, game.getBoard().blackpieces);
+		//MiniMaxPlayer black = new MiniMaxPlayer(game, game.getBoard().blackpieces);
 		MiniMaxPlayer white = new MiniMaxPlayer(game,game.getBoard().whitepieces);
 		white.searchDepth=depth;
 		
-		for(int i=0;i<white.featureCount;i++)
-			featureWeights.add(1.0);
-		featureWeights.set(0, 10.0d);
-		featureWeights.set(4, 10.0d);
+		ImmutableMap<String, Double> featureWeights=new ImmutableMap.Builder<String,Double>().
+				put("kingdist",1.0).put("piecedist",1.0).put("cornerdist",1.0).
+				put("numpieces",1.0).put("incapture",1.0).put("escaperoute",1.0).build();
+				
 		white.setFeatureWeights(featureWeights);
+		black.setFeatureWeights(featureWeights);
 		
-		int games=1;
-		int turns=50;
+		int games=100;
+		int turns=100;
 		int delay=0;
 		game.play(white, black, games, turns,delay);
 		

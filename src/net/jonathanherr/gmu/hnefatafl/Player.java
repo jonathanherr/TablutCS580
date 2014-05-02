@@ -1,7 +1,17 @@
 package net.jonathanherr.gmu.hnefatafl;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+
+import com.google.common.collect.ImmutableMap;
+import com.google.common.io.Files;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.Expose;
 
 /**
  * basic player class. supports basic operations for controlling any piece on the board. 
@@ -9,25 +19,34 @@ import java.util.HashMap;
  *
  */
 public abstract class 
-Player {
+Player {	
 	enum Result {KINGCAP, KINGESCAPE, ALLCAP, LOSS, WIN, DRAW};
+	
 	protected ArrayList<Move> moves;
+	
 	protected Hnefatafl game;
 	protected ArrayList<Piece> pieces;
-	protected ArrayList<Outcome> games; 
-	protected ArrayList<Double> featureWeights;
+	protected ArrayList<Outcome> games;
+	@Expose	
+	protected ImmutableMap<String,Double> featureWeights;
 	
 	protected HashMap<String,ArrayList<Double>> transposeTable;
+	
+	@Expose	
 	protected int featureCount=7; //dist from king, dist from corner, dist from opponent, number pieces remaining, part of a capture, king can see escape
+	@Expose	
 	protected int captures;
+	@Expose	
 	private int wins;
+	@Expose	
 	private String type;
+	@Expose	
 	private String color;
 	
-	public ArrayList<Double> getFeatureWeights() {
+	public Map<String,Double> getFeatureWeights() {
 		return featureWeights;
 	}
-	public void setFeatureWeights(ArrayList<Double> featureWeights) {
+	public void setFeatureWeights(ImmutableMap<String, Double> featureWeights) {
 		this.featureWeights = featureWeights;
 	}
 	public ArrayList<Move> getMoves() {
@@ -56,11 +75,12 @@ Player {
 		this.type=name;
 		transposeTable=new HashMap<String,ArrayList<Double>>();
 		moves=new ArrayList<Move>();
-		games=new ArrayList<Outcome>();
-		featureWeights=new ArrayList<Double>();
-		for(int feature=0;feature<featureCount;feature++) {
-			featureWeights.add(1.0d);
-		}
+		games=new ArrayList<Outcome>();		
+		Map<String,Double> featureWeights=new ImmutableMap.Builder<String,Double>().put("kingdist",1.0).
+				put("piecedist",1.0).put("cornerdist",1.0).put("numpieces",1.0).put("incapture",1.0).
+				put("escaperoute",1.0).build();
+		
+		
 	}
 	public Move turn(){
 		return null;
@@ -147,12 +167,12 @@ Player {
 		
 		for(Piece piece:board.getBlackpieces()) {
 			double score=0.0d;
-			score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get(0);
-			score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get(1);
-			score+=(1.0d/(double) distanceFromOpponent(board,game.getBoard().getWhitepieces(), piece))*featureWeights.get(2);
+			score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get("cornerdist");
+			score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get("kingdist");
+			score+=(1.0d/(double) distanceFromOpponent(board,game.getBoard().getWhitepieces(), piece))*featureWeights.get("piecedist");
 			pieceScores.add(score);
 		}
-		pieceScores.add(board.getBlackpieces().size()*featureWeights.get(3)); //overall board position scores go in the last field of the piecescores list
+		pieceScores.add(board.getBlackpieces().size()*featureWeights.get("numpieces")); //overall board position scores go in the last field of the piecescores list
 		
 		
 		
@@ -177,26 +197,26 @@ Player {
 			if(!piece.getName().equals(Board.KING_NAME)) {
 				double score=0.0d;
 				if(this.debug) {
-				System.out.println(piece.getRow() + ","+piece.getCol()+ " distance from corner:" + distanceFromCorner(piece));
-				System.out.println(piece.getRow() + ","+piece.getCol()+ " distance from king:" + distanceFromKing(board, piece));
-				System.out.println(piece.getRow() + ","+piece.getCol()+ " distance from opponent:" + distanceFromOpponent(board,game.getBoard().getBlackpieces(), piece));
+					System.out.println(piece.getRow() + ","+piece.getCol()+ " distance from corner:" + distanceFromCorner(piece));
+					System.out.println(piece.getRow() + ","+piece.getCol()+ " distance from king:" + distanceFromKing(board, piece));
+					System.out.println(piece.getRow() + ","+piece.getCol()+ " distance from opponent:" + distanceFromOpponent(board,game.getBoard().getBlackpieces(), piece));
 				}
-				score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get(0);
-				score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get(1);
-				score+=(1.0d/(double) distanceFromOpponent(board,game.getBoard().getBlackpieces(), piece))*featureWeights.get(2);
+				score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get("cornerdist");
+				score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get("kingdist");
+				score+=(1.0d/(double) distanceFromOpponent(board,game.getBoard().getBlackpieces(), piece))*featureWeights.get("piecedist");
 				pieceScores.add(score);
 			}
 			else {
-				pieceScores.add((1.0d/(double)distanceFromCorner(piece))*featureWeights.get(4));
+				pieceScores.add((1.0d/(double)distanceFromCorner(piece))*featureWeights.get("cornerdist"));
 				if(pathToExit(board, piece)) {
-					pieceScores.add(1*featureWeights.get(6));
+					pieceScores.add(1*featureWeights.get("escaperoute"));
 				}
 			}
 			if(inCapture(board,piece)) {
-				pieceScores.add(1*featureWeights.get(5));
+				pieceScores.add(1*featureWeights.get("incapture"));
 			}
 		}
-		pieceScores.add(board.getWhitepieces().size()*featureWeights.get(3)); //overall board position scores go in the last field of the piecescores list
+		pieceScores.add(board.getWhitepieces().size()*featureWeights.get("numpieces")); //overall board position scores go in the last field of the piecescores list
 		
 	}
 	/**
@@ -245,7 +265,7 @@ Player {
 	 * @return
 	 */
 	protected boolean inCapture(BoardState board, Piece piece) {
-		Board simBoard=new Board(game);
+		Board simBoard=new Board();
 		simBoard.setBlackpieces(board.getBlackpieces());
 		simBoard.setWhitepieces(board.getWhitepieces());
 		simBoard.setBoard(board.board);
@@ -276,6 +296,23 @@ Player {
 	public Move turn(int turnNumber) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public static Player openPlayer(String path) throws IOException{
+		return null;
+		
+	}
+	public void save(String path){
+		Gson gson=new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+		String json=gson.toJson(this);
+		try {
+			Files.write(json, new File(path), Charset.forName("UTF8"));			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 	}
 	
 }

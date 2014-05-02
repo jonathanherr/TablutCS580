@@ -29,16 +29,16 @@ public class Board {
 	int[] throne={4,4};
 	int[][] board;
 	ArrayList<int[]> escapeNodes=new ArrayList<int[]>();
-	private int[] kingLocation=new int[2];
-	private Hnefatafl game;
+	private int[] kingLocation=new int[2];	
 	String initstate;
 	String winner;
 	Result winResult;
 	boolean gameOver;
 	public boolean debug=false;
+	private int blackCaptures;
+	private int whiteCaptures;
 	
-	public Board(Hnefatafl game){
-		this.game=game;
+	public Board(){
 		board=new int[][]{};
 		initstate="";
 	}
@@ -202,7 +202,7 @@ public class Board {
 				kingLocation[0]=newrow;
 				kingLocation[1]=newcol;
 			}
-			System.out.println(this.toStateString());
+			//System.out.println(this.toStateString());
 			takeCaptures(move);
 			checkKingWin();
 			return true;
@@ -319,7 +319,7 @@ public class Board {
 	public static void deepCopy(ArrayList<Piece> pieces,
 			ArrayList<Piece> simPieces) {
 		for(Piece piece:pieces) {
-			simPieces.add(piece.copy());
+			simPieces.add(new Piece(piece.row,piece.col,piece.value));
 		}
 		
 	}
@@ -487,12 +487,10 @@ public class Board {
 			if(takenPiece.value==this.king){
 				win(attackingPiece,takenPiece,Result.KINGCAP);
 			}
-			game.blackCaptures+=1;	
-			game.getBlackPlayer().captures+=1;
+			this.setBlackCaptures(this.getBlackCaptures() + 1);				
 		}
 		else{
-			game.whiteCaptures+=1;
-			game.getWhitePlayer().captures+=1;
+			this.setWhiteCaptures(this.getWhiteCaptures() + 1);
 		}
 		
 	}
@@ -615,5 +613,21 @@ public class Board {
 	 */
 	public String toStateString(){
 		return getStateString("",this.board);
+	}
+
+	public int getWhiteCaptures() {
+		return whiteCaptures;
+	}
+
+	public void setWhiteCaptures(int whiteCaptures) {
+		this.whiteCaptures = whiteCaptures;
+	}
+
+	public int getBlackCaptures() {
+		return blackCaptures;
+	}
+
+	public void setBlackCaptures(int blackCaptures) {
+		this.blackCaptures = blackCaptures;
 	}
 }

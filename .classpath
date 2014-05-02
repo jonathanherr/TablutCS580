@@ -5,5 +5,7 @@
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/org.abego.treelayout.core.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="lib/guava-17.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
