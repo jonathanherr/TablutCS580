@@ -1,1 +1,3964 @@
 Playing minimax vs random with minimax depth of 3
+White's turn. Turn 1
+Avg. Branching Factor:22.870967741935484
+Generated states:21270
+Tree Height:3
+Scored 6793 nodes
+best node score is 12.253500451204474
+white is moving 2 steps LEFT from 5,3
+white turn time:0.318878811(s)
+Black's turn. Turn 1
+Avg. Branching Factor:24.087786259541986
+Generated states:25244
+Tree Height:3
+Scored 18378 nodes
+best node score is 67.75350045120447
+black is moving 2 steps RIGHT from 5,1
+black turn time:0.223347013(s)
+Game:0	turn:1
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k w b b 
+4 b _ _ w _ _ b 
+5 _ _ _ w _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 2
+Avg. Branching Factor:11.435483870967742
+Generated states:21270
+Tree Height:3
+Scored 6793 nodes
+best node score is 12.253500451204474
+white is moving 1 steps DOWN from 3,4
+white turn time:0.086567686(s)
+Black's turn. Turn 2
+Avg. Branching Factor:10.733027054619704
+Generated states:21026
+Tree Height:3
+Scored 5025 nodes
+best node score is 67.75350045120447
+black is moving 1 steps RIGHT from 5,3
+black turn time:0.044783177(s)
+Game:0	turn:2
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b _ _ w w _ b 
+5 _ _ _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 3
+Avg. Branching Factor:7.6570083303151035
+Generated states:21141
+Tree Height:3
+Scored 5741 nodes
+best node score is 26.822215284715284
+white is moving 2 steps LEFT from 4,3
+white turn time:0.26842672(s)
+Black's turn. Turn 3
+Avg. Branching Factor:9.35656836461126
+Generated states:27920
+Tree Height:3
+Scored 8068 nodes
+best node score is 54.74801133215858
+black is moving 1 steps UP from 4,4
+black turn time:0.078146786(s)
+Game:0	turn:3
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k w b b 
+4 b w _ _ _ _ b 
+5 _ _ _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 4
+Avg. Branching Factor:7.027975719187121
+Generated states:26629
+Tree Height:3
+Scored 6119 nodes
+best node score is 26.278384024853267
+white is moving 1 steps UP from 3,4
+white turn time:0.065259958(s)
+Black's turn. Turn 4
+Avg. Branching Factor:6.885685884691849
+Generated states:27708
+Tree Height:3
+Scored 23050 nodes
+best node score is 53.418550207419536
+black is moving 1 steps UP from 2,4
+black turn time:0.411326172(s)
+Game:0	turn:4
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b w _ _ _ _ b 
+5 _ _ _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 5
+Avg. Branching Factor:6.721165520032375
+Generated states:33216
+Tree Height:3
+Scored 17189 nodes
+best node score is 26.254787494453666
+white is moving 1 steps DOWN from 3,3
+white turn time:0.094294725(s)
+Black's turn. Turn 5
+Avg. Branching Factor:6.225205801646413
+Generated states:31761
+Tree Height:3
+Scored 12588 nodes
+best node score is 51.75058552011523
+black is moving 1 steps DOWN from 4,1
+black turn time:0.139424282(s)
+Game:0	turn:5
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k _ _ b 
+5 _ w _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 6
+Avg. Branching Factor:5.887469287469288
+Generated states:35943
+Tree Height:3
+Scored 7780 nodes
+best node score is 26.74617333772546
+white is moving 1 steps LEFT from 5,1
+white turn time:0.567982253(s)
+Black's turn. Turn 6
+Avg. Branching Factor:5.521593090211132
+Generated states:34521
+Tree Height:3
+Scored 7984 nodes
+best node score is 62.41691067282365
+black is moving 3 steps UP from 5,4
+black turn time:0.081716523(s)
+Game:0	turn:6
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ w w _ b 
+3 b b w _ _ b b 
+4 b _ _ k _ _ b 
+5 w _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 7
+Avg. Branching Factor:3.4669332952435368
+Generated states:24272
+Tree Height:3
+Scored 4715 nodes
+best node score is 26.75118746440333
+white is moving 4 steps RIGHT from 5,0
+white turn time:0.044029936(s)
+Black's turn. Turn 7
+Avg. Branching Factor:3.45157689087357
+Generated states:24734
+Tree Height:3
+Scored 7666 nodes
+best node score is 57.916509926229516
+black is moving 1 steps UP from 5,4
+black turn time:0.051549147(s)
+Game:0	turn:7
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ w w _ b 
+3 b b w _ _ b b 
+4 b _ _ k w _ b 
+5 _ _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 8
+Avg. Branching Factor:1.7509191176470589
+Generated states:13335
+Tree Height:3
+Scored 3352 nodes
+best node score is 26.808903596403596
+white is moving 1 steps DOWN from 4,4
+white turn time:0.026499407(s)
+Black's turn. Turn 8
+Avg. Branching Factor:3.0611386138613863
+Generated states:24734
+Tree Height:3
+Scored 7666 nodes
+best node score is 57.916509926229516
+black is moving 1 steps UP from 5,4
+black turn time:0.050228135(s)
+Game:0	turn:8
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ w w _ b 
+3 b b w _ _ b b 
+4 b _ _ k w _ b 
+5 _ _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 9
+Avg. Branching Factor:1.6200947636982141
+Generated states:13335
+Tree Height:3
+Scored 3352 nodes
+best node score is 26.808903596403596
+white is moving 2 steps RIGHT from 1,4
+white turn time:0.06456573(s)
+Black's turn. Turn 9
+Avg. Branching Factor:1.719634703196347
+Generated states:15064
+Tree Height:3
+Scored 4365 nodes
+best node score is 63.25378581095682
+black is moving 1 steps UP from 4,4
+black turn time:0.03108776(s)
+Game:0	turn:9
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ w 
+2 b _ _ w w _ b 
+3 b b w _ w b b 
+4 b _ _ k _ _ b 
+5 _ _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 10
+Avg. Branching Factor:1.522415162864601
+Generated states:13414
+Tree Height:3
+Scored 4018 nodes
+best node score is 26.796643791182802
+white is moving 2 steps LEFT from 1,6
+white turn time:0.02711153(s)
+Black's turn. Turn 10
+Avg. Branching Factor:1.2710129310344827
+Generated states:11795
+Tree Height:3
+Scored 4334 nodes
+best node score is 63.25378581095682
+black is moving 1 steps RIGHT from 2,4
+black turn time:0.027266942(s)
+Game:0	turn:10
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ w _ w b 
+3 b b w _ w b b 
+4 b _ _ k _ _ b 
+5 _ _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 11
+Avg. Branching Factor:1.8177231157363607
+Generated states:17292
+Tree Height:3
+Scored 4490 nodes
+best node score is 26.815750915750918
+white is moving 1 steps DOWN from 3,4
+white turn time:0.034863493(s)
+Black's turn. Turn 11
+Avg. Branching Factor:1.8635053186201411
+Generated states:18745
+Tree Height:3
+Scored 6286 nodes
+best node score is 57.088349805330935
+black is moving 1 steps UP from 4,4
+black turn time:0.038961415(s)
+Game:0	turn:11
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ w _ w b 
+3 b b w _ w b b 
+4 b _ _ k _ _ b 
+5 _ _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 12
+Avg. Branching Factor:1.6928046989721
+Generated states:17292
+Tree Height:3
+Scored 4490 nodes
+best node score is 26.815750915750918
+white is moving 2 steps RIGHT from 1,4
+white turn time:0.034698183(s)
+Black's turn. Turn 12
+Avg. Branching Factor:1.6959785025945144
+Generated states:18303
+Tree Height:3
+Scored 4733 nodes
+best node score is 67.74858689594777
+black is moving 1 steps UP from 2,5
+black turn time:0.03783467(s)
+Game:0	turn:12
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ w w 
+2 b _ _ w _ _ b 
+3 b b w _ w b b 
+4 b _ _ k _ _ b 
+5 _ _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 13
+Avg. Branching Factor:1.617017383348582
+Generated states:17674
+Tree Height:3
+Scored 6128 nodes
+best node score is 26.778375822341733
+white is moving 2 steps LEFT from 4,3
+white turn time:0.036552144(s)
+Black's turn. Turn 13
+Avg. Branching Factor:1.6930983847283407
+Generated states:19601
+Tree Height:3
+Scored 9487 nodes
+best node score is 50.75021438238539
+black is moving 1 steps DOWN from 3,4
+black turn time:0.05066835(s)
+Game:0	turn:13
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ w w 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b k _ _ w _ b 
+5 _ _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 14
+Avg. Branching Factor:1.8879587349906986
+Generated states:22327
+Tree Height:3
+Scored 13459 nodes
+best node score is 26.09694819069819
+white is moving 1 steps LEFT from 4,4
+white turn time:0.111531655(s)
+Black's turn. Turn 14
+Avg. Branching Factor:1.2992356480728573
+Generated states:15978
+Tree Height:3
+Scored 6242 nodes
+best node score is 56.01143303794366
+black is moving 1 steps RIGHT from 4,1
+black turn time:0.035537561(s)
+Game:0	turn:14
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ w w 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ k w _ _ b 
+5 _ _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 15
+Avg. Branching Factor:0.9198519353021647
+Generated states:11431
+Tree Height:3
+Scored 6002 nodes
+best node score is 26.751064213564213
+white is moving 1 steps LEFT from 4,2
+white turn time:0.030185338(s)
+Black's turn. Turn 15
+Avg. Branching Factor:1.2272832014747677
+Generated states:15978
+Tree Height:3
+Scored 6242 nodes
+best node score is 56.01143303794366
+black is moving 1 steps UP from 1,5
+black turn time:0.038824695(s)
+Game:0	turn:15
+  0 1 2 3 4 5 6 
+0 x _ b b b w x 
+1 _ _ _ b _ _ w 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b k _ w _ _ b 
+5 _ _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 16
+Avg. Branching Factor:1.3450992273897895
+Generated states:17758
+Tree Height:3
+Scored 9278 nodes
+best node score is 26.085521423021422
+white is moving 2 steps DOWN from 4,1
+white turn time:0.043580924(s)
+Black's turn. Turn 16
+Avg. Branching Factor:1.4724001439366678
+Generated states:20459
+Tree Height:3
+Scored 1141 nodes
+best node score is Infinity
+black is moving 2 steps LEFT from 2,3
+black turn time:0.035538294(s)
+Game:0	turn:16
+  0 1 2 3 4 5 6 
+0 x _ b b b w x 
+1 _ _ _ b _ _ w 
+2 b w _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ w _ _ b 
+5 _ _ _ _ _ _ _ 
+6 x k b b b _ x 
+
+White's turn. Turn 17
+Avg. Branching Factor:1.762682051642862
+Generated states:25053
+Tree Height:3
+Scored 8693 nodes
+best node score is 26.671701215451215
+white is moving 2 steps LEFT from 4,3
+white turn time:0.056199811(s)
+white takes black at 3,1
+Black's turn. Turn 17
+Avg. Branching Factor:1.9265499101018846
+Generated states:28931
+Tree Height:3
+Scored 1372 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.051457144(s)
+white takes black at 0,2
+white takes black at 0,3
+white takes black at 0,4
+Game:0	turn:17
+  0 1 2 3 4 5 6 
+0 x w _ _ _ w x 
+1 _ _ _ b _ _ w 
+2 b _ _ _ _ _ b 
+3 b _ w _ _ b b 
+4 b w _ _ _ _ b 
+5 _ _ _ _ _ _ _ 
+6 x k b b b _ x 
+
+White's turn. Turn 18
+Avg. Branching Factor:2.586025303448719
+Generated states:40267
+Tree Height:3
+Scored 16858 nodes
+best node score is 19.045827497665734
+white is moving 4 steps RIGHT from 4,1
+white turn time:0.165568878(s)
+Black's turn. Turn 18
+Avg. Branching Factor:2.8291108404384895
+Generated states:46454
+Tree Height:3
+Scored 1545 nodes
+best node score is Infinity
+black is moving 5 steps DOWN from 0,1
+black turn time:0.086505374(s)
+Game:0	turn:18
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ w x 
+1 _ _ _ b _ _ w 
+2 b _ _ _ _ _ b 
+3 b _ w _ _ b b 
+4 b _ _ _ _ w b 
+5 _ w _ _ _ _ _ 
+6 x k b b b _ x 
+
+White's turn. Turn 19
+Avg. Branching Factor:2.6712635549269215
+Generated states:45326
+Tree Height:3
+Scored 8485 nodes
+best node score is 19.08189309548549
+white is moving 2 steps DOWN from 4,5
+white turn time:0.077999437(s)
+white takes black at 6,4
+white takes black at 6,3
+white takes black at 6,2
+Black's turn. Turn 19
+Avg. Branching Factor:2.8342684021543985
+Generated states:50518
+Tree Height:3
+Scored 1654 nodes
+best node score is Infinity
+black is moving 5 steps UP from 5,1
+black turn time:0.089540696(s)
+Game:0	turn:19
+  0 1 2 3 4 5 6 
+0 x w _ _ _ w x 
+1 _ _ _ b _ _ w 
+2 b _ _ _ _ _ b 
+3 b _ w _ _ b b 
+4 b _ _ _ _ _ b 
+5 _ _ _ _ _ _ _ 
+6 x k _ _ _ w x 
+
+White's turn. Turn 20
+Avg. Branching Factor:2.7416353843642893
+Generated states:50394
+Tree Height:3
+Scored 26349 nodes
+best node score is 14.461441050779285
+white is moving 2 steps UP from 6,5
+white turn time:0.125093651(s)
+Black's turn. Turn 20
+Avg. Branching Factor:2.5191194115498985
+Generated states:48289
+Tree Height:3
+Scored 1202 nodes
+best node score is Infinity
+black is moving 5 steps DOWN from 0,1
+black turn time:0.063407829(s)
+Game:0	turn:20
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ w x 
+1 _ _ _ b _ _ w 
+2 b _ _ _ _ _ b 
+3 b _ w _ _ b b 
+4 b _ _ _ _ w b 
+5 _ w _ _ _ _ _ 
+6 x k _ _ _ _ x 
+
+White's turn. Turn 21
+Avg. Branching Factor:2.478730964467005
+Generated states:48831
+Tree Height:3
+Scored 14388 nodes
+best node score is 13.642823701611
+white is moving 4 steps LEFT from 4,5
+white turn time:0.176873351(s)
+Black's turn. Turn 21
+Avg. Branching Factor:2.2624376893754277
+Generated states:46294
+Tree Height:3
+Scored 1068 nodes
+best node score is Infinity
+black is moving 1 steps LEFT from 5,1
+black turn time:0.067508683(s)
+Game:0	turn:21
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ w x 
+1 _ _ _ b _ _ w 
+2 b _ _ _ _ _ b 
+3 b _ w _ _ b b 
+4 b w _ _ _ _ b 
+5 w _ _ _ _ _ _ 
+6 x k _ _ _ _ x 
+
+White's turn. Turn 22
+Avg. Branching Factor:2.3482371947163356
+Generated states:49421
+Tree Height:3
+Scored 18925 nodes
+best node score is 13.81895743145743
+white is moving 1 steps LEFT from 6,1
+white turn time:0.102442185(s)
+White Wins
+White wins by KINGESCAPE
+White's turn. Turn 1
+Avg. Branching Factor:0.9678740444120859
+Generated states:21270
+Tree Height:3
+Scored 6793 nodes
+best node score is 12.253500451204474
+white is moving 1 steps DOWN from 3,4
+white turn time:0.048169644(s)
+Black's turn. Turn 1
+Avg. Branching Factor:0.9837645627661068
+Generated states:21026
+Tree Height:3
+Scored 5025 nodes
+best node score is 67.75350045120447
+black is moving 2 steps LEFT from 5,3
+black turn time:0.040996447(s)
+Game:1	turn:1
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b _ _ w w _ b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 2
+Avg. Branching Factor:1.0894231187236447
+Generated states:25060
+Tree Height:3
+Scored 6148 nodes
+best node score is 26.81023269484723
+white is moving 3 steps UP from 4,4
+white turn time:0.048837114(s)
+Black's turn. Turn 2
+Avg. Branching Factor:1.3182363660607137
+Generated states:29659
+Tree Height:3
+Scored 14117 nodes
+best node score is 51.25197086329162
+black is moving 2 steps RIGHT from 4,3
+black turn time:0.081606195(s)
+Game:1	turn:2
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b _ _ _ _ w b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 3
+Avg. Branching Factor:1.4339973549347
+Generated states:34697
+Tree Height:3
+Scored 17443 nodes
+best node score is 26.24102564102564
+white is moving 2 steps DOWN from 3,3
+white turn time:0.138376343(s)
+Black's turn. Turn 3
+Avg. Branching Factor:1.5471889245314874
+Generated states:36656
+Tree Height:3
+Scored 12408 nodes
+best node score is 52.58250699382775
+black is moving 4 steps DOWN from 1,4
+black turn time:0.076561866(s)
+Game:1	turn:3
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ w b 
+5 _ w _ k w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 4
+Avg. Branching Factor:1.2789330387089137
+Generated states:32412
+Tree Height:3
+Scored 10896 nodes
+best node score is 26.5366452991453
+white is moving 2 steps UP from 5,3
+white turn time:0.070081798(s)
+Black's turn. Turn 4
+Avg. Branching Factor:1.4046720719274304
+Generated states:34996
+Tree Height:3
+Scored 11892 nodes
+best node score is 54.250082781681456
+black is moving 1 steps RIGHT from 5,4
+black turn time:0.078636851(s)
+Game:1	turn:4
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b _ _ _ _ w b 
+5 _ w _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 5
+Avg. Branching Factor:1.140682831029534
+Generated states:30203
+Tree Height:3
+Scored 9599 nodes
+best node score is 26.22698414363668
+white is moving 3 steps LEFT from 4,5
+white turn time:0.064340675(s)
+Black's turn. Turn 5
+Avg. Branching Factor:1.138411358403684
+Generated states:29667
+Tree Height:3
+Scored 6727 nodes
+best node score is 55.916469664199
+black is moving 1 steps UP from 5,1
+black turn time:0.056036701(s)
+Game:1	turn:5
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b w w _ _ _ b 
+5 _ _ _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 6
+Avg. Branching Factor:0.8468238638434346
+Generated states:23236
+Tree Height:3
+Scored 5507 nodes
+best node score is 26.791541714253498
+white is moving 2 steps RIGHT from 4,2
+white turn time:0.048418525(s)
+Black's turn. Turn 6
+Avg. Branching Factor:1.1927542621987066
+Generated states:32462
+Tree Height:3
+Scored 12768 nodes
+best node score is 54.24659947253777
+black is moving 1 steps LEFT from 5,5
+black turn time:0.074856719(s)
+Game:1	turn:6
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b w _ _ w _ b 
+5 _ _ _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 7
+Avg. Branching Factor:0.9808881394041596
+Generated states:27920
+Tree Height:3
+Scored 7363 nodes
+best node score is 26.800606338106338
+white is moving 2 steps DOWN from 4,1
+white turn time:0.113929196(s)
+Black's turn. Turn 7
+Avg. Branching Factor:0.9975596816976128
+Generated states:28206
+Tree Height:3
+Scored 7513 nodes
+best node score is 56.74861746093902
+black is moving 2 steps LEFT from 5,4
+black turn time:0.055559832(s)
+Game:1	turn:7
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b _ _ _ w _ b 
+5 _ _ w _ _ _ _ 
+6 x w b b b _ x 
+
+White's turn. Turn 8
+Avg. Branching Factor:0.9761333288259356
+Generated states:28875
+Tree Height:3
+Scored 6654 nodes
+best node score is 26.778035853035853
+white is moving 1 steps RIGHT from 4,4
+white turn time:0.056011777(s)
+Black's turn. Turn 8
+Avg. Branching Factor:0.9380410333310613
+Generated states:27524
+Tree Height:3
+Scored 8009 nodes
+best node score is 59.243424274399764
+black is moving 1 steps UP from 5,2
+black turn time:0.055157371(s)
+Game:1	turn:8
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b _ w _ _ w b 
+5 _ _ _ _ _ _ _ 
+6 x w b b b _ x 
+
+White's turn. Turn 9
+Avg. Branching Factor:0.5603363006923838
+Generated states:16995
+Tree Height:3
+Scored 5605 nodes
+best node score is 22.16591672216672
+white is moving 1 steps UP from 6,1
+white turn time:0.034919574(s)
+Black's turn. Turn 9
+Avg. Branching Factor:0.8556470200856108
+Generated states:25986
+Tree Height:3
+Scored 7683 nodes
+best node score is 54.25054202393175
+black is moving 1 steps RIGHT from 3,3
+black turn time:0.056029737(s)
+Game:1	turn:9
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ w _ _ w b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 10
+Avg. Branching Factor:0.9354581673306773
+Generated states:29350
+Tree Height:3
+Scored 4930 nodes
+best node score is 26.901646964146963
+white is moving 1 steps RIGHT from 4,2
+white turn time:0.052402086(s)
+Black's turn. Turn 10
+Avg. Branching Factor:0.9015463095807429
+Generated states:28277
+Tree Height:3
+Scored 6256 nodes
+best node score is 63.24814604018969
+black is moving 5 steps RIGHT from 5,1
+black turn time:0.052989284(s)
+Game:1	turn:10
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ _ w _ w b 
+5 _ _ _ _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 11
+Avg. Branching Factor:0.7958204334365325
+Generated states:25705
+Tree Height:3
+Scored 6324 nodes
+best node score is 26.906012043512042
+white is moving 1 steps LEFT from 5,6
+white turn time:0.049033947(s)
+Black's turn. Turn 11
+Avg. Branching Factor:0.7428996651370458
+Generated states:23960
+Tree Height:3
+Scored 8239 nodes
+best node score is 62.416683808727456
+black is moving 2 steps LEFT from 5,5
+black turn time:0.049675025(s)
+Game:1	turn:11
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ _ w _ w b 
+5 _ _ _ w _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 12
+Avg. Branching Factor:0.7219543070709507
+Generated states:23953
+Tree Height:3
+Scored 5508 nodes
+best node score is 26.92928031389485
+white is moving 1 steps LEFT from 4,3
+white turn time:0.044143197(s)
+Black's turn. Turn 12
+Avg. Branching Factor:0.7852539003674478
+Generated states:26072
+Tree Height:3
+Scored 7223 nodes
+best node score is 58.75545071321543
+black is moving 1 steps LEFT from 5,3
+black turn time:0.101925364(s)
+Game:1	turn:12
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ w _ _ w b 
+5 _ _ w _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 13
+Avg. Branching Factor:0.7276378668386643
+Generated states:24819
+Tree Height:3
+Scored 5091 nodes
+best node score is 26.912907365178288
+white is moving 1 steps RIGHT from 5,2
+white turn time:0.051173809(s)
+Black's turn. Turn 13
+Avg. Branching Factor:0.7634106348090888
+Generated states:26072
+Tree Height:3
+Scored 7223 nodes
+best node score is 58.75545071321543
+black is moving 2 steps RIGHT from 5,3
+black turn time:0.065149629(s)
+Game:1	turn:13
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ w _ _ w b 
+5 _ _ _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 14
+Avg. Branching Factor:0.7124065513896022
+Generated states:24967
+Tree Height:3
+Scored 4723 nodes
+best node score is 26.90852480852481
+white is moving 4 steps LEFT from 5,5
+white turn time:0.051909822(s)
+Black's turn. Turn 14
+Avg. Branching Factor:0.8338778873199421
+Generated states:29350
+Tree Height:3
+Scored 6388 nodes
+best node score is 58.75333922672895
+black is moving 2 steps RIGHT from 5,1
+black turn time:0.058403819(s)
+Game:1	turn:14
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ w _ _ w b 
+5 _ _ _ w _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 15
+Avg. Branching Factor:0.7243027003000333
+Generated states:26072
+Tree Height:3
+Scored 4326 nodes
+best node score is 26.919653957153958
+white is moving 2 steps RIGHT from 5,3
+white turn time:0.051107465(s)
+Black's turn. Turn 15
+Avg. Branching Factor:0.6909558864227597
+Generated states:24967
+Tree Height:3
+Scored 9289 nodes
+best node score is 58.75333922672895
+black is moving 4 steps LEFT from 5,5
+black turn time:0.052469163(s)
+Game:1	turn:15
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ w _ _ w b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 16
+Avg. Branching Factor:0.7923652169217894
+Generated states:29350
+Tree Height:3
+Scored 4930 nodes
+best node score is 26.901646964146963
+white is moving 2 steps DOWN from 3,4
+white turn time:0.052182895(s)
+Black's turn. Turn 16
+Avg. Branching Factor:0.8699309344011179
+Generated states:32371
+Tree Height:3
+Scored 8485 nodes
+best node score is 54.25054202393175
+black is moving 2 steps RIGHT from 4,2
+black turn time:0.065144131(s)
+Game:1	turn:16
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ w w b 
+5 _ w _ _ k _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 17
+Avg. Branching Factor:0.7919410267845431
+Generated states:30188
+Tree Height:3
+Scored 9062 nodes
+best node score is 26.576096819846818
+white is moving 1 steps LEFT from 5,1
+white turn time:0.063267811(s)
+Black's turn. Turn 17
+Avg. Branching Factor:0.7529996078943929
+Generated states:28806
+Tree Height:3
+Scored 7380 nodes
+best node score is 57.74676069701329
+black is moving 1 steps LEFT from 5,4
+black turn time:0.072836348(s)
+Game:1	turn:17
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ w w b 
+5 w _ _ k _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 18
+Avg. Branching Factor:0.769207200306396
+Generated states:30126
+Tree Height:3
+Scored 11644 nodes
+best node score is 26.53137279387279
+white is moving 2 steps RIGHT from 5,3
+white turn time:0.112835073(s)
+Black's turn. Turn 18
+Avg. Branching Factor:0.7759487882944673
+Generated states:30546
+Tree Height:3
+Scored 11550 nodes
+best node score is 57.74676069701329
+black is moving 1 steps LEFT from 4,4
+black turn time:0.068045299(s)
+Game:1	turn:18
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ w _ w b 
+5 w _ _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 19
+Avg. Branching Factor:0.6187876975225562
+Generated states:24827
+Tree Height:3
+Scored 13146 nodes
+best node score is 26.055993312408248
+white is moving 2 steps LEFT from 4,3
+white turn time:0.057109565(s)
+Black's turn. Turn 19
+Avg. Branching Factor:0.8205925158489356
+Generated states:33266
+Tree Height:3
+Scored 9790 nodes
+best node score is 59.080553272596916
+black is moving 1 steps RIGHT from 5,0
+black turn time:0.064637572(s)
+Game:1	turn:19
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b w _ _ _ w b 
+5 _ w _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 20
+Avg. Branching Factor:0.7258921423546251
+Generated states:29922
+Tree Height:3
+Scored 20725 nodes
+best node score is 26.135357208151326
+white is moving 2 steps RIGHT from 5,1
+white turn time:0.079736839(s)
+Black's turn. Turn 20
+Avg. Branching Factor:0.6635731974130262
+Generated states:27600
+Tree Height:3
+Scored 10536 nodes
+best node score is 51.91412699054564
+black is moving 2 steps LEFT from 5,3
+black turn time:0.06258238(s)
+Game:1	turn:20
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b w _ _ _ w b 
+5 _ w _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 21
+Avg. Branching Factor:0.7070415879017014
+Generated states:29922
+Tree Height:3
+Scored 20725 nodes
+best node score is 26.135357208151326
+white is moving 1 steps LEFT from 4,5
+white turn time:0.077477117(s)
+Black's turn. Turn 21
+Avg. Branching Factor:0.8184262203104544
+Generated states:35009
+Tree Height:3
+Scored 13016 nodes
+best node score is 50.08387535726508
+black is moving 2 steps RIGHT from 4,1
+black turn time:0.072180974(s)
+Game:1	turn:21
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ w w _ b 
+5 _ w _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 22
+Avg. Branching Factor:0.7286694923062748
+Generated states:31633
+Tree Height:3
+Scored 10600 nodes
+best node score is 26.75057963863084
+white is moving 1 steps DOWN from 5,5
+white turn time:0.062588977(s)
+Black's turn. Turn 22
+Avg. Branching Factor:0.6913695632351601
+Generated states:30329
+Tree Height:3
+Scored 1022 nodes
+best node score is Infinity
+black is moving 2 steps LEFT from 2,3
+black turn time:0.048240752(s)
+Game:1	turn:22
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ w w _ b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b k x 
+
+White's turn. Turn 23
+Avg. Branching Factor:0.7901049139167863
+Generated states:35245
+Tree Height:3
+Scored 10013 nodes
+best node score is 26.72414689069101
+white is moving 1 steps DOWN from 4,3
+white turn time:0.1128545(s)
+Black's turn. Turn 23
+Avg. Branching Factor:0.8608687951113669
+Generated states:38882
+Tree Height:3
+Scored 930 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.061548003(s)
+Game:1	turn:23
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ w _ b 
+5 _ w _ w _ _ _ 
+6 x _ b b b k x 
+
+White's turn. Turn 24
+Avg. Branching Factor:0.762347966345525
+Generated states:34975
+Tree Height:3
+Scored 7418 nodes
+best node score is 26.68184657240807
+white is moving 1 steps LEFT from 5,1
+white turn time:0.065466687(s)
+Black's turn. Turn 24
+Avg. Branching Factor:0.7110632338683616
+Generated states:33004
+Tree Height:3
+Scored 1084 nodes
+best node score is Infinity
+black is moving 2 steps DOWN from 0,1
+black turn time:0.05201282(s)
+Game:1	turn:24
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ w _ b 
+5 w _ _ w _ _ _ 
+6 x _ b b b k x 
+
+White's turn. Turn 25
+Avg. Branching Factor:0.7880207781193682
+Generated states:37167
+Tree Height:3
+Scored 22244 nodes
+best node score is 25.989065019947375
+white is moving 1 steps RIGHT from 5,3
+white turn time:0.093619191(s)
+Black's turn. Turn 25
+Avg. Branching Factor:0.729179350450318
+Generated states:34733
+Tree Height:3
+Scored 1016 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.05376415(s)
+Game:1	turn:25
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ w _ b 
+5 w _ _ _ w _ _ 
+6 x _ b b b k x 
+
+White's turn. Turn 26
+Avg. Branching Factor:0.6316715299766147
+Generated states:30523
+Tree Height:3
+Scored 7630 nodes
+best node score is 26.662959865317074
+white is moving 1 steps RIGHT from 4,4
+white turn time:0.060765439(s)
+Black's turn. Turn 26
+Avg. Branching Factor:0.6487476467217811
+Generated states:31703
+Tree Height:3
+Scored 1032 nodes
+best node score is Infinity
+black is moving 2 steps DOWN from 0,1
+black turn time:0.049518146(s)
+Game:1	turn:26
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ w b 
+5 w _ _ _ w _ _ 
+6 x _ b b b k x 
+
+White's turn. Turn 27
+Avg. Branching Factor:0.7286877974030164
+Generated states:36140
+Tree Height:3
+Scored 13924 nodes
+best node score is 25.489594433344436
+white is moving 2 steps RIGHT from 5,0
+white turn time:0.077796373(s)
+Black's turn. Turn 27
+Avg. Branching Factor:0.6348295511346596
+Generated states:31751
+Tree Height:3
+Scored 780 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.047892173(s)
+Game:1	turn:27
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ w b 
+5 _ _ w _ w _ _ 
+6 x _ b b b k x 
+
+White's turn. Turn 28
+Avg. Branching Factor:0.5456177381492514
+Generated states:27659
+Tree Height:3
+Scored 7757 nodes
+best node score is 25.50921529450941
+white is moving 1 steps DOWN from 4,5
+white turn time:0.134635065(s)
+Black's turn. Turn 28
+Avg. Branching Factor:0.3855970471590686
+Generated states:19640
+Tree Height:3
+Scored 1016 nodes
+best node score is Infinity
+black is moving 2 steps DOWN from 0,1
+black turn time:0.035550023(s)
+Game:1	turn:28
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ _ b 
+5 _ _ w _ w w _ 
+6 x _ b b b k x 
+
+White's turn. Turn 29
+Avg. Branching Factor:0.4603143912295288
+Generated states:23807
+Tree Height:3
+Scored 13730 nodes
+best node score is 25.513733721194555
+white is moving 2 steps LEFT from 5,2
+white turn time:0.073622578(s)
+Black's turn. Turn 29
+Avg. Branching Factor:0.5336186874988004
+Generated states:27801
+Tree Height:3
+Scored 904 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.051822219(s)
+Game:1	turn:29
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ _ b 
+5 w _ _ _ w w _ 
+6 x _ b b b k x 
+
+White's turn. Turn 30
+Avg. Branching Factor:0.43728569534165607
+Generated states:23083
+Tree Height:3
+Scored 11134 nodes
+best node score is 25.455383480349383
+white is moving 1 steps RIGHT from 5,5
+white turn time:0.074438863(s)
+Black's turn. Turn 30
+Avg. Branching Factor:0.5001221276515792
+Generated states:26618
+Tree Height:3
+Scored 1327 nodes
+best node score is Infinity
+black is moving 2 steps DOWN from 0,1
+black turn time:0.056200545(s)
+Game:1	turn:30
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ _ b 
+5 w _ _ _ w _ w 
+6 x _ b b b k x 
+
+White's turn. Turn 31
+Avg. Branching Factor:0.5903065758293838
+Generated states:31886
+Tree Height:3
+Scored 12521 nodes
+best node score is 26.489339060062747
+white is moving 3 steps RIGHT from 5,0
+white turn time:0.091588557(s)
+Black's turn. Turn 31
+Avg. Branching Factor:0.522260053372596
+Generated states:28377
+Tree Height:3
+Scored 1083 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.054076443(s)
+Game:1	turn:31
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ _ b 
+5 _ _ _ w w _ w 
+6 x _ b b b k x 
+
+White's turn. Turn 32
+Avg. Branching Factor:0.4325409806273398
+Generated states:23801
+Tree Height:3
+Scored 7307 nodes
+best node score is 26.660822744259413
+white is moving 2 steps UP from 6,5
+white turn time:0.055825207(s)
+Black's turn. Turn 32
+Avg. Branching Factor:0.4657938043655171
+Generated states:25757
+Tree Height:3
+Scored 9605 nodes
+best node score is 68.0169426175083
+black is moving 1 steps LEFT from 4,5
+black turn time:0.064574527(s)
+Game:1	turn:32
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ k _ b 
+5 _ _ _ w w _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 33
+Avg. Branching Factor:0.3741474679125718
+Generated states:20901
+Tree Height:3
+Scored 5963 nodes
+best node score is 26.701329430373548
+white is moving 1 steps LEFT from 5,3
+white turn time:0.050052195(s)
+Black's turn. Turn 33
+Avg. Branching Factor:0.354931887882462
+Generated states:19906
+Tree Height:3
+Scored 6157 nodes
+best node score is 64.57342509141614
+black is moving 1 steps RIGHT from 4,4
+black turn time:0.058271864(s)
+Game:1	turn:33
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ k b 
+5 _ _ w _ w _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 34
+Avg. Branching Factor:0.43322005247310313
+Generated states:24603
+Tree Height:3
+Scored 8350 nodes
+best node score is 26.67255403909816
+white is moving 3 steps UP from 5,4
+white turn time:0.062636262(s)
+Black's turn. Turn 34
+Avg. Branching Factor:0.5903062918246467
+Generated states:33785
+Tree Height:3
+Scored 8768 nodes
+best node score is 62.90969019447229
+black is moving 2 steps LEFT from 5,6
+black turn time:0.081161215(s)
+Game:1	turn:34
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ k b 
+5 _ _ w _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 35
+Avg. Branching Factor:0.5340353061189204
+Generated states:30887
+Tree Height:3
+Scored 6880 nodes
+best node score is 26.705988751655916
+white is moving 1 steps LEFT from 5,4
+white turn time:0.136771996(s)
+Black's turn. Turn 35
+Avg. Branching Factor:0.5220561741845822
+Generated states:30427
+Tree Height:3
+Scored 8137 nodes
+best node score is 58.4132670017012
+black is moving 1 steps UP from 5,2
+black turn time:0.072145787(s)
+Game:1	turn:35
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ b 
+3 b b w _ _ b b 
+4 b _ w _ _ k b 
+5 _ _ _ w _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 36
+Avg. Branching Factor:0.518942222825718
+Generated states:30574
+Tree Height:3
+Scored 5271 nodes
+best node score is 26.297286991424922
+white is moving 1 steps DOWN from 4,2
+white turn time:0.054047486(s)
+Black's turn. Turn 36
+Avg. Branching Factor:0.5128174877386952
+Generated states:30427
+Tree Height:3
+Scored 8137 nodes
+best node score is 58.4132670017012
+black is moving 3 steps DOWN from 2,4
+black turn time:0.059935958(s)
+Game:1	turn:36
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ k b 
+5 _ _ w w w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 37
+Avg. Branching Factor:0.39213325306040536
+Generated states:23448
+Tree Height:3
+Scored 7189 nodes
+best node score is 26.701202792915325
+white is moving 4 steps UP from 5,4
+white turn time:0.048211796(s)
+Black's turn. Turn 37
+Avg. Branching Factor:0.46844024531742084
+Generated states:28261
+Tree Height:3
+Scored 7288 nodes
+best node score is 58.74461620805041
+black is moving 1 steps DOWN from 1,4
+black turn time:0.057039556(s)
+Game:1	turn:37
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ k b 
+5 _ _ w w _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 38
+Avg. Branching Factor:0.5000657397363837
+Generated states:30427
+Tree Height:3
+Scored 6822 nodes
+best node score is 26.71178821178821
+white is moving 2 steps UP from 5,3
+white turn time:0.059598741(s)
+Black's turn. Turn 38
+Avg. Branching Factor:0.4957152166829586
+Generated states:30427
+Tree Height:3
+Scored 8137 nodes
+best node score is 58.4132670017012
+black is moving 2 steps RIGHT from 5,3
+black turn time:0.063064747(s)
+Game:1	turn:38
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ b 
+3 b b w _ _ b b 
+4 b _ _ _ _ k b 
+5 _ _ w _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 39
+Avg. Branching Factor:0.4946904654315409
+Generated states:30653
+Tree Height:3
+Scored 7866 nodes
+best node score is 26.69609557109557
+white is moving 1 steps LEFT from 5,5
+white turn time:0.059949153(s)
+Black's turn. Turn 39
+Avg. Branching Factor:0.49477781693525136
+Generated states:30887
+Tree Height:3
+Scored 7538 nodes
+best node score is 57.5792340415022
+black is moving 2 steps UP from 5,4
+black turn time:0.061638905(s)
+Game:1	turn:39
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ b 
+3 b b w _ w b b 
+4 b _ _ _ _ k b 
+5 _ _ w _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 40
+Avg. Branching Factor:0.3946016446374322
+Generated states:24809
+Tree Height:3
+Scored 5400 nodes
+best node score is 26.73118908382066
+white is moving 2 steps LEFT from 4,5
+white turn time:0.05387228(s)
+Black's turn. Turn 40
+Avg. Branching Factor:0.4047299537424417
+Generated states:25636
+Tree Height:3
+Scored 6570 nodes
+best node score is 63.246966079199595
+black is moving 1 steps LEFT from 5,2
+black turn time:0.052666728(s)
+Game:1	turn:40
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ b 
+3 b b w _ w b b 
+4 b _ _ k _ _ b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 41
+Avg. Branching Factor:0.45600275520906713
+Generated states:29129
+Tree Height:3
+Scored 15134 nodes
+best node score is 26.75688894438894
+white is moving 3 steps RIGHT from 5,1
+white turn time:0.072424723(s)
+Black's turn. Turn 41
+Avg. Branching Factor:0.4038593215063803
+Generated states:25952
+Tree Height:3
+Scored 6968 nodes
+best node score is 63.246966079199595
+black is moving 1 steps RIGHT from 5,4
+black turn time:0.052164201(s)
+Game:1	turn:41
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ b 
+3 b b w _ w b b 
+4 b _ _ k _ _ b 
+5 _ _ _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 42
+Avg. Branching Factor:0.4505370875522061
+Generated states:29234
+Tree Height:3
+Scored 14394 nodes
+best node score is 26.751800976800972
+white is moving 1 steps UP from 2,4
+white turn time:0.124708051(s)
+Black's turn. Turn 42
+Avg. Branching Factor:0.4420999402381281
+Generated states:28851
+Tree Height:3
+Scored 7679 nodes
+best node score is 63.24323248493299
+black is moving 1 steps DOWN from 3,4
+black turn time:0.059392746(s)
+Game:1	turn:42
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k w _ b 
+5 _ _ _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 43
+Avg. Branching Factor:0.4719886045066752
+Generated states:31147
+Tree Height:3
+Scored 15559 nodes
+best node score is 26.716333666333664
+white is moving 1 steps UP from 5,5
+white turn time:0.084376507(s)
+Black's turn. Turn 43
+Avg. Branching Factor:0.2780512929271507
+Generated states:18355
+Tree Height:3
+Scored 7290 nodes
+best node score is 56.225855845906544
+black is moving 1 steps DOWN from 4,5
+black turn time:0.041032368(s)
+Game:1	turn:43
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k w _ b 
+5 _ _ _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 44
+Avg. Branching Factor:0.4642223712646248
+Generated states:31147
+Tree Height:3
+Scored 15559 nodes
+best node score is 26.716333666333664
+white is moving 5 steps LEFT from 5,5
+white turn time:0.074145631(s)
+Black's turn. Turn 44
+Avg. Branching Factor:0.42282219570405727
+Generated states:28346
+Tree Height:3
+Scored 6398 nodes
+best node score is 68.07460602777763
+black is moving 1 steps RIGHT from 1,4
+black turn time:0.056712968(s)
+Game:1	turn:44
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ w _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k w _ b 
+5 w _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 45
+Avg. Branching Factor:0.4671691251942872
+Generated states:31860
+Tree Height:3
+Scored 12381 nodes
+best node score is 26.70756535131535
+white is moving 5 steps RIGHT from 5,0
+white turn time:0.068330834(s)
+Black's turn. Turn 45
+Avg. Branching Factor:0.5086994122216848
+Generated states:34705
+Tree Height:3
+Scored 5693 nodes
+best node score is 64.73997939449707
+black is moving 1 steps LEFT from 5,5
+black turn time:0.073150474(s)
+Game:1	turn:45
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ w _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k w _ b 
+5 _ _ _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 46
+Avg. Branching Factor:0.428305265894451
+Generated states:29655
+Tree Height:3
+Scored 13615 nodes
+best node score is 26.73061938061938
+white is moving 3 steps UP from 4,4
+white turn time:0.079674526(s)
+Black's turn. Turn 46
+Avg. Branching Factor:0.47777729692301035
+Generated states:33120
+Tree Height:3
+Scored 8078 nodes
+best node score is 58.17484325956284
+black is moving 1 steps RIGHT from 5,4
+black turn time:0.067445639(s)
+Game:1	turn:46
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b w w _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k _ _ b 
+5 _ _ _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 47
+Avg. Branching Factor:0.4853618327553863
+Generated states:34152
+Tree Height:3
+Scored 15916 nodes
+best node score is 26.707316294816295
+white is moving 1 steps LEFT from 5,5
+white turn time:0.098510673(s)
+Black's turn. Turn 47
+Avg. Branching Factor:0.4703276104460444
+Generated states:33120
+Tree Height:3
+Scored 8078 nodes
+best node score is 58.17484325956284
+black is moving 1 steps LEFT from 5,4
+black turn time:0.063200367(s)
+Game:1	turn:47
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b w w _ 
+2 b _ _ _ _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k _ _ b 
+5 _ _ _ w _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 48
+Avg. Branching Factor:0.4167915621979746
+Generated states:29756
+Tree Height:3
+Scored 13568 nodes
+best node score is 26.72527056277056
+white is moving 3 steps RIGHT from 5,3
+white turn time:0.070831005(s)
+Black's turn. Turn 48
+Avg. Branching Factor:0.4378533445284075
+Generated states:31289
+Tree Height:3
+Scored 8072 nodes
+best node score is 63.24339465062817
+black is moving 2 steps DOWN from 1,4
+black turn time:0.110242899(s)
+Game:1	turn:48
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ w _ 
+2 b _ _ _ _ _ b 
+3 b b w _ w b b 
+4 b _ _ k _ _ b 
+5 _ _ _ _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 49
+Avg. Branching Factor:0.4279342723004695
+Generated states:30991
+Tree Height:3
+Scored 15938 nodes
+best node score is 26.703514273800657
+white is moving 1 steps RIGHT from 1,5
+white turn time:0.073758564(s)
+white takes black at 2,6
+white takes black at 3,6
+white takes black at 4,6
+Black's turn. Turn 49
+Avg. Branching Factor:0.5254353961588766
+Generated states:38165
+Tree Height:3
+Scored 6074 nodes
+best node score is 67.75939737583573
+black is moving 3 steps DOWN from 1,6
+black turn time:0.097694754(s)
+Game:1	turn:49
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b b w _ w b _ 
+4 b _ _ k _ _ w 
+5 _ _ _ _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 50
+Avg. Branching Factor:0.4428532534712769
+Generated states:32532
+Tree Height:3
+Scored 8759 nodes
+best node score is 21.72134927800409
+white is moving 2 steps LEFT from 4,6
+white turn time:0.059966381(s)
+Black's turn. Turn 50
+Avg. Branching Factor:0.3570477458626593
+Generated states:26278
+Tree Height:3
+Scored 5055 nodes
+best node score is 64.27114284755481
+black is moving 2 steps UP from 3,4
+black turn time:0.050700239(s)
+Game:1	turn:50
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ _ _ _ _ 
+3 b b w _ _ b _ 
+4 b _ _ k w _ _ 
+5 _ _ _ _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 51
+Avg. Branching Factor:0.4621283213127061
+Generated states:34472
+Tree Height:3
+Scored 6955 nodes
+best node score is 21.741724283787445
+white is moving 1 steps DOWN from 1,4
+white turn time:0.075818522(s)
+Black's turn. Turn 51
+Avg. Branching Factor:0.5176127859739149
+Generated states:38734
+Tree Height:3
+Scored 6603 nodes
+best node score is 64.26372169727651
+black is moving 1 steps DOWN from 4,3
+black turn time:0.084789598(s)
+Game:1	turn:51
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ _ 
+3 b b w _ _ b _ 
+4 b _ _ _ w _ _ 
+5 _ _ _ k _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 52
+Avg. Branching Factor:0.5947871667895901
+Generated states:45161
+Tree Height:3
+Scored 12216 nodes
+best node score is 21.478059687514154
+white is moving 1 steps RIGHT from 5,3
+white turn time:0.105762309(s)
+Black's turn. Turn 52
+Avg. Branching Factor:0.48650816610998604
+Generated states:36997
+Tree Height:3
+Scored 8479 nodes
+best node score is 59.51383902390033
+black is moving 1 steps RIGHT from 2,4
+black turn time:0.086194915(s)
+Game:1	turn:52
+  0 1 2 3 4 5 6 
+0 x w b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ w _ 
+3 b b w _ _ b _ 
+4 b _ _ _ w _ _ 
+5 _ _ _ _ k _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 53
+Avg. Branching Factor:0.537879866892828
+Generated states:41541
+Tree Height:3
+Scored 6361 nodes
+best node score is 21.09274839411424
+white is moving 2 steps UP from 2,5
+white turn time:0.084035624(s)
+white takes black at 0,4
+white takes black at 0,3
+white takes black at 0,2
+Black's turn. Turn 53
+Avg. Branching Factor:0.6316598029976376
+Generated states:48929
+Tree Height:3
+Scored 12109 nodes
+best node score is 66.52450421876344
+black is moving 2 steps DOWN from 0,5
+black turn time:0.103316751(s)
+Game:1	turn:53
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ w _ 
+3 b b w _ _ b _ 
+4 b _ _ _ w _ _ 
+5 _ _ _ _ k _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 54
+Avg. Branching Factor:0.6562134540092541
+Generated states:51623
+Tree Height:3
+Scored 23004 nodes
+best node score is 16.122303867273715
+white is moving 4 steps LEFT from 2,5
+white turn time:0.12635345(s)
+Black's turn. Turn 54
+Avg. Branching Factor:0.5669604307410981
+Generated states:44647
+Tree Height:3
+Scored 11833 nodes
+best node score is 59.559820375890084
+black is moving 1 steps UP from 4,4
+black turn time:0.160985657(s)
+Game:1	turn:54
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ _ 
+3 b b w _ w b _ 
+4 b _ _ _ _ _ _ 
+5 _ _ _ _ k _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 55
+Avg. Branching Factor:0.45240005013159545
+Generated states:36097
+Tree Height:3
+Scored 23361 nodes
+best node score is 16.137487512487514
+white is moving 3 steps UP from 5,6
+white turn time:0.101189351(s)
+Black's turn. Turn 55
+Avg. Branching Factor:0.506346209156048
+Generated states:40492
+Tree Height:3
+Scored 9594 nodes
+best node score is 52.22025251877004
+black is moving 2 steps LEFT from 5,4
+black turn time:0.076489657(s)
+Game:1	turn:55
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ w 
+3 b b w _ w b _ 
+4 b _ _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 56
+Avg. Branching Factor:0.49885202192267813
+Generated states:40413
+Tree Height:3
+Scored 22405 nodes
+best node score is 16.154291583449726
+white is moving 4 steps RIGHT from 2,1
+white turn time:0.096341853(s)
+Black's turn. Turn 56
+Avg. Branching Factor:0.4931253696037847
+Generated states:40026
+Tree Height:3
+Scored 11375 nodes
+best node score is 50.301231620318276
+black is moving 1 steps UP from 3,4
+black turn time:0.088402221(s)
+Game:1	turn:56
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w w w 
+3 b b w _ _ b _ 
+4 b _ _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 57
+Avg. Branching Factor:0.4962792733639746
+Generated states:40815
+Tree Height:3
+Scored 20742 nodes
+best node score is 16.127963702963704
+white is moving 1 steps UP from 2,5
+white turn time:0.09724904(s)
+Black's turn. Turn 57
+Avg. Branching Factor:0.6009107093117605
+Generated states:49619
+Tree Height:3
+Scored 17269 nodes
+best node score is 51.789658425673466
+black is moving 1 steps LEFT from 2,6
+black turn time:0.110374121(s)
+Game:1	turn:57
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ w _ 
+2 b _ _ _ w w _ 
+3 b b w _ _ b _ 
+4 b _ _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 58
+Avg. Branching Factor:0.41398797739462223
+Generated states:34503
+Tree Height:3
+Scored 18421 nodes
+best node score is 16.133519258519257
+white is moving 1 steps UP from 2,4
+white turn time:0.087700296(s)
+Black's turn. Turn 58
+Avg. Branching Factor:0.4193216855087359
+Generated states:35088
+Tree Height:3
+Scored 12741 nodes
+best node score is 50.0812460503327
+black is moving 1 steps RIGHT from 1,5
+black turn time:0.078936681(s)
+Game:1	turn:58
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b w _ w 
+2 b _ _ _ _ w _ 
+3 b b w _ _ b _ 
+4 b _ _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 59
+Avg. Branching Factor:0.5798237022526934
+Generated states:49136
+Tree Height:3
+Scored 20495 nodes
+best node score is 16.11270477888125
+white is moving 2 steps DOWN from 1,6
+white turn time:0.107754823(s)
+Black's turn. Turn 59
+Avg. Branching Factor:0.5678192271065285
+Generated states:48297
+Tree Height:3
+Scored 14063 nodes
+best node score is 51.36606086514752
+black is moving 3 steps LEFT from 2,5
+black turn time:0.100522613(s)
+Game:1	turn:59
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b w _ _ 
+2 b _ w _ _ _ _ 
+3 b b w _ _ b w 
+4 b _ _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 60
+Avg. Branching Factor:0.47746039868809753
+Generated states:41053
+Tree Height:3
+Scored 15990 nodes
+best node score is 16.143601364158172
+white is moving 1 steps UP from 1,4
+white turn time:0.094391125(s)
+Black's turn. Turn 60
+Avg. Branching Factor:0.47921276078167896
+Generated states:41369
+Tree Height:3
+Scored 9365 nodes
+best node score is 52.887986405253926
+black is moving 4 steps RIGHT from 5,2
+black turn time:0.142266437(s)
+Game:1	turn:60
+  0 1 2 3 4 5 6 
+0 x w _ _ w _ x 
+1 _ _ _ b _ _ _ 
+2 b _ w _ _ _ _ 
+3 b b w _ _ b w 
+4 b _ _ _ _ _ _ 
+5 _ _ _ _ _ _ k 
+6 x _ b b b _ x 
+
+White's turn. Turn 61
+Avg. Branching Factor:0.5165804058077222
+Generated states:45114
+Tree Height:3
+Scored 16300 nodes
+best node score is 16.100222816399285
+white is moving 2 steps UP from 3,6
+white turn time:0.112156607(s)
+Black's turn. Turn 61
+Avg. Branching Factor:0.6252461666306192
+Generated states:54926
+Tree Height:3
+Scored 5155 nodes
+best node score is Infinity
+black is moving 1 steps DOWN from 3,2
+black turn time:0.093357847(s)
+Game:1	turn:61
+  0 1 2 3 4 5 6 
+0 x w _ _ w _ x 
+1 _ _ _ b _ _ w 
+2 b _ w _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b _ w _ _ _ _ 
+5 _ _ _ _ _ _ k 
+6 x _ b b b _ x 
+
+White's turn. Turn 62
+Avg. Branching Factor:0.7476919966755767
+Generated states:66573
+Tree Height:3
+Scored 25871 nodes
+best node score is 16.084836227094293
+white is moving 3 steps LEFT from 5,6
+white turn time:0.156635555(s)
+Black's turn. Turn 62
+Avg. Branching Factor:0.6895371850924176
+Generated states:61666
+Tree Height:3
+Scored 15908 nodes
+best node score is 61.82003758201216
+black is moving 1 steps DOWN from 0,4
+black turn time:0.133213987(s)
+Game:1	turn:62
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b w _ w 
+2 b _ w _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b _ w _ _ _ _ 
+5 _ _ _ k _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 63
+Avg. Branching Factor:0.614323759848828
+Generated states:55592
+Tree Height:3
+Scored 25229 nodes
+best node score is 16.10756547645714
+white is moving 3 steps DOWN from 1,4
+white turn time:0.13858967(s)
+Black's turn. Turn 63
+Avg. Branching Factor:0.5949744650876112
+Generated states:54057
+Tree Height:3
+Scored 15867 nodes
+best node score is 63.13565213821378
+black is moving 4 steps RIGHT from 2,2
+black turn time:0.112448373(s)
+Game:1	turn:63
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ w 
+2 b _ _ _ _ _ w 
+3 b b _ _ _ b _ 
+4 b _ w _ w _ _ 
+5 _ _ _ k _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 64
+Avg. Branching Factor:0.6093612394672465
+Generated states:56046
+Tree Height:3
+Scored 27901 nodes
+best node score is 16.087703962703962
+white is moving 3 steps DOWN from 2,6
+white turn time:0.135183776(s)
+Black's turn. Turn 64
+Avg. Branching Factor:0.6056022348304387
+Generated states:55931
+Tree Height:3
+Scored 15420 nodes
+best node score is 68.95412891417007
+black is moving 1 steps DOWN from 4,4
+black turn time:0.116465656(s)
+Game:1	turn:64
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ w 
+2 b _ _ _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b _ w _ _ _ _ 
+5 _ _ _ k w _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 65
+Avg. Branching Factor:0.5420739868301301
+Generated states:50627
+Tree Height:3
+Scored 31125 nodes
+best node score is 16.08358606263018
+white is moving 2 steps LEFT from 5,3
+white turn time:0.138484472(s)
+Black's turn. Turn 65
+Avg. Branching Factor:0.5856573705179283
+Generated states:54978
+Tree Height:3
+Scored 13909 nodes
+best node score is 67.06808632509143
+black is moving 2 steps LEFT from 1,6
+black turn time:0.174017269(s)
+Game:1	turn:65
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b w _ _ 
+2 b _ _ _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b _ w _ _ _ _ 
+5 _ k _ _ w _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 66
+Avg. Branching Factor:0.5512020244622522
+Generated states:52276
+Tree Height:3
+Scored 27905 nodes
+best node score is 16.76760531135531
+white is moving 2 steps DOWN from 1,4
+white turn time:0.14116205(s)
+Black's turn. Turn 66
+Avg. Branching Factor:0.4645836397638209
+Generated states:44220
+Tree Height:3
+Scored 15219 nodes
+best node score is 61.369304391959844
+black is moving 1 steps UP from 5,6
+black turn time:0.102022863(s)
+Game:1	turn:66
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b b _ _ w b _ 
+4 b _ w _ _ _ w 
+5 _ k _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 67
+Avg. Branching Factor:0.5084238424362105
+Generated states:48918
+Tree Height:3
+Scored 27344 nodes
+best node score is 16.790762780412148
+white is moving 2 steps LEFT from 4,6
+white turn time:0.119330903(s)
+Black's turn. Turn 67
+Avg. Branching Factor:0.3259814366340647
+Generated states:31363
+Tree Height:3
+Scored 12472 nodes
+best node score is 53.73810236625363
+black is moving 2 steps RIGHT from 4,4
+black turn time:0.067385526(s)
+Game:1	turn:67
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b b _ _ w b _ 
+4 b _ w _ _ _ w 
+5 _ k _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 68
+Avg. Branching Factor:0.501260375038426
+Generated states:48918
+Tree Height:3
+Scored 27344 nodes
+best node score is 16.790762780412148
+white is moving 1 steps LEFT from 5,1
+white turn time:0.126261082(s)
+Black's turn. Turn 68
+Avg. Branching Factor:0.5150537303953205
+Generated states:50278
+Tree Height:3
+Scored 984 nodes
+best node score is Infinity
+black is moving 2 steps DOWN from 0,1
+black turn time:0.079585824(s)
+Game:1	turn:68
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ _ 
+3 b b _ _ w b _ 
+4 b _ w _ _ _ w 
+5 k _ _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 69
+Avg. Branching Factor:0.4426589490088139
+Generated states:43744
+Tree Height:3
+Scored 22091 nodes
+best node score is 15.962337662337664
+white is moving 1 steps DOWN from 4,6
+white turn time:0.107495312(s)
+Black's turn. Turn 69
+Avg. Branching Factor:0.40479974088282034
+Generated states:39993
+Tree Height:3
+Scored 1256 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.062330567(s)
+Game:1	turn:69
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b b _ _ w b _ 
+4 b _ w _ _ _ _ 
+5 k _ _ _ w _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 70
+Avg. Branching Factor:0.4549121405750799
+Generated states:45564
+Tree Height:3
+Scored 29696 nodes
+best node score is 16.113922787710088
+white is moving 2 steps LEFT from 5,4
+white turn time:0.119494013(s)
+Black's turn. Turn 70
+Avg. Branching Factor:0.43655162079816195
+Generated states:43701
+Tree Height:3
+Scored 1003 nodes
+best node score is Infinity
+black is moving 2 steps DOWN from 0,1
+black turn time:0.073214618(s)
+Game:1	turn:70
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ _ 
+3 b b _ _ w b _ 
+4 b _ w _ _ _ _ 
+5 k _ w _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 71
+Avg. Branching Factor:0.37747285291214216
+Generated states:38238
+Tree Height:3
+Scored 19634 nodes
+best node score is 15.975871275380051
+white is moving 1 steps UP from 5,6
+white turn time:0.152326139(s)
+Black's turn. Turn 71
+Avg. Branching Factor:0.382461304438013
+Generated states:38720
+Tree Height:3
+Scored 1137 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.068790476(s)
+Game:1	turn:71
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b b _ _ w b _ 
+4 b _ w _ _ _ w 
+5 k _ w _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 72
+Avg. Branching Factor:0.4328668057152882
+Generated states:44413
+Tree Height:3
+Scored 17645 nodes
+best node score is 15.882267732267731
+white is moving 3 steps UP from 4,6
+white turn time:0.096385838(s)
+Black's turn. Turn 72
+Avg. Branching Factor:0.4289685442574982
+Generated states:43980
+Tree Height:3
+Scored 968 nodes
+best node score is Infinity
+black is moving 2 steps DOWN from 0,1
+black turn time:0.081334588(s)
+Game:1	turn:72
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ _ x 
+1 _ _ _ b _ _ w 
+2 b w _ _ _ _ _ 
+3 b b _ _ w b _ 
+4 b _ w _ _ _ _ 
+5 k _ w _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 73
+Avg. Branching Factor:0.3692380373894851
+Generated states:38297
+Tree Height:3
+Scored 20685 nodes
+best node score is 15.949428698349237
+white is moving 2 steps UP from 3,4
+white turn time:0.119859821(s)
+Black's turn. Turn 73
+Avg. Branching Factor:0.38017533200243037
+Generated states:39420
+Tree Height:3
+Scored 1279 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.079194359(s)
+Game:1	turn:73
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b w _ w 
+2 b _ _ _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b _ w _ _ _ _ 
+5 k _ w _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 74
+Avg. Branching Factor:0.42511019506668823
+Generated states:44654
+Tree Height:3
+Scored 19574 nodes
+best node score is 15.774147774597548
+white is moving 3 steps DOWN from 1,4
+white turn time:0.127935072(s)
+Black's turn. Turn 74
+Avg. Branching Factor:0.41573793602712844
+Generated states:43645
+Tree Height:3
+Scored 882 nodes
+best node score is Infinity
+black is moving 2 steps DOWN from 0,1
+black turn time:0.076458502(s)
+Game:1	turn:74
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ _ x 
+1 _ _ _ b _ _ w 
+2 b w _ _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b _ w _ w _ _ 
+5 k _ w _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 75
+Avg. Branching Factor:0.3620686407474382
+Generated states:38443
+Tree Height:3
+Scored 15322 nodes
+best node score is 15.951681651681653
+white is moving 1 steps RIGHT from 5,2
+white turn time:0.093150386(s)
+Black's turn. Turn 75
+Avg. Branching Factor:0.40910203774153453
+Generated states:43445
+Tree Height:3
+Scored 1033 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.072804092(s)
+Game:1	turn:75
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ w 
+2 b _ _ _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b _ w _ w _ _ 
+5 k _ _ w _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 76
+Avg. Branching Factor:0.4642750901721638
+Generated states:49943
+Tree Height:3
+Scored 17581 nodes
+best node score is 16.10725859292576
+white is moving 2 steps RIGHT from 5,0
+white turn time:0.10991961(s)
+Black's turn. Turn 76
+Avg. Branching Factor:0.37811042533582817
+Generated states:40617
+Tree Height:3
+Scored 12333 nodes
+best node score is 65.71412625196291
+black is moving 3 steps RIGHT from 5,3
+black turn time:0.090219162(s)
+Game:1	turn:76
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ w 
+2 b _ _ _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b _ w _ w _ _ 
+5 _ _ k _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 77
+Avg. Branching Factor:0.46943081227354033
+Generated states:51175
+Tree Height:3
+Scored 22054 nodes
+best node score is 16.112110805860805
+white is moving 2 steps DOWN from 1,6
+white turn time:0.1166273(s)
+Black's turn. Turn 77
+Avg. Branching Factor:0.3832167832167832
+Generated states:41648
+Tree Height:3
+Scored 22654 nodes
+best node score is 63.12481030147908
+black is moving 2 steps LEFT from 5,6
+black turn time:0.223116093(s)
+Game:1	turn:77
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b b _ _ _ b w 
+4 b _ w _ w _ _ 
+5 _ _ k _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 78
+Avg. Branching Factor:0.31675975116923216
+Generated states:34880
+Tree Height:3
+Scored 17831 nodes
+best node score is 16.150341325341323
+white is moving 1 steps LEFT from 4,4
+white turn time:0.088880556(s)
+Black's turn. Turn 78
+Avg. Branching Factor:0.32741911979014865
+Generated states:35948
+Tree Height:3
+Scored 18834 nodes
+best node score is 61.46983349248894
+black is moving 5 steps UP from 5,4
+black turn time:0.094753267(s)
+Game:1	turn:78
+  0 1 2 3 4 5 6 
+0 x w _ _ w _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b b _ _ _ b w 
+4 b _ w w _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 79
+Avg. Branching Factor:0.3718680963413977
+Generated states:41409
+Tree Height:3
+Scored 14869 nodes
+best node score is 16.130561105561103
+white is moving 1 steps LEFT from 4,2
+white turn time:0.089608139(s)
+Black's turn. Turn 79
+Avg. Branching Factor:0.40694386919018205
+Generated states:45196
+Tree Height:3
+Scored 17142 nodes
+best node score is 64.62676012355351
+black is moving 1 steps DOWN from 3,6
+black turn time:0.102761076(s)
+Game:1	turn:79
+  0 1 2 3 4 5 6 
+0 x w _ _ w _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b w _ w _ _ w 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 80
+Avg. Branching Factor:0.42805547914207875
+Generated states:48238
+Tree Height:3
+Scored 13043 nodes
+best node score is 16.249975024975022
+white is moving 1 steps LEFT from 0,4
+white turn time:0.091745437(s)
+Black's turn. Turn 80
+Avg. Branching Factor:0.31140581661865563
+Generated states:34917
+Tree Height:3
+Scored 11794 nodes
+best node score is 63.295316434966956
+black is moving 1 steps LEFT from 4,6
+black turn time:0.084699796(s)
+Game:1	turn:80
+  0 1 2 3 4 5 6 
+0 x w _ w _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b b _ _ _ b _ 
+4 b w _ w _ w _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 81
+Avg. Branching Factor:0.23598453830643387
+Generated states:26801
+Tree Height:3
+Scored 9971 nodes
+best node score is 16.143348318348316
+white is moving 2 steps LEFT from 5,2
+white turn time:0.056102678(s)
+Black's turn. Turn 81
+Avg. Branching Factor:0.21336649437088437
+Generated states:24107
+Tree Height:3
+Scored 854 nodes
+best node score is Infinity
+black is moving 2 steps DOWN from 0,1
+black turn time:0.040373695(s)
+white takes black at 3,1
+Game:1	turn:81
+  0 1 2 3 4 5 6 
+0 x _ _ w _ _ x 
+1 _ _ _ b _ _ _ 
+2 b w _ _ _ _ _ 
+3 b _ _ _ _ b _ 
+4 b w _ w _ w _ 
+5 k _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 82
+Avg. Branching Factor:0.2979070518133359
+Generated states:34147
+Tree Height:3
+Scored 18399 nodes
+best node score is 14.610839160839161
+white is moving 1 steps LEFT from 4,5
+white turn time:0.083424602(s)
+Black's turn. Turn 82
+Avg. Branching Factor:0.31556985439148616
+Generated states:35998
+Tree Height:3
+Scored 814 nodes
+best node score is Infinity
+black is moving 2 steps UP from 2,1
+black turn time:0.058743602(s)
+Game:1	turn:82
+  0 1 2 3 4 5 6 
+0 x w _ w _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b _ _ _ _ b _ 
+4 b w _ w w _ _ 
+5 k _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 83
+Avg. Branching Factor:0.29614167919929474
+Generated states:34263
+Tree Height:3
+Scored 19213 nodes
+best node score is 14.598723799902405
+white is moving 2 steps UP from 4,4
+white turn time:0.08765961(s)
+Black's turn. Turn 83
+Avg. Branching Factor:0.4001854435480377
+Generated states:46181
+Tree Height:3
+Scored 615 nodes
+best node score is Infinity
+black is moving 3 steps DOWN from 0,1
+black turn time:0.071150263(s)
+Game:1	turn:83
+  0 1 2 3 4 5 6 
+0 x _ _ w _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ _ 
+3 b w _ _ _ b _ 
+4 b w _ w _ _ _ 
+5 k _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 84
+Avg. Branching Factor:0.34655659166737957
+Generated states:40509
+Tree Height:3
+Scored 18757 nodes
+best node score is 14.622960372960373
+white is moving 1 steps UP from 4,3
+white turn time:0.09266142(s)
+Black's turn. Turn 84
+Avg. Branching Factor:0.3474453431225395
+Generated states:40509
+Tree Height:3
+Scored 791 nodes
+best node score is Infinity
+black is moving 3 steps UP from 3,1
+black turn time:0.064008956(s)
+Game:1	turn:84
+  0 1 2 3 4 5 6 
+0 x w _ w _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ w _ _ 
+3 b _ _ _ _ b _ 
+4 b w _ w _ _ _ 
+5 k _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 85
+Avg. Branching Factor:0.3906493198890167
+Generated states:46181
+Tree Height:3
+Scored 21573 nodes
+best node score is 14.595138469726177
+white is moving 2 steps LEFT from 2,4
+white turn time:0.19110465(s)
+Black's turn. Turn 85
+Avg. Branching Factor:0.3743988192683196
+Generated states:44139
+Tree Height:3
+Scored 577 nodes
+best node score is Infinity
+black is moving 3 steps DOWN from 0,1
+black turn time:0.075618391(s)
+Game:1	turn:85
+  0 1 2 3 4 5 6 
+0 x _ _ w _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ w _ _ _ _ 
+3 b w _ _ _ b _ 
+4 b w _ w _ _ _ 
+5 k _ _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 86
+Avg. Branching Factor:0.32497675626324474
+Generated states:38798
+Tree Height:3
+Scored 17842 nodes
+best node score is 14.63699148074148
+white is moving 1 steps RIGHT from 5,0
+white turn time:0.083030571(s)
+Black's turn. Turn 86
+Avg. Branching Factor:0.3000016803051434
+Generated states:35708
+Tree Height:3
+Scored 16101 nodes
+best node score is 62.667343526039176
+black is moving 3 steps RIGHT from 2,2
+black turn time:0.083089951(s)
+Game:1	turn:86
+  0 1 2 3 4 5 6 
+0 x _ _ w _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ w _ 
+3 b w _ _ _ b _ 
+4 b w _ w _ _ _ 
+5 _ k _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 87
+Avg. Branching Factor:0.2712945279415428
+Generated states:32672
+Tree Height:3
+Scored 19441 nodes
+best node score is 14.275407925407924
+white is moving 4 steps RIGHT from 5,1
+white turn time:0.078717489(s)
+Black's turn. Turn 87
+Avg. Branching Factor:0.3030943798336677
+Generated states:36408
+Tree Height:3
+Scored 13655 nodes
+best node score is 46.8686598124098
+black is moving 1 steps LEFT from 0,3
+black turn time:0.086141766(s)
+Game:1	turn:87
+  0 1 2 3 4 5 6 
+0 x _ w _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ _ _ w _ 
+3 b w _ _ _ b _ 
+4 b w _ w _ _ _ 
+5 _ _ _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 88
+Avg. Branching Factor:0.37046074468434714
+Generated states:45091
+Tree Height:3
+Scored 34103 nodes
+best node score is 13.985210489993099
+white is moving 1 steps RIGHT from 4,3
+white turn time:0.119895375(s)
+Black's turn. Turn 88
+Avg. Branching Factor:0.43250314713795573
+Generated states:52566
+Tree Height:3
+Scored 15543 nodes
+best node score is 48.41439393939393
+black is moving 2 steps DOWN from 0,2
+black turn time:0.11919455(s)
+Game:1	turn:88
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ w _ _ w _ 
+3 b w _ _ _ b _ 
+4 b w _ _ w _ _ 
+5 _ _ _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 89
+Avg. Branching Factor:0.3362272379619534
+Generated states:41323
+Tree Height:3
+Scored 31812 nodes
+best node score is 14.00546398046398
+white is moving 3 steps UP from 4,4
+white turn time:0.119963918(s)
+Black's turn. Turn 89
+Avg. Branching Factor:0.35914540774769493
+Generated states:44093
+Tree Height:3
+Scored 16045 nodes
+best node score is 47.61736111111111
+black is moving 4 steps LEFT from 5,5
+black turn time:0.097347274(s)
+Game:1	turn:89
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ _ x 
+1 _ _ _ b w _ _ 
+2 b _ w _ _ w _ 
+3 b w _ _ _ b _ 
+4 b w _ _ _ _ _ 
+5 _ k _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 90
+Avg. Branching Factor:0.329529703768172
+Generated states:40892
+Tree Height:3
+Scored 23298 nodes
+best node score is 14.2872983725347
+white is moving 1 steps RIGHT from 5,1
+white turn time:0.105205901(s)
+Black's turn. Turn 90
+Avg. Branching Factor:0.33462975365324255
+Generated states:41471
+Tree Height:3
+Scored 10867 nodes
+best node score is 54.31816770186335
+black is moving 2 steps UP from 2,5
+black turn time:0.082475629(s)
+Game:1	turn:90
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ w x 
+1 _ _ _ b w _ _ 
+2 b _ w _ _ _ _ 
+3 b w _ _ _ b _ 
+4 b w _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 91
+Avg. Branching Factor:0.4028414481499494
+Generated states:50528
+Tree Height:3
+Scored 35065 nodes
+best node score is 14.39114010989011
+white is moving 4 steps LEFT from 0,5
+white turn time:0.133528113(s)
+Black's turn. Turn 91
+Avg. Branching Factor:0.3907739473390071
+Generated states:48946
+Tree Height:3
+Scored 11776 nodes
+best node score is 65.6450195537152
+black is moving 2 steps RIGHT from 0,1
+black turn time:0.098138268(s)
+Game:1	turn:91
+  0 1 2 3 4 5 6 
+0 x _ _ w _ _ x 
+1 _ _ _ b w _ _ 
+2 b _ w _ _ _ _ 
+3 b w _ _ _ b _ 
+4 b w _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 92
+Avg. Branching Factor:0.3674738736463234
+Generated states:46556
+Tree Height:3
+Scored 35598 nodes
+best node score is 14.410806554556554
+white is moving 2 steps DOWN from 1,4
+white turn time:0.233910341(s)
+Black's turn. Turn 92
+Avg. Branching Factor:0.32326044995728254
+Generated states:40864
+Tree Height:3
+Scored 8503 nodes
+best node score is 58.99928404928404
+black is moving 1 steps LEFT from 0,3
+black turn time:0.077127803(s)
+Game:1	turn:92
+  0 1 2 3 4 5 6 
+0 x _ w _ _ _ x 
+1 _ _ _ b _ _ _ 
+2 b _ w _ _ _ _ 
+3 b w _ _ w b _ 
+4 b w _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 93
+Avg. Branching Factor:0.32636287566569955
+Generated states:41733
+Tree Height:3
+Scored 21882 nodes
+best node score is 14.631595417560575
+white is moving 1 steps LEFT from 0,2
+white turn time:0.109065571(s)
+Black's turn. Turn 93
+Avg. Branching Factor:0.3376347624420208
+Generated states:43093
+Tree Height:3
+Scored 8549 nodes
+best node score is 65.66496257365822
+black is moving 3 steps RIGHT from 0,1
+black turn time:0.086514904(s)
+Game:1	turn:93
+  0 1 2 3 4 5 6 
+0 x _ _ _ w _ x 
+1 _ _ _ b _ _ _ 
+2 b _ w _ _ _ _ 
+3 b w _ _ w b _ 
+4 b w _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 94
+Avg. Branching Factor:0.33555144125370867
+Generated states:43316
+Tree Height:3
+Scored 22679 nodes
+best node score is 14.62052600683785
+white is moving 1 steps UP from 2,2
+white turn time:0.115499088(s)
+Black's turn. Turn 94
+Avg. Branching Factor:0.3210179412929221
+Generated states:41350
+Tree Height:3
+Scored 9931 nodes
+best node score is 55.99183455433455
+black is moving 1 steps LEFT from 0,4
+black turn time:0.080468087(s)
+Game:1	turn:94
+  0 1 2 3 4 5 6 
+0 x _ _ w _ _ x 
+1 _ _ w b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b w _ _ w b _ 
+4 b w _ _ _ _ _ 
+5 _ _ k _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 95
+Avg. Branching Factor:0.30044770732381604
+Generated states:39124
+Tree Height:3
+Scored 24754 nodes
+best node score is 14.519835583192044
+white is moving 2 steps RIGHT from 5,2
+white turn time:0.102232525(s)
+Black's turn. Turn 95
+Avg. Branching Factor:0.288068536065334
+Generated states:37425
+Tree Height:3
+Scored 13021 nodes
+best node score is 46.08383838383838
+black is moving 2 steps RIGHT from 0,3
+black turn time:0.077335999(s)
+Game:1	turn:95
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ w x 
+1 _ _ w b _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b w _ _ w b _ 
+4 b w _ _ _ _ _ 
+5 _ _ _ _ k _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 96
+Avg. Branching Factor:0.311090139730281
+Generated states:40876
+Tree Height:3
+Scored 33577 nodes
+best node score is 14.147575932167582
+white is moving 2 steps UP from 3,4
+white turn time:0.123903127(s)
+white takes black at 1,3
+Black's turn. Turn 96
+Avg. Branching Factor:0.37237058715931953
+Generated states:48858
+Tree Height:3
+Scored 19504 nodes
+best node score is 53.19864776456848
+black is moving 1 steps RIGHT from 5,4
+black turn time:0.107784879(s)
+Game:1	turn:96
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ w x 
+1 _ _ w _ w _ _ 
+2 b _ _ _ _ _ _ 
+3 b w _ _ _ b _ 
+4 b w _ _ _ _ _ 
+5 _ _ _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 97
+Avg. Branching Factor:0.3855969868173258
+Generated states:51188
+Tree Height:3
+Scored 24139 nodes
+best node score is 13.027299783549783
+white is moving 3 steps DOWN from 1,2
+white turn time:0.119129672(s)
+Black's turn. Turn 97
+Avg. Branching Factor:0.3357545738037889
+Generated states:44467
+Tree Height:3
+Scored 11664 nodes
+best node score is 57.99250693329441
+black is moving 2 steps DOWN from 1,4
+black turn time:0.08961547(s)
+Game:1	turn:97
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ w x 
+1 _ _ _ _ _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b w _ _ w b _ 
+4 b w w _ _ _ _ 
+5 _ _ _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 98
+Avg. Branching Factor:0.22252810964069034
+Generated states:29746
+Tree Height:3
+Scored 10939 nodes
+best node score is 13.061558782012503
+white is moving 4 steps LEFT from 0,5
+white turn time:0.057758707(s)
+Black's turn. Turn 98
+Avg. Branching Factor:0.21760193177301668
+Generated states:29017
+Tree Height:3
+Scored 8155 nodes
+best node score is 57.118662026617756
+black is moving 3 steps RIGHT from 4,2
+black turn time:0.06110229(s)
+Game:1	turn:98
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ _ _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b w _ _ w b _ 
+4 b w _ _ _ w _ 
+5 _ _ _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 99
+Avg. Branching Factor:0.20676920790607817
+Generated states:27827
+Tree Height:3
+Scored 12878 nodes
+best node score is 13.05952380952381
+white is moving 3 steps LEFT from 4,5
+white turn time:0.063135856(s)
+Black's turn. Turn 99
+Avg. Branching Factor:0.2161270380384183
+Generated states:29017
+Tree Height:3
+Scored 8155 nodes
+best node score is 57.118662026617756
+black is moving 1 steps UP from 4,2
+black turn time:0.105150187(s)
+Game:1	turn:99
+  0 1 2 3 4 5 6 
+0 x w _ _ _ _ x 
+1 _ _ _ _ _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b w w _ w b _ 
+4 b w _ _ _ _ _ 
+5 _ _ _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 100
+Avg. Branching Factor:0.20807375476099088
+Generated states:28189
+Tree Height:3
+Scored 14196 nodes
+best node score is 13.073418248418248
+white is moving 1 steps RIGHT from 0,1
+white turn time:0.066440585(s)
+Black's turn. Turn 100
+Avg. Branching Factor:0.2090282196605354
+Generated states:28251
+Tree Height:3
+Scored 13684 nodes
+best node score is 48.02280308258569
+black is moving 3 steps RIGHT from 0,2
+black turn time:0.069648913(s)
+Game:1	turn:100
+  0 1 2 3 4 5 6 
+0 x _ _ _ _ w x 
+1 _ _ _ _ _ _ _ 
+2 b _ _ _ _ _ _ 
+3 b w w _ w b _ 
+4 b w _ _ _ _ _ 
+5 _ _ _ _ _ k _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 1
+Avg. Branching Factor:0.155931557262877
+Generated states:21270
+Tree Height:3
+Scored 6793 nodes
+best node score is 12.253500451204474
+white is moving 3 steps RIGHT from 5,3
+white turn time:0.055376195(s)
+Black's turn. Turn 1
+Avg. Branching Factor:0.1682447570426415
+Generated states:22904
+Tree Height:3
+Scored 14240 nodes
+best node score is 67.75350045120447
+black is moving 1 steps LEFT from 5,6
+black turn time:0.076194592(s)
+Game:2	turn:1
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k w b b 
+4 b _ _ w _ _ b 
+5 _ _ _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 2
+Avg. Branching Factor:0.18353049020035794
+Generated states:25227
+Tree Height:3
+Scored 16344 nodes
+best node score is 12.253500451204474
+white is moving 2 steps LEFT from 5,5
+white turn time:0.079796951(s)
+Black's turn. Turn 2
+Avg. Branching Factor:0.15518184802830773
+Generated states:21270
+Tree Height:3
+Scored 4763 nodes
+best node score is 67.75350045120447
+black is moving 3 steps RIGHT from 5,3
+black turn time:0.051322258(s)
+Game:2	turn:2
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k w b b 
+4 b _ _ w _ _ b 
+5 _ _ _ _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 3
+Avg. Branching Factor:0.16544948892982267
+Generated states:22904
+Tree Height:3
+Scored 12920 nodes
+best node score is 12.253500451204474
+white is moving 3 steps LEFT from 5,6
+white turn time:0.082848767(s)
+Black's turn. Turn 3
+Avg. Branching Factor:0.1541360194209935
+Generated states:21270
+Tree Height:3
+Scored 4763 nodes
+best node score is 67.75350045120447
+black is moving 2 steps RIGHT from 4,3
+black turn time:0.057233089(s)
+Game:2	turn:3
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k w b b 
+4 b _ _ _ _ w b 
+5 _ _ _ w _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 4
+Avg. Branching Factor:0.1896800189278519
+Generated states:26456
+Tree Height:3
+Scored 5624 nodes
+best node score is 26.202752802752798
+white is moving 3 steps LEFT from 4,5
+white turn time:0.063743213(s)
+Black's turn. Turn 4
+Avg. Branching Factor:0.1582083966114138
+Generated states:21981
+Tree Height:3
+Scored 13108 nodes
+best node score is 67.75350045120447
+black is moving 1 steps RIGHT from 4,2
+black turn time:0.071225403(s)
+Game:2	turn:4
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k w b b 
+4 b _ _ w _ _ b 
+5 _ _ _ w _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 5
+Avg. Branching Factor:0.1514881736665551
+Generated states:21270
+Tree Height:3
+Scored 6793 nodes
+best node score is 12.253500451204474
+white is moving 2 steps LEFT from 4,3
+white turn time:0.057014264(s)
+Black's turn. Turn 5
+Avg. Branching Factor:0.1879112165222423
+Generated states:26304
+Tree Height:3
+Scored 13459 nodes
+best node score is 67.75350045120447
+black is moving 3 steps RIGHT from 5,3
+black turn time:0.08616889(s)
+Game:2	turn:5
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k w b b 
+4 b w _ _ _ _ b 
+5 _ _ _ _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 6
+Avg. Branching Factor:0.19247409124969955
+Generated states:27227
+Tree Height:3
+Scored 6849 nodes
+best node score is 26.246359527985774
+white is moving 1 steps DOWN from 3,4
+white turn time:0.064417281(s)
+Black's turn. Turn 6
+Avg. Branching Factor:0.21097438223910855
+Generated states:29763
+Tree Height:3
+Scored 10046 nodes
+best node score is 58.41240694724245
+black is moving 1 steps UP from 4,4
+black turn time:0.078406663(s)
+Game:2	turn:6
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k w b b 
+4 b w _ _ _ _ b 
+5 _ _ _ _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 7
+Avg. Branching Factor:0.19105460006034708
+Generated states:27227
+Tree Height:3
+Scored 6849 nodes
+best node score is 26.246359527985774
+white is moving 1 steps DOWN from 3,4
+white turn time:0.065372119(s)
+Black's turn. Turn 7
+Avg. Branching Factor:0.20935238135432274
+Generated states:29763
+Tree Height:3
+Scored 10046 nodes
+best node score is 58.41240694724245
+black is moving 2 steps RIGHT from 4,1
+black turn time:0.077373019(s)
+Game:2	turn:7
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b _ _ w w _ b 
+5 _ _ _ _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 8
+Avg. Branching Factor:0.15841384021301214
+Generated states:22727
+Tree Height:3
+Scored 6216 nodes
+best node score is 26.792386779886776
+white is moving 3 steps LEFT from 5,6
+white turn time:0.056551324(s)
+Black's turn. Turn 8
+Avg. Branching Factor:0.14695480786703757
+Generated states:21026
+Tree Height:3
+Scored 5025 nodes
+best node score is 67.75350045120447
+black is moving 2 steps RIGHT from 5,3
+black turn time:0.057207431(s)
+Game:2	turn:8
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w k _ b b 
+4 b _ _ w w _ b 
+5 _ _ _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 9
+Avg. Branching Factor:0.17321826511827482
+Generated states:25029
+Tree Height:3
+Scored 6206 nodes
+best node score is 26.81023269484723
+white is moving 1 steps LEFT from 5,5
+white turn time:0.058286526(s)
+Black's turn. Turn 9
+Avg. Branching Factor:0.14683391327901985
+Generated states:21141
+Tree Height:3
+Scored 7597 nodes
+best node score is 49.92141775301643
+black is moving 1 steps RIGHT from 3,3
+black turn time:0.056635995(s)
+Game:2	turn:9
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ _ w w _ b 
+5 _ _ _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 10
+Avg. Branching Factor:0.127891690240696
+Generated states:18581
+Tree Height:3
+Scored 2630 nodes
+best node score is 26.937255808186134
+white is moving 1 steps LEFT from 5,4
+white turn time:0.043481225(s)
+Black's turn. Turn 10
+Avg. Branching Factor:0.12920405329796714
+Generated states:18705
+Tree Height:3
+Scored 5015 nodes
+best node score is 63.251873905986514
+black is moving 1 steps RIGHT from 5,3
+black turn time:0.077318771(s)
+Game:2	turn:10
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ _ w w _ b 
+5 _ _ _ _ w _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 11
+Avg. Branching Factor:0.127197426067908
+Generated states:18581
+Tree Height:3
+Scored 2630 nodes
+best node score is 26.937255808186134
+white is moving 2 steps LEFT from 5,4
+white turn time:0.03795123(s)
+Black's turn. Turn 11
+Avg. Branching Factor:0.13416669528486555
+Generated states:19534
+Tree Height:3
+Scored 6609 nodes
+best node score is 63.251873905986514
+black is moving 3 steps RIGHT from 5,2
+black turn time:0.051949409(s)
+Game:2	turn:11
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ k b b 
+4 b _ _ w w _ b 
+5 _ _ _ _ _ w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 12
+Avg. Branching Factor:0.15224638075541527
+Generated states:22379
+Tree Height:3
+Scored 5856 nodes
+best node score is 26.92765567765568
+white is moving 2 steps UP from 3,4
+white turn time:0.054747578(s)
+Black's turn. Turn 12
+Avg. Branching Factor:0.1866190937495736
+Generated states:27355
+Tree Height:3
+Scored 6776 nodes
+best node score is 49.92000589339561
+black is moving 1 steps DOWN from 4,4
+black turn time:0.067756465(s)
+Game:2	turn:12
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b k _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ w _ _ b 
+5 _ _ _ _ w w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 13
+Avg. Branching Factor:0.20406977529759895
+Generated states:30206
+Tree Height:3
+Scored 6617 nodes
+best node score is 26.766167659917453
+white is moving 1 steps DOWN from 1,4
+white turn time:0.071120572(s)
+Black's turn. Turn 13
+Avg. Branching Factor:0.16805737254875378
+Generated states:24793
+Tree Height:3
+Scored 9246 nodes
+best node score is 55.253500451204474
+black is moving 2 steps LEFT from 4,3
+black turn time:0.065023906(s)
+Game:2	turn:13
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w k _ b 
+3 b b w _ _ b b 
+4 b w _ _ _ _ b 
+5 _ _ _ _ w w _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 14
+Avg. Branching Factor:0.19804118870329376
+Generated states:29522
+Tree Height:3
+Scored 5013 nodes
+best node score is 26.87516095016095
+white is moving 3 steps LEFT from 5,4
+white turn time:0.070249673(s)
+Black's turn. Turn 14
+Avg. Branching Factor:0.21808335295502707
+Generated states:32417
+Tree Height:3
+Scored 16537 nodes
+best node score is 50.17671746876112
+black is moving 1 steps UP from 5,5
+black turn time:0.097623278(s)
+Game:2	turn:14
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w k _ b 
+3 b b w _ _ b b 
+4 b w _ _ _ w b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 15
+Avg. Branching Factor:0.19603989420174953
+Generated states:29425
+Tree Height:3
+Scored 6802 nodes
+best node score is 26.882105394605396
+white is moving 2 steps DOWN from 2,4
+white turn time:0.070485725(s)
+Black's turn. Turn 15
+Avg. Branching Factor:0.18810015436120522
+Generated states:28149
+Tree Height:3
+Scored 13483 nodes
+best node score is 56.58335047539412
+black is moving 1 steps RIGHT from 4,1
+black turn time:0.086065892(s)
+Game:2	turn:15
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ w _ k w b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 16
+Avg. Branching Factor:0.17495648260296912
+Generated states:26434
+Tree Height:3
+Scored 4661 nodes
+best node score is 26.893349624490725
+white is moving 3 steps UP from 4,4
+white turn time:0.063767038(s)
+Black's turn. Turn 16
+Avg. Branching Factor:0.2118952201491547
+Generated states:31936
+Tree Height:3
+Scored 8126 nodes
+best node score is 47.58387535726507
+black is moving 1 steps DOWN from 5,1
+black turn time:0.073551835(s)
+Game:2	turn:16
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b k _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ w _ _ w b 
+5 _ _ _ _ _ _ _ 
+6 x w b b b _ x 
+
+White's turn. Turn 17
+Avg. Branching Factor:0.14498058060693833
+Generated states:22024
+Tree Height:3
+Scored 9517 nodes
+best node score is 22.148037692629345
+white is moving 1 steps LEFT from 4,2
+white turn time:0.061483125(s)
+Black's turn. Turn 17
+Avg. Branching Factor:0.1618450213709039
+Generated states:24537
+Tree Height:3
+Scored 7618 nodes
+best node score is 51.24721993926359
+black is moving 1 steps UP from 6,1
+black turn time:0.063740647(s)
+Game:2	turn:17
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b k _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b w _ _ _ w b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 18
+Avg. Branching Factor:0.21878798969948104
+Generated states:33475
+Tree Height:3
+Scored 13186 nodes
+best node score is 25.368871199320974
+white is moving 2 steps LEFT from 4,5
+white turn time:0.094755832(s)
+Black's turn. Turn 18
+Avg. Branching Factor:0.17152877933656746
+Generated states:26165
+Tree Height:3
+Scored 6828 nodes
+best node score is 45.41814912946988
+black is moving 3 steps DOWN from 1,4
+black turn time:0.063156382(s)
+Game:2	turn:18
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b w _ w k _ b 
+5 _ w _ _ _ _ _ 
+6 x _ b b b _ x 
+
+White's turn. Turn 19
+Avg. Branching Factor:0.14366762848007486
+Generated states:22107
+Tree Height:3
+Scored 8096 nodes
+best node score is 26.911711899211898
+white is moving 1 steps LEFT from 5,1
+white turn time:0.06017934(s)
+Black's turn. Turn 19
+Avg. Branching Factor:0.15457951842559708
+Generated states:23721
+Tree Height:3
+Scored 10396 nodes
+best node score is 57.41172084089597
+black is moving 2 steps DOWN from 4,1
+black turn time:0.067714313(s)
+Game:2	turn:19
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ w k _ b 
+5 w _ _ _ _ _ _ 
+6 x w b b b _ x 
+
+White's turn. Turn 20
+Avg. Branching Factor:0.16249765876783373
+Generated states:25160
+Tree Height:3
+Scored 9519 nodes
+best node score is 26.868596336435367
+white is moving 6 steps RIGHT from 5,0
+white turn time:0.067514181(s)
+Black's turn. Turn 20
+Avg. Branching Factor:0.1637717764393498
+Generated states:25288
+Tree Height:3
+Scored 4801 nodes
+best node score is 61.910710059224805
+black is moving 2 steps UP from 6,1
+black turn time:0.054503462(s)
+Game:2	turn:20
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b w _ w k _ b 
+5 _ _ _ _ _ _ w 
+6 x _ b b b _ x 
+
+White's turn. Turn 21
+Avg. Branching Factor:0.15307616246966213
+Generated states:23841
+Tree Height:3
+Scored 15278 nodes
+best node score is 26.225779661843966
+white is moving 1 steps LEFT from 4,3
+white turn time:0.132600032(s)
+Black's turn. Turn 21
+Avg. Branching Factor:0.1520076235609241
+Generated states:23608
+Tree Height:3
+Scored 9043 nodes
+best node score is 55.4193201770849
+black is moving 2 steps DOWN from 4,1
+black turn time:0.067706249(s)
+Game:2	turn:21
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ w _ k _ b 
+5 _ _ _ _ _ _ w 
+6 x w b b b _ x 
+
+White's turn. Turn 22
+Avg. Branching Factor:0.1679991832619751
+Generated states:26329
+Tree Height:3
+Scored 9330 nodes
+best node score is 26.73153880433292
+white is moving 2 steps LEFT from 5,6
+white turn time:0.070081797(s)
+Black's turn. Turn 22
+Avg. Branching Factor:0.16055853123180197
+Generated states:25090
+Tree Height:3
+Scored 6379 nodes
+best node score is 59.58265042113803
+black is moving 1 steps LEFT from 5,4
+black turn time:0.068218673(s)
+Game:2	turn:22
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ w _ k _ b 
+5 _ _ _ w _ _ _ 
+6 x w b b b _ x 
+
+White's turn. Turn 23
+Avg. Branching Factor:0.16286016908840673
+Generated states:25678
+Tree Height:3
+Scored 7851 nodes
+best node score is 26.89265282900524
+white is moving 2 steps RIGHT from 5,3
+white turn time:0.064008588(s)
+Black's turn. Turn 23
+Avg. Branching Factor:0.18593341766841057
+Generated states:29249
+Tree Height:3
+Scored 9413 nodes
+best node score is 59.58265042113803
+black is moving 1 steps LEFT from 4,2
+black turn time:0.077223837(s)
+Game:2	turn:23
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b w _ _ k _ b 
+5 _ _ _ _ _ w _ 
+6 x w b b b _ x 
+
+White's turn. Turn 24
+Avg. Branching Factor:0.20235320794648592
+Generated states:32126
+Tree Height:3
+Scored 10580 nodes
+best node score is 26.857480224024343
+white is moving 1 steps LEFT from 4,4
+white turn time:0.086714669(s)
+Black's turn. Turn 24
+Avg. Branching Factor:0.16632661440600344
+Generated states:26331
+Tree Height:3
+Scored 10208 nodes
+best node score is 65.91342736367997
+black is moving 2 steps LEFT from 5,5
+black turn time:0.080174121(s)
+Game:2	turn:24
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b w _ k _ _ b 
+5 _ _ _ w _ _ _ 
+6 x w b b b _ x 
+
+White's turn. Turn 25
+Avg. Branching Factor:0.13635424169354587
+Generated states:21771
+Tree Height:3
+Scored 6074 nodes
+best node score is 26.670032240232338
+white is moving 1 steps RIGHT from 5,3
+white turn time:0.061987484(s)
+Black's turn. Turn 25
+Avg. Branching Factor:0.17307185440853468
+Generated states:27579
+Tree Height:3
+Scored 11053 nodes
+best node score is 65.91342736367997
+black is moving 1 steps DOWN from 4,1
+black turn time:0.07436189(s)
+Game:2	turn:25
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k _ _ b 
+5 _ w _ _ w _ _ 
+6 x w b b b _ x 
+
+White's turn. Turn 26
+Avg. Branching Factor:0.1822327856000697
+Generated states:29289
+Tree Height:3
+Scored 8629 nodes
+best node score is 26.739671409739547
+white is moving 2 steps LEFT from 5,4
+white turn time:0.074285283(s)
+Black's turn. Turn 26
+Avg. Branching Factor:0.1270862080807198
+Generated states:20354
+Tree Height:3
+Scored 10084 nodes
+best node score is 65.91342736367997
+black is moving 1 steps LEFT from 5,1
+black turn time:0.067499886(s)
+Game:2	turn:26
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k _ _ b 
+5 w _ w _ _ _ _ 
+6 x w b b b _ x 
+
+White's turn. Turn 27
+Avg. Branching Factor:0.14797263019834445
+Generated states:23918
+Tree Height:3
+Scored 7465 nodes
+best node score is 26.74054456465447
+white is moving 1 steps RIGHT from 4,3
+white turn time:0.060803193(s)
+Black's turn. Turn 27
+Avg. Branching Factor:0.17537991846257903
+Generated states:28263
+Tree Height:3
+Scored 10794 nodes
+best node score is 65.91009094106644
+black is moving 4 steps RIGHT from 5,2
+black turn time:0.087419159(s)
+Game:2	turn:27
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ _ k _ b 
+5 w _ _ _ _ _ w 
+6 x w b b b _ x 
+
+White's turn. Turn 28
+Avg. Branching Factor:0.22494181798085366
+Generated states:36632
+Tree Height:3
+Scored 10230 nodes
+best node score is 26.698105225301624
+white is moving 2 steps RIGHT from 5,0
+white turn time:0.091727842(s)
+Black's turn. Turn 28
+Avg. Branching Factor:0.19777368236142528
+Generated states:32087
+Tree Height:3
+Scored 10622 nodes
+best node score is 64.5767576077331
+black is moving 1 steps LEFT from 4,4
+black turn time:0.084013632(s)
+Game:2	turn:28
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ _ k _ _ b 
+5 _ _ w _ _ _ w 
+6 x w b b b _ x 
+
+White's turn. Turn 29
+Avg. Branching Factor:0.16799399498361436
+Generated states:27528
+Tree Height:3
+Scored 7620 nodes
+best node score is 26.714906621156622
+white is moving 2 steps LEFT from 5,2
+white turn time:0.06645378(s)
+Black's turn. Turn 29
+Avg. Branching Factor:0.19316811624362687
+Generated states:31560
+Tree Height:3
+Scored 9729 nodes
+best node score is 67.74054709403651
+black is moving 1 steps LEFT from 4,3
+black turn time:0.081811091(s)
+Game:2	turn:29
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ k _ _ _ b 
+5 w _ _ _ _ _ w 
+6 x w b b b _ x 
+
+White's turn. Turn 30
+Avg. Branching Factor:0.17839154862992526
+Generated states:29433
+Tree Height:3
+Scored 13303 nodes
+best node score is 26.691411701968512
+white is moving 5 steps RIGHT from 5,0
+white turn time:0.082850967(s)
+Black's turn. Turn 30
+Avg. Branching Factor:0.14787905340854463
+Generated states:24302
+Tree Height:3
+Scored 4835 nodes
+best node score is 69.9065276543567
+black is moving 2 steps LEFT from 5,5
+black turn time:0.051307596(s)
+Game:2	turn:30
+  0 1 2 3 4 5 6 
+0 x _ b b b _ x 
+1 _ _ _ b _ _ _ 
+2 b _ _ w _ _ b 
+3 b b w _ _ b b 
+4 b _ k _ _ _ b 
+5 _ _ _ w _ _ w 
+6 x w b b b _ x 
+
+White's turn. Turn 31
+Avg. Branching Factor:0.14602956508114429
+Generated states:24232
+Tree Height:3
+Scored 11006 nodes
+best node score is 26.714906621156622
+white is moving 2 steps UP from 6,1
+white turn time:0.133496957(s)
+Black's turn. Turn 31
+Avg. Branching Factor:0.13453845641767379
+Generated states:22231
+Tree Height:3

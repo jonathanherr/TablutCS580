@@ -189,10 +189,7 @@ public class Hnefatafl {
 					gameOver=getBoard().gameOver;
 					winner=getBoard().winner;
 					winResult=getBoard().winResult;
-					if(winner.equals("black") && gameOver && winResult.equals("KINGCAP")){
-						System.out.println("blah");
-						System.out.println(getBoard().getStateString("", getBoard().board));
-					}
+					
 				}
 				if(gameOver){
 					double end=System.nanoTime();
@@ -280,19 +277,32 @@ public class Hnefatafl {
 					players.put(name,player);
 				}
 			}
-			for(MiniMaxPlayer player:players.values()){
-				for(MiniMaxPlayer player2:players.values()){
-					if(!player.name.equals(player2.name)){
-						if(player.getColor().equals("white"))
+		}
+		for(MiniMaxPlayer player:players.values()){
+			for(MiniMaxPlayer player2:players.values()){
+				if(!player.name.equals(player2.name)){
+					if(player.getColor().equals("white"))
+						try {
+							this.play(player, player2, games, turns, 0);
 							try {
-								this.play(player, player2, games, turns, 0);
-							} catch (InterruptedException e) {
+								BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_minimax_"+player.name + "_" + player2.name+"_"+games+"_"+turns+".txt")));
+								for(Outcome result:player.games){
+									bw.write(result.toString());
+								}
+								for(Outcome result:player2.games){
+									bw.write(result.toString());
+								}
+								bw.close();
+							} catch (IOException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
-					}
-				}	
-			}
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+				}
+			}	
 		}
 	}
 	
