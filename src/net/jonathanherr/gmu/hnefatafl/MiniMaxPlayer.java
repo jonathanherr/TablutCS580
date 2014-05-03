@@ -44,6 +44,8 @@ public class MiniMaxPlayer extends Player {
 		tree.setRoot(node);		
 		totalMoves=0;
 		generateStates(currentState,this.pieces,tree.root);
+		double bf=countBranches(tree.root)/nodeCount;
+		System.out.println("Avg. Branching Factor:"+bf);
 		System.out.println("Generated states:" + totalMoves);
 		//printTree(node);
 		Move chosenMove= tree.choose(this,turnNumber,searchDepth);
@@ -52,6 +54,18 @@ public class MiniMaxPlayer extends Player {
 		this.moves.add(chosenMove);
 		return chosenMove;
 	}
+	int nodeCount=0;
+	private double countBranches(TreeNode node) {
+		int branches=node.getChildren().size();
+		if(branches>0)
+			nodeCount+=1;
+		double avgBF=0.0d;
+		for(TreeLink link:node.getChildren()){
+			branches+=countBranches(link.getChild());
+		}
+		return branches;
+	}
+
 	/**
 	 * Print out the tree for debugging
 	 * @param node
@@ -114,13 +128,15 @@ public class MiniMaxPlayer extends Player {
 	 * @param parent
 	 */
 	private int totalMoves=0;
+	private double totalBranches=0;
 	private void generateStates(BoardState state, ArrayList<Piece> pieces, TreeNode parent) {
 		BoardState gameState=null;
 		int availMoves=0;
 		//TODO: calculate branching factor
 		int pieceIndex=0;
-		for(Piece piece:pieces) {
+		for(Piece piece:pieces) {			
 			if(piece!=null) {
+				
 				for(Direction moveDir:Direction.values()) {
 					//TODO: figure out why availMoves is wrong(gave 4 instead of 3)
 					availMoves=piece.availLength(moveDir,game,state.board);

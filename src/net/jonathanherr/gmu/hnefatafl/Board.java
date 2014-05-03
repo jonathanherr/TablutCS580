@@ -475,7 +475,11 @@ public class Board {
 	 * @param col
 	 */
 	private void take(Piece attackingPiece,Piece takenPiece) {
-		
+		if(attackingPiece.value==this.black){
+			if(takenPiece.value==this.king){
+				//System.out.println("king capped:\n" + Board.getStateString("", getBoardGrid()));
+			}
+		}
 		this.getBoardGrid()[takenPiece.getRow()][takenPiece.getCol()]=this.blank;
 		
 		if(this.getBlackpieces().contains(takenPiece))
@@ -485,6 +489,7 @@ public class Board {
 		
 		if(attackingPiece.value==this.black){
 			if(takenPiece.value==this.king){
+				//System.out.println("king capped:\n" + Board.getStateString("", getBoardGrid()));
 				win(attackingPiece,takenPiece,Result.KINGCAP);
 			}
 			this.setBlackCaptures(this.getBlackCaptures() + 1);				

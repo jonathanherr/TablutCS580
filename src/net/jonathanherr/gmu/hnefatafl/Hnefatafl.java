@@ -184,6 +184,10 @@ public class Hnefatafl {
 					gameOver=getBoard().gameOver;
 					winner=getBoard().winner;
 					winResult=getBoard().winResult;
+					if(winner.equals("black") && gameOver && winResult.equals("KINGCAP")){
+						System.out.println("blah");
+						System.out.println(getBoard().getStateString("", getBoard().board));
+					}
 				}
 				if(gameOver){
 					double end=System.nanoTime();
