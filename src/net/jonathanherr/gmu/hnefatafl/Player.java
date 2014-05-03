@@ -28,7 +28,7 @@ Player {
 	protected ArrayList<Piece> pieces;
 	protected ArrayList<Outcome> games;
 	@Expose	
-	protected ImmutableMap<String,Double> featureWeights;
+	protected HashMap<String,Double> featureWeights;
 	
 	protected HashMap<String,ArrayList<Double>> transposeTable;
 	
@@ -46,7 +46,7 @@ Player {
 	public Map<String,Double> getFeatureWeights() {
 		return featureWeights;
 	}
-	public void setFeatureWeights(ImmutableMap<String, Double> featureWeights) {
+	public void setFeatureWeights(HashMap<String, Double> featureWeights) {
 		this.featureWeights = featureWeights;
 	}
 	public ArrayList<Move> getMoves() {

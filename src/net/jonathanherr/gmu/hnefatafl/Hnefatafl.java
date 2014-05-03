@@ -7,13 +7,16 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Map;
+import java.util.HashMap;
 import java.util.Random;
 
-import com.google.common.collect.ImmutableMap;
-
 import net.jonathanherr.gmu.hnefatafl.Player.Result;
+
+import com.google.common.collect.ImmutableMap;
 
 /**
  * Main class for hnefatafal game logic. Provides methods for reading and altering the game board by manipulating pieces.
@@ -161,6 +164,8 @@ public class Hnefatafl {
 		black.setColor(Board.BLACK);
 		this.setWhitePlayer(white);
 		this.setBlackPlayer(black);
+		HashMap<String, Double> featureWeights=new HashMap<String,Double>();
+		
 		for(int gameNum=0;gameNum<games;gameNum++){
 			int turns=0;
 			reset(false);
@@ -238,13 +243,59 @@ public class Hnefatafl {
 	 * tournament runner runs games and tracks statistics. 
 	 * @param rounds
 	 */
-	public void tournament(int rounds, Player white, Player black){
-		int blackWins=0;
-		int whiteWins=0;
-		for(int round=0;round<rounds;round++){
-			
+	public void tournament(){
+		int games=100;
+		int turns=100;
+		
+		ArrayList<String> playerConfigs=null;
+		HashMap<String,MiniMaxPlayer> players=new HashMap<String,MiniMaxPlayer>();
+		try {
+			playerConfigs=(ArrayList<String>) Files.readAllLines(FileSystems.getDefault().getPath("cannedplayers.cfg"),Charset.forName("UTF8"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for(String config:playerConfigs){
+			if(!config.trim().equals("")){
+				String[] kv=config.split("=");
+				String[] parts=kv[0].split("_");
+				Double weight=Double.valueOf(kv[1]);
+				String side=parts[0];
+				String name=parts[1];
+				String feature=parts[2];
+				ArrayList<Piece> pieces=null;
+				if(side.equals("white"))
+					pieces=getBoard().getWhitepieces();
+				else
+					pieces=getBoard().getBlackpieces();
+				
+				if(players.containsKey(name)){
+					players.get(name).addFeature(feature, weight);
+				}
+				else{
+					MiniMaxPlayer player=new MiniMaxPlayer(this, pieces);
+					player.setColor(side);
+					player.name=name;
+					player.addFeature(feature,weight);
+					players.put(name,player);
+				}
+			}
+			for(MiniMaxPlayer player:players.values()){
+				for(MiniMaxPlayer player2:players.values()){
+					if(!player.name.equals(player2.name)){
+						if(player.getColor().equals("white"))
+							try {
+								this.play(player, player2, games, turns, 0);
+							} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+					}
+				}	
+			}
 		}
 	}
+	
 	/**
 	 * Main entry, runs a default number of games between two RandomPlayer players. 
 	 * @param args
@@ -257,10 +308,8 @@ public class Hnefatafl {
 		if(args.length>0)
 			searchDepth=Integer.valueOf(args[0]);
 		System.out.println("Playing minimax vs random with minimax depth of " + searchDepth);
-		playMinimax(game,searchDepth);
-		//playRandom(game);
-		
-		
+		//playMinimax(game,searchDepth);
+		game.tournament();
 	}
 	/**
 	 * Start a game with one minimax player and one random player. 
@@ -275,12 +324,9 @@ public class Hnefatafl {
 		MiniMaxPlayer white = new MiniMaxPlayer(game,game.getBoard().whitepieces);
 		white.searchDepth=depth;
 		
-		ImmutableMap<String, Double> featureWeights=new ImmutableMap.Builder<String,Double>().
-				put("kingdist",1.0).put("piecedist",1.0).put("cornerdist",1.0).
-				put("numpieces",1.0).put("incapture",1.0).put("escaperoute",1.0).build();
-				
-		white.setFeatureWeights(featureWeights);
-		black.setFeatureWeights(featureWeights);
+		
+		//white.setFeatureWeights(featureWeights);
+		//black.setFeatureWeights(featureWeights);
 		
 		int games=100;
 		int turns=100;

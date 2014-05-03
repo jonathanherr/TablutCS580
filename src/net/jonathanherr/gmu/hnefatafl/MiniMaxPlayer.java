@@ -4,12 +4,14 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import net.jonathanherr.gmu.hnefatafl.Board.Direction;
 import net.jonathanherr.gmu.minimax.MiniMaxTree;
 import net.jonathanherr.gmu.minimax.TreeLink;
 import net.jonathanherr.gmu.minimax.TreeNode;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.common.io.Files;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -30,6 +32,8 @@ public class MiniMaxPlayer extends Player {
 	public MiniMaxPlayer(Hnefatafl game, ArrayList<Piece> pieces) {
 		super(game, pieces, "Minimax");
 		tree=new MiniMaxTree();
+		featureWeights=new HashMap<String,Double>();
+		
 	}
 	
 	/**
@@ -43,12 +47,15 @@ public class MiniMaxPlayer extends Player {
 		node.setColor(this.pieces.get(0).getName());
 		tree.setRoot(node);		
 		totalMoves=0;
+		treeGenerationDuration=0;
 		generateStates(currentState,this.pieces,tree.root);
 		double bf=countBranches(tree.root)/nodeCount;
 		System.out.println("Avg. Branching Factor:"+bf);
 		System.out.println("Generated states:" + totalMoves);
+		int treeHeight=tree.getHeight(tree.root);
+		System.out.println("Tree Height:" + treeHeight);
 		//printTree(node);
-		Move chosenMove= tree.choose(this,turnNumber,searchDepth);
+		Move chosenMove= tree.choose(this,turnNumber,treeHeight);
 		long end=System.nanoTime();
 		System.out.println(this.getColor() + " turn time:"+((end-start)/1000000000.0d)+"(s)");
 		this.moves.add(chosenMove);
@@ -74,7 +81,6 @@ public class MiniMaxPlayer extends Player {
 		
 		//System.out.println(game.getStateString("",node.board));
 		ArrayList<String> outlines=new ArrayList<String>();
-		game.getBoard();
 		for(int i=0;i<=Board.boardheight+1;i++) {
 			outlines.add("");
 		}
@@ -128,12 +134,13 @@ public class MiniMaxPlayer extends Player {
 	 * @param parent
 	 */
 	private int totalMoves=0;
-	private double totalBranches=0;
+	private long treeGenerationDuration=0L;
+	public String name;
 	private void generateStates(BoardState state, ArrayList<Piece> pieces, TreeNode parent) {
 		BoardState gameState=null;
 		int availMoves=0;
-		//TODO: calculate branching factor
 		int pieceIndex=0;
+		long start=System.nanoTime();
 		for(Piece piece:pieces) {			
 			if(piece!=null) {
 				
@@ -154,35 +161,26 @@ public class MiniMaxPlayer extends Player {
 						Board simBoard=new Board();
 						simBoard.debug=false; //don't want output from simulated moves
 						simBoard.setBoard(boardGrid);
-						//System.out.println("before state move from " + piece.getRow()+","+piece.getCol() + " " + move.getDirection() + " " + move.getLength());
-						//System.out.println(simBoard.toStateString());
 						Board.deepCopy(state.getBlackpieces(), blackPieces);
 						Board.deepCopy(state.getWhitepieces(), whitePieces);
+						simBoard.setBlackpieces(blackPieces);
+						simBoard.setWhitepieces(whitePieces);
+					
 						if(piece.getName().equals(Board.BLACK)) {
-							
-							simBoard.setBlackpieces(blackPieces);
-							simBoard.setWhitepieces(whitePieces);
 							move=new Move(blackPieces.get(pieceIndex),moveDir,availMoves);
-							
 						}
 						else {
-							
-							simBoard.setWhitepieces(whitePieces);
-							simBoard.setBlackpieces(blackPieces);
 							move=new Move(whitePieces.get(pieceIndex),moveDir,availMoves);							
 						}
 						
 						simBoard.move(this, move);
-						//System.out.println("after state move to " + statePiece.getRow()+","+statePiece.getCol() + " " + move.getDirection() + " " + move.getLength());
-						//System.out.println(simBoard.toStateString());
 						
 						gameState=new BoardState(simBoard.getBoardGrid(), simBoard.getBlackpieces(), simBoard.getWhitepieces());
 						gameState.setMove(new Move(piece,moveDir,availMoves)); //when we create the state's move object based on what was selected, use the piece that is the original piece so that it won't have been updated and is the object from the game board's state.
 						gameState.winner=simBoard.winner;
 						gameState.setGameOver(simBoard.gameOver);
 						if(simBoard.debug) {
-							System.out.println(move.toString());
-							
+							System.out.println(move.toString());		
 							System.out.println("move score:" +this.evaluate(gameState) );
 						}
 						TreeNode node=new TreeNode(gameState);
@@ -195,23 +193,33 @@ public class MiniMaxPlayer extends Player {
 			}
 			pieceIndex+=1;
 		}
-		
+		long end=System.nanoTime();
+		treeGenerationDuration+=end-start;
 		/**
 		 * Call self recursively to generate more levels
 		 */
 		for(TreeLink link:parent.getChildren()) {
-			if(link.getChild().getLevel()<searchDepth){
+			start=System.nanoTime();
+			if(link.getChild().getLevel()<searchDepth || belowTimeThreshold(treeGenerationDuration)){
 				BoardState childState=link.getChild().getState();
-				game.getBoard();
 				if(link.getChild().getColor().equals(Board.WHITE))
 					generateStates(childState,childState.getBlackpieces(),link.getChild());
 				else
 					generateStates(childState,childState.getWhitepieces(),link.getChild());
 			}
+			treeGenerationDuration+=System.nanoTime()-start;
 		}
+		
 		
 	}
 		
+	private boolean belowTimeThreshold(long totalTime) {
+		if(totalTime>50000L)
+			return false;
+		else
+			return true;
+	}
+
 	public static Player openPlayer(String path) throws IOException{
 		Gson gson=new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
 		String json = Files.toString(new File(path), Charset.forName("UTF-8"));
@@ -225,6 +233,10 @@ public class MiniMaxPlayer extends Player {
 	}
 	public double evaluateOpponent(BoardState state) {
 		return super.evaluateOpponent(state);
+	}
+
+	public void addFeature(String feature, Double weight) {
+		featureWeights.put(feature, weight);
 	}
 	
 

@@ -21,6 +21,13 @@ public class MiniMaxTree {
 		this.root=node;
 		
 	}
+	
+	public int getHeight(TreeNode node){		
+		if(node.getChildren().size()>0)
+			return getHeight(node.getChildren().get(0).getChild());
+		else
+			return node.getLevel();
+	}
 	/**
 	 * Score the leaves and propagate scores upward based on minimax
 	 */
