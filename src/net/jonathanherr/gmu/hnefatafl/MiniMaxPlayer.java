@@ -32,21 +32,8 @@ public class MiniMaxPlayer extends Player {
 		super(game, pieces, "Minimax");
 		tree=new MiniMaxTree();
 		featureWeights=new HashMap<String,Double>();
-		
 	}
-	protected void updateweights(BoardState state,int lookback){
-		for(int i=lookback;i>=0;i--){
-			BoardState compareState=states.get(i);
-			double score=evaluate(compareState);
-			double curScore=evaluate(state);
-			if(curScore>=score){
-				//bump up parameters
-			}
-			else{
-				//decrease them
-			}
-		}
-	}
+	
 	/**
 	 * Obey player interface, provide a Move object to game controller representing the player's choice of action. 
 	 */

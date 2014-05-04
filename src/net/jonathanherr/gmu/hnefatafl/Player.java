@@ -43,8 +43,8 @@ Player {
 	protected int captures;
 	@Expose	
 	private int wins;
-	@Expose	
-	private String type;
+	@Expose
+	protected String type;
 	@Expose	
 	private String color;
 	

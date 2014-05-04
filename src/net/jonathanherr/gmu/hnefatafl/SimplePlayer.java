@@ -7,7 +7,7 @@ public class SimplePlayer extends MiniMaxPlayer {
 	
 	public SimplePlayer(Hnefatafl game, ArrayList<Piece> pieces) {
 		super(game, pieces);
-		this.name="Simple";
+		this.type="Simple";
 		this.searchDepth=2;
 		// TODO Auto-generated constructor stub
 	}

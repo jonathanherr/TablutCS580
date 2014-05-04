@@ -332,9 +332,31 @@ public class Hnefatafl {
 		else{
 			System.out.println("Tablut.jar <searchdepth> <whiteplayer.plr> <blackplayer.plr>");
 		}
-		game.playSimple(game);
+		game.playANN(game);
+		//game.playSimple(game);
 		//game.playMinimax(game,searchDepth);
 		//game.tournament();
+	}
+	private void playANN(Hnefatafl game) throws InterruptedException {
+		ANN_Player white=new ANN_Player(game, game.getBoard().whitepieces);
+		RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
+		int games=100;
+		int turns=1000;
+		int delay=0;
+		game.play(white, black, games, turns,delay);
+		try {
+			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_ANN_Random_"+games+"_"+turns+".txt")));
+			for(Outcome result:black.games){
+				bw.write(result.toString());
+			}
+			for(Outcome result:white.games){
+				bw.write(result.toString());
+			}
+			bw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	/**
 	 * 
