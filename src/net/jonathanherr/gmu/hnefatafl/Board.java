@@ -493,10 +493,15 @@ public class Board {
 				win(attackingPiece,takenPiece,Result.KINGCAP);
 			}
 			this.setBlackCaptures(this.getBlackCaptures() + 1);				
+			if(this.getWhitepieces().size()==0)
+				win(attackingPiece,takenPiece,Result.ALLCAP);
 		}
 		else{
 			this.setWhiteCaptures(this.getWhiteCaptures() + 1);
+			if(this.getBlackpieces().size()==0)
+				win(attackingPiece,takenPiece,Result.ALLCAP);
 		}
+		
 		
 	}
 	

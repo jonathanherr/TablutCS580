@@ -327,25 +327,30 @@ public class Hnefatafl {
 		Hnefatafl game=new Hnefatafl();
 		int searchDepth=3;
 		
-		if(args.length>1)
+		if(args.length>0)
 			searchDepth=Integer.valueOf(args[0]);
-		else{
-			System.out.println("Tablut.jar <searchdepth> <whiteplayer.plr> <blackplayer.plr>");
-		}
-		game.playANN(game);
-		//game.playSimple(game);
-		//game.playMinimax(game,searchDepth);
-		//game.tournament();
+		
+		ArrayList<Player> players=new ArrayList<Player>();
+		players.add(new RandomPlayer(game,game.getBoard().blackpieces));
+		players.add(new SimplePlayer(game,game.getBoard().blackpieces));
+		MiniMaxPlayer mmplayer=new MiniMaxPlayer(game, game.getBoard().blackpieces);
+		mmplayer.readFeatures("blackfeature1.txt");
+		mmplayer.searchDepth=searchDepth;
+		players.add(mmplayer);
+		
+		for(Player player:players)
+			game.playANN(game,player);
+		
+		
 	}
-	private void playANN(Hnefatafl game) throws InterruptedException {
+	private void playANN(Hnefatafl game, Player black) throws InterruptedException {
 		ANN_Player white=new ANN_Player(game, game.getBoard().whitepieces);
-		RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
-		int games=100;
-		int turns=1000;
+		int games=5000;
+		int turns=250;
 		int delay=0;
 		game.play(white, black, games, turns,delay);
 		try {
-			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_ANN_Random_"+games+"_"+turns+".txt")));
+			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_"+white.type+"_"+black.type+"_"+games+"_"+turns+".txt")));
 			for(Outcome result:black.games){
 				bw.write(result.toString());
 			}

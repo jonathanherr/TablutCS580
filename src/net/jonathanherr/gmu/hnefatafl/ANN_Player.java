@@ -11,11 +11,16 @@ import org.neuroph.util.TransferFunctionType;
 public class ANN_Player extends MiniMaxPlayer {
 
 	double[] lastoutput={0};
+	NeuralNetwork<BackPropagation> nn;
 	public ANN_Player(Hnefatafl game, ArrayList<Piece> pieces) {
 		super(game, pieces);
 		this.type="ANN";
 		this.searchDepth=1;
+		nn=new org.neuroph.nnet.MultiLayerPerceptron(TransferFunctionType.SIGMOID,Board.getBoardheight()*Board.getBoardwidth()+3,50,1);
 	}
+	/**
+	 * evaluate current state using backprop neural network and fully incremented td learning. 
+	 */
 	public double evaluate(BoardState state){
 		//input neurons - 
 		//one for each cell, 
@@ -23,7 +28,7 @@ public class ANN_Player extends MiniMaxPlayer {
 		//one for if its black's turn, 
 		//one for difference between white and black piece counts
 		
-		int inputsize=game.getBoard().getBoardheight()*game.getBoard().getBoardwidth()+3;
+		int inputsize=Board.getBoardheight()*Board.getBoardwidth()+3;
 		DataSet inputdata=new DataSet(inputsize);
 		double[] input=new double[inputsize];
 	
@@ -51,17 +56,31 @@ public class ANN_Player extends MiniMaxPlayer {
 			input[inputsize-2]=1;
 			input[inputsize-1]=game.whiteCaptures;
 		}
-		int reward=0;
+		//exepected output is previous state output if not end of game, else one at end of game if game won, else 0. 
+		double reward=lastoutput[0];
 		if(game.getBoard().gameOver && game.getBoard().winner.equals(this.getColor()))
-			reward=1;
-		inputdata.addRow(new DataSetRow(input,new double[]{lastoutput[reward]}));
-		NeuralNetwork<BackPropagation> nn=new org.neuroph.nnet.MultiLayerPerceptron(TransferFunctionType.SIGMOID,Board.getBoardheight()*game.getBoard().getBoardwidth()+3,50,1);
+			reward=1.0d;
+		else if(game.getBoard().gameOver)
+			reward=0.0d;
+		inputdata.addRow(new DataSetRow(input,new double[]{reward}));
 		nn.setLearningRule(new org.neuroph.nnet.learning.BackPropagation());
 		nn.learn(inputdata);
-		double[] prevoutput=lastoutput;
 		lastoutput=nn.getOutput();
+		int turns=this.moves.size();
+		if(turns%100==0){
+			save("ANN_"+turns+".nn");
+		}
 		
 		return nn.getOutput()[0];
 	}
+	
+	public void save(String path){
+		nn.save(path);
+	}
+	public void load(String path){
+		nn=NeuralNetwork.createFromFile(path);
+	}
+	
+	
 
 }
