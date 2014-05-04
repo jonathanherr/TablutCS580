@@ -15,9 +15,9 @@ public class Outcome{
 	private String side;
 	private String playerName;
 	private long gameid;
+	private int captures;
 	
-	
-	public Outcome(long gameid,String playerName, String sideName, boolean win,int moves, double length, Result result){
+	public Outcome(long gameid,String playerName, String sideName, boolean win,int moves, double length, Result result, int captures){
 		this.moveCount=moves;
 		this.gameLength=length;
 		this.type=result;
@@ -25,12 +25,13 @@ public class Outcome{
 		this.side=sideName;
 		this.playerName=playerName;
 		this.gameid=gameid;
+		this.captures=captures;
 	}
 	@Override
 	public String toString(){
 		String state="";
 			
-		state+=gameid+"\t"+playerName+"\t"+side+"\t"+moveCount+"\t"+gameLength+"\t"+String.valueOf(win)+"\t"+type+"\n";
+		state+=gameid+"\t"+playerName+"\t"+side+"\t"+moveCount+"\t"+gameLength+"\t"+String.valueOf(win)+"\t"+type+"\t"+captures+"\n";
 		return state;
 	}
 }

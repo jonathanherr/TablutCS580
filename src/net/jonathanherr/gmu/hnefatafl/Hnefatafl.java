@@ -90,6 +90,10 @@ public class Hnefatafl {
 		board.gameOver=false;
 		board.winner="";
 		board.winResult=null;
+		blackCaptures=0;
+		whiteCaptures=0;
+		board.setBlackCaptures(0);
+		board.setWhiteCaptures(0);
 		readConfig(reloadConfig);
 		
 	}
@@ -164,7 +168,6 @@ public class Hnefatafl {
 		black.setColor(Board.BLACK);
 		this.setWhitePlayer(white);
 		this.setBlackPlayer(black);
-		HashMap<String, Double> featureWeights=new HashMap<String,Double>();
 		
 		for(int gameNum=0;gameNum<games;gameNum++){
 			int turns=0;
@@ -176,7 +179,7 @@ public class Hnefatafl {
 				Move whitemove=white.turn(turns);
 				if(whitemove!=null)
 					getBoard().move(white,whitemove);
-				this.whitePlayer.captures+=getBoard().getWhiteCaptures();
+				this.whitePlayer.captures=getBoard().getWhiteCaptures();
 				gameOver=getBoard().gameOver;
 				winner=getBoard().winner;
 				winResult=getBoard().winResult;
@@ -185,7 +188,7 @@ public class Hnefatafl {
 					Move blackmove=black.turn(turns);
 					if(blackmove!=null)
 						getBoard().move(black,blackmove);
-					blackPlayer.captures+=getBoard().getBlackCaptures();
+					blackPlayer.captures=getBoard().getBlackCaptures();
 					gameOver=getBoard().gameOver;
 					winner=getBoard().winner;
 					winResult=getBoard().winResult;
@@ -244,10 +247,43 @@ public class Hnefatafl {
 		int games=100;
 		int turns=100;
 		
+		HashMap<String, MiniMaxPlayer> players = readPlayerConfigs("cannedplayers.cfg");
+		for(MiniMaxPlayer player:players.values()){
+			for(MiniMaxPlayer player2:players.values()){
+				if(!player.name.equals(player2.name)){
+					try {
+						System.out.println(player.name + " vs " + player2.name);
+						this.play(player, player2, games, turns, 0);
+						try {
+							BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_minimax_"+player.name + "_" + player2.name+"_"+games+"_"+turns+".txt")));
+							for(Outcome result:player.games){
+								bw.write(result.toString());
+							}
+							for(Outcome result:player2.games){
+								bw.write(result.toString());
+							}
+							bw.close();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}	
+		}
+	}
+	/**
+	 * read player definitions from config file
+	 * @return
+	 */
+	private HashMap<String, MiniMaxPlayer> readPlayerConfigs(String configfilename) {
 		ArrayList<String> playerConfigs=null;
 		HashMap<String,MiniMaxPlayer> players=new HashMap<String,MiniMaxPlayer>();
 		try {
-			playerConfigs=(ArrayList<String>) Files.readAllLines(FileSystems.getDefault().getPath("cannedplayers.cfg"),Charset.forName("UTF8"));
+			playerConfigs=(ArrayList<String>) Files.readAllLines(FileSystems.getDefault().getPath(configfilename),Charset.forName("UTF8"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -278,32 +314,7 @@ public class Hnefatafl {
 				}
 			}
 		}
-		for(MiniMaxPlayer player:players.values()){
-			for(MiniMaxPlayer player2:players.values()){
-				if(!player.name.equals(player2.name)){
-					if(player.getColor().equals("white"))
-						try {
-							this.play(player, player2, games, turns, 0);
-							try {
-								BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_minimax_"+player.name + "_" + player2.name+"_"+games+"_"+turns+".txt")));
-								for(Outcome result:player.games){
-									bw.write(result.toString());
-								}
-								for(Outcome result:player2.games){
-									bw.write(result.toString());
-								}
-								bw.close();
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-				}
-			}	
-		}
+		return players;
 	}
 	
 	/**
@@ -315,31 +326,61 @@ public class Hnefatafl {
 		
 		Hnefatafl game=new Hnefatafl();
 		int searchDepth=3;
-		if(args.length>0)
+		
+		if(args.length>1)
 			searchDepth=Integer.valueOf(args[0]);
-		System.out.println("Playing minimax vs random with minimax depth of " + searchDepth);
-		//playMinimax(game,searchDepth);
-		game.tournament();
+		else{
+			System.out.println("Tablut.jar <searchdepth> <whiteplayer.plr> <blackplayer.plr>");
+		}
+		game.playSimple(game);
+		//game.playMinimax(game,searchDepth);
+		//game.tournament();
+	}
+	/**
+	 * 
+	 * @param game
+	 * @throws InterruptedException
+	 */
+	private void playSimple(Hnefatafl game) throws InterruptedException {
+		SimplePlayer white=new SimplePlayer(game, game.getBoard().whitepieces);
+		RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
+		white.readFeatures("whitefeature1.txt");
+		int games=100;
+		int turns=1000;
+		int delay=0;
+		game.play(white, black, games, turns,delay);
+		
+		try {
+			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_simple_random_"+games+"_"+turns+".txt")));
+			for(Outcome result:black.games){
+				bw.write(result.toString());
+			}
+			for(Outcome result:white.games){
+				bw.write(result.toString());
+			}
+			bw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	/**
 	 * Start a game with one minimax player and one random player. 
 	 * @param game
 	 * @throws InterruptedException
 	 */
-	private static void playMinimax(Hnefatafl game, int depth) throws InterruptedException {
+	private void playMinimax(Hnefatafl game, int depth) throws InterruptedException {
 		System.out.println(game.getBoard().toStateString());
-		RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
-		//NoopPlayer black = new NoopPlayer(game, game.getBoard().blackpieces,"noop");
-		//MiniMaxPlayer black = new MiniMaxPlayer(game, game.getBoard().blackpieces);
+		
+		MiniMaxPlayer black = new MiniMaxPlayer(game, game.getBoard().blackpieces);
+		black.readFeatures("blackfeature1.txt");
 		MiniMaxPlayer white = new MiniMaxPlayer(game,game.getBoard().whitepieces);
+		white.readFeatures("whitefeature1.txt");
 		white.searchDepth=depth;
+		black.searchDepth=depth;
 		
-		
-		//white.setFeatureWeights(featureWeights);
-		//black.setFeatureWeights(featureWeights);
-		
-		int games=100;
-		int turns=100;
+		int games=1000;
+		int turns=50;
 		int delay=0;
 		game.play(white, black, games, turns,delay);
 		

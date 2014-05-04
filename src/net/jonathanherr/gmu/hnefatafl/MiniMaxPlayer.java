@@ -11,7 +11,6 @@ import net.jonathanherr.gmu.minimax.MiniMaxTree;
 import net.jonathanherr.gmu.minimax.TreeLink;
 import net.jonathanherr.gmu.minimax.TreeNode;
 
-import com.google.common.collect.ImmutableMap;
 import com.google.common.io.Files;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,7 +34,19 @@ public class MiniMaxPlayer extends Player {
 		featureWeights=new HashMap<String,Double>();
 		
 	}
-	
+	protected void updateweights(BoardState state,int lookback){
+		for(int i=lookback;i>=0;i--){
+			BoardState compareState=states.get(i);
+			double score=evaluate(compareState);
+			double curScore=evaluate(state);
+			if(curScore>=score){
+				//bump up parameters
+			}
+			else{
+				//decrease them
+			}
+		}
+	}
 	/**
 	 * Obey player interface, provide a Move object to game controller representing the player's choice of action. 
 	 */
@@ -43,22 +54,28 @@ public class MiniMaxPlayer extends Player {
 		long start=System.nanoTime();
 		BoardState currentState=new BoardState(game.getBoard().board, game.getBoard().getBlackpieces(), game.getBoard().getWhitepieces());
 		TreeNode node=new TreeNode(currentState);
-		//System.out.println(game.getBoard().toStateString());
 		node.setColor(this.pieces.get(0).getName());
 		tree.setRoot(node);		
 		totalMoves=0;
 		treeGenerationDuration=0;
-		generateStates(currentState,this.pieces,tree.root);
+		generateSearchTree(currentState,this.pieces,tree.root,Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY,searchDepth,true);
 		double bf=countBranches(tree.root)/nodeCount;
 		System.out.println("Avg. Branching Factor:"+bf);
 		System.out.println("Generated states:" + totalMoves);
 		int treeHeight=tree.getHeight(tree.root);
 		System.out.println("Tree Height:" + treeHeight);
 		//printTree(node);
-		Move chosenMove= tree.choose(this,turnNumber,treeHeight);
+		if(treeHeight==0){
+			System.out.println("White cannot move, forfeiting");
+			game.getBoard().win(null,game.getBoard().getBlackpieces().get(0),Result.ALLCAP);
+			return null;
+		}
+		BoardState bestState= tree.getBestState(this,turnNumber,treeHeight);
+		Move chosenMove=bestState.getMove();
 		long end=System.nanoTime();
 		System.out.println(this.getColor() + " turn time:"+((end-start)/1000000000.0d)+"(s)");
 		this.moves.add(chosenMove);
+		this.states.add(bestState);
 		return chosenMove;
 	}
 	int nodeCount=0;
@@ -135,7 +152,72 @@ public class MiniMaxPlayer extends Player {
 	 */
 	private int totalMoves=0;
 	private long treeGenerationDuration=0L;
-	public String name;
+	private double generateSearchTree(BoardState state, ArrayList<Piece> pieces, TreeNode node,double alpha, double beta, int depth,boolean maximizingplayer){
+		if(depth==0){
+			double score=evaluate(node.getState());
+			node.setScore(score);
+			return score;
+		}
+		if(maximizingplayer){
+			//generate all children for this node = all the possible moves from here
+			generateFrontier(state, pieces, node);
+			for(TreeLink link:node.getChildren()){
+				alpha=Math.max(alpha,generateSearchTree(state,link.getChild().getState().getBlackpieces(),link.getChild(),alpha,beta,depth-1,false));
+				if(beta<=alpha){
+					break;
+				}
+			}
+			node.setScore(alpha);
+			return alpha;
+		}
+		else{
+			generateFrontier(state, pieces, node);
+			for(TreeLink link:node.getChildren()){
+				beta=Math.min(beta,generateSearchTree(state,link.getChild().getState().getBlackpieces(),link.getChild(),alpha,beta,depth-1,true));
+				if(beta<=alpha){
+					break;
+				}
+			}
+			node.setScore(beta);
+			return beta;
+		}
+	}
+	/**
+	 * Generate all children, all legal moves, from the current state
+	 * @param state
+	 * @param pieces
+	 * @param node
+	 */
+	private void generateFrontier(BoardState state, ArrayList<Piece> pieces,
+			TreeNode node) {
+		BoardState gameState;
+		int availMoves;
+		int pieceIndex=0;
+		for(Piece piece:pieces) {			
+			if(piece!=null) {
+				for(Direction moveDir:Direction.values()) {
+					availMoves=piece.availLength(moveDir,game,state.board);
+					totalMoves+=availMoves;
+					while (availMoves>=minMoveSize) {
+						gameState = generateNextState(state, availMoves,pieceIndex, piece, moveDir);	
+						TreeNode newnode=new TreeNode(gameState);
+						newnode.setColor(piece.getName());
+						newnode.setLevel(node.getLevel()+1);
+						node.addChild(newnode);
+						availMoves-=1;
+					}
+				}
+			}
+			pieceIndex+=1;
+		}
+	}
+	
+	/**
+	 * Generates entire search tree without pruning. costly. 
+	 * @param state
+	 * @param pieces
+	 * @param parent
+	 */
 	private void generateStates(BoardState state, ArrayList<Piece> pieces, TreeNode parent) {
 		BoardState gameState=null;
 		int availMoves=0;
@@ -145,7 +227,6 @@ public class MiniMaxPlayer extends Player {
 			if(piece!=null) {
 				
 				for(Direction moveDir:Direction.values()) {
-					//TODO: figure out why availMoves is wrong(gave 4 instead of 3)
 					availMoves=piece.availLength(moveDir,game,state.board);
 					totalMoves+=availMoves;
 					
@@ -182,7 +263,7 @@ public class MiniMaxPlayer extends Player {
 						if(simBoard.debug) {
 							System.out.println(move.toString());		
 							System.out.println("move score:" +this.evaluate(gameState) );
-						}
+						}	
 						TreeNode node=new TreeNode(gameState);
 						node.setColor(piece.getName());
 						node.setLevel(parent.getLevel()+1);
@@ -212,6 +293,53 @@ public class MiniMaxPlayer extends Player {
 		
 		
 	}
+
+	/**
+	 * Simulate the given move and create a boardstate to represent the outcome of the move
+	 * @param state
+	 * @param availMoves
+	 * @param pieceIndex
+	 * @param piece
+	 * @param moveDir
+	 * @return
+	 */
+	private BoardState generateNextState(BoardState state, int availMoves,
+			int pieceIndex, Piece piece, Direction moveDir) {
+		BoardState gameState;
+		int[][] boardGrid = new int[Board.boardwidth][Board.boardheight];
+		ArrayList<Piece> blackPieces=new ArrayList<Piece>();
+		ArrayList<Piece> whitePieces=new ArrayList<Piece>();
+		
+		Board.copyBoard(state.getBoard(), boardGrid);
+		//when we do the simulated move, use a copy of the piece so that we don't update it's position in the 'real' set since we don't know which node the player will choose
+		Move move=null;
+		Board simBoard=new Board();
+		simBoard.debug=false; //don't want output from simulated moves
+		simBoard.setBoard(boardGrid);
+		Board.deepCopy(state.getBlackpieces(), blackPieces);
+		Board.deepCopy(state.getWhitepieces(), whitePieces);
+		simBoard.setBlackpieces(blackPieces);
+		simBoard.setWhitepieces(whitePieces);
+
+		if(piece.getName().equals(Board.BLACK)) {
+			move=new Move(blackPieces.get(pieceIndex),moveDir,availMoves);
+		}
+		else {
+			move=new Move(whitePieces.get(pieceIndex),moveDir,availMoves);							
+		}
+		
+		simBoard.move(this, move);
+		
+		gameState=new BoardState(simBoard.getBoardGrid(), simBoard.getBlackpieces(), simBoard.getWhitepieces());
+		gameState.setMove(new Move(piece,moveDir,availMoves)); //when we create the state's move object based on what was selected, use the piece that is the original piece so that it won't have been updated and is the object from the game board's state.
+		gameState.winner=simBoard.winner;
+		gameState.setGameOver(simBoard.gameOver);
+		if(simBoard.debug) {
+			System.out.println(move.toString());		
+			System.out.println("move score:" +this.evaluate(gameState) );
+		}
+		return gameState;
+	}
 		
 	private boolean belowTimeThreshold(long totalTime) {
 		if(totalTime>50000L)
@@ -237,6 +365,21 @@ public class MiniMaxPlayer extends Player {
 
 	public void addFeature(String feature, Double weight) {
 		featureWeights.put(feature, weight);
+	}
+
+	public void readFeatures(String featurefile) {
+		try {
+			for(String feature:Files.readLines(new File(featurefile), Charset.forName("UTF8"))){
+				String name=feature.split("=")[0];
+				Double weight=Double.valueOf(feature.split("=")[1]);
+				this.addFeature(name, weight);
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 

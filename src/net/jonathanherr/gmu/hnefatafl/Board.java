@@ -195,7 +195,6 @@ public class Board {
 		}
 		if(this.isValid(move,newrow,newcol)){
 			board[move.getPiece().getRow()][move.getPiece().getCol()]=blank;
-			//this.getPieceAt(move.getPiece().getRow(), move.getPiece().getCol()).setPosition(newrow, newcol);
 			move.getPiece().setPosition(newrow,newcol);
 			board[newrow][newcol]=move.getPiece().toChar();
 			if(move.getPiece().getName().equals(KING_NAME)) {
@@ -373,9 +372,10 @@ public class Board {
 		
 		if(takenPiece!=null){
 			if(takenPiece.getName().equals(KING_NAME)){
-				if(debug)
+				if(debug){
 					System.out.println(takingPiece.getName() + " wins by capturing white's king");
-				getBoardGrid();
+					System.out.println(toStateString());
+				}
 				winner=Board.BLACK;
 				winResult=Result.KINGCAP;				
 			}

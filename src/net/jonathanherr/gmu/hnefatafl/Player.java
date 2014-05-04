@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.jonathanherr.gmu.hnefatafl.Board.Direction;
+
 import com.google.common.collect.ImmutableMap;
 import com.google.common.io.Files;
 import com.google.gson.Gson;
@@ -23,10 +25,13 @@ Player {
 	enum Result {KINGCAP, KINGESCAPE, ALLCAP, LOSS, WIN, DRAW};
 	
 	protected ArrayList<Move> moves;
-	
+	@Expose
+	public String name;
 	protected Hnefatafl game;
 	protected ArrayList<Piece> pieces;
 	protected ArrayList<Outcome> games;
+	protected ArrayList<BoardState> states;
+	
 	@Expose	
 	protected HashMap<String,Double> featureWeights;
 	
@@ -76,6 +81,7 @@ Player {
 		transposeTable=new HashMap<String,ArrayList<Double>>();
 		moves=new ArrayList<Move>();
 		games=new ArrayList<Outcome>();		
+		states=new ArrayList<BoardState>();
 		Map<String,Double> featureWeights=new ImmutableMap.Builder<String,Double>().put("kingdist",1.0).
 				put("piecedist",1.0).put("cornerdist",1.0).put("numpieces",1.0).put("incapture",1.0).
 				put("escaperoute",1.0).build();
@@ -89,7 +95,7 @@ Player {
 		return games.get(games.size()-1);
 	}
 	public void addPlayedGame(long gameid,boolean wonGame,String side, int moveCount, double gameTime, Result result){
-		Outcome outcome=new Outcome(gameid,type,side,wonGame,moveCount,gameTime,result);
+		Outcome outcome=new Outcome(gameid,type,side,wonGame,moveCount,gameTime,result,this.captures);
 		games.add(outcome);
 		
 	}
@@ -156,22 +162,30 @@ Player {
 		
 		if(board.isGameOver() && board.winner.equals("white"))
 		{
-			pieceScores.add(Double.NEGATIVE_INFINITY);
+			pieceScores.add(Double.MIN_VALUE);
 			return;
 		}
 		else if(board.isGameOver() && board.winner.equals("black"))
 		{
-			pieceScores.add(Double.POSITIVE_INFINITY);
+			pieceScores.add(Double.MAX_VALUE);
 			return;
 		}
-		
+		int freedom=0;
 		for(Piece piece:board.getBlackpieces()) {
 			double score=0.0d;
 			score+=(1.0d/(double) distanceFromCorner(piece))*featureWeights.get("cornerdist");
 			score+=(1.0d/(double) distanceFromKing(board, piece))*featureWeights.get("kingdist");
 			score+=(1.0d/(double) distanceFromOpponent(board,game.getBoard().getWhitepieces(), piece))*featureWeights.get("piecedist");
+			
+			//sum movement freedom across all pieces
+			for(Direction dir:Direction.values()){
+				freedom+=piece.availLength(dir, game, board.board);
+			}
 			pieceScores.add(score);
 		}
+		freedom/=(game.getBoard().getBoardheight()*game.getBoard().getBoardwidth()); //normalize freedom by board size
+		pieceScores.add(freedom*featureWeights.get("freedom"));
+		
 		pieceScores.add(board.getBlackpieces().size()*featureWeights.get("numpieces")); //overall board position scores go in the last field of the piecescores list
 		
 		

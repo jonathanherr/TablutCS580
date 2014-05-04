@@ -3,6 +3,8 @@ package net.jonathanherr.gmu.minimax;
 import java.util.ArrayList;
 import java.util.Random;
 
+import net.jonathanherr.gmu.hnefatafl.Board;
+import net.jonathanherr.gmu.hnefatafl.BoardState;
 import net.jonathanherr.gmu.hnefatafl.MiniMaxPlayer;
 import net.jonathanherr.gmu.hnefatafl.Move;
 
@@ -29,7 +31,35 @@ public class MiniMaxTree {
 			return node.getLevel();
 	}
 	/**
+	 * get the best choice from the frontier by querying the root node of the tree for the highest scoring node. Choose randomly among ties.
+	 * @param player
+	 * @param turnNumber
+	 * @param depth
+	 * @return
+	 */
+	public BoardState getBestState(MiniMaxPlayer player, int turnNumber, int depth){
+		this.player=player;
+		ArrayList<TreeNode> bestChoices=new ArrayList<>();
+		for(TreeLink link:root.getChildren()) {
+			if(link.getChild().getScore()==root.getScore())
+				bestChoices.add(link.getChild());
+		}
+		TreeNode bestChoice=bestChoices.get(new Random().nextInt(bestChoices.size()));
+		if(bestChoice.getScore()==Double.POSITIVE_INFINITY){
+			System.out.println("infinity!");
+			System.out.println(Board.getStateString("", bestChoice.getBoard()));
+		}
+		System.out.println("best node score is " + bestChoice.getScore());
+		System.out.println(player.getColor() + " is moving " + bestChoice.getMove().getLength() + 
+				" steps " + bestChoice.getMove().getDirection() + " from " + bestChoice.getMove().getPiece().getRow() +
+				"," + bestChoice.getMove().getPiece().getCol());
+		return bestChoice.getState();
+	}
+	
+	
+	/**
 	 * Score the leaves and propagate scores upward based on minimax
+	 *	@deprecated
 	 */
 	public Move choose(MiniMaxPlayer player, int turnNumber, int depth) {
 		this.player=player;
@@ -45,10 +75,10 @@ public class MiniMaxTree {
 				bestChoices.add(link.getChild());
 		}
 		TreeNode bestChoice=bestChoices.get(new Random().nextInt(bestChoices.size()));
-		
-		
-		//DrawTree.write(this,turnNumber);
-		//player.printTree(root);
+		if(bestChoice.getScore()==Double.POSITIVE_INFINITY){
+			System.out.println("infinity!");
+			System.out.println(Board.getStateString("", bestChoice.getBoard()));
+		}
 		System.out.println("best node score is " + bestChoice.getScore());
 		System.out.println(player.getColor() + " is moving " + bestChoice.getMove().getLength() + 
 				" steps " + bestChoice.getMove().getDirection() + " from " + bestChoice.getMove().getPiece().getRow() +
