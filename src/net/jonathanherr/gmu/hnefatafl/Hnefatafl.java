@@ -47,7 +47,12 @@ public class Hnefatafl {
 	 * Accessors
 	 * @return
 	 */
-	
+	public Board getBoard() {
+		return board;
+	}
+	public void setBoard(Board board) {
+		this.board = board;
+	}
 	public void setGUI(GUI gui) {
 		this.gui=gui;
 	}
@@ -74,7 +79,7 @@ public class Hnefatafl {
 	 */
 	public Hnefatafl(){
 		board=new Board();
-		setupfile="setup7x7.cfg";
+		setupfile="config/setup7x7.cfg";
 		reset(true);
 		
 	}
@@ -143,12 +148,7 @@ public class Hnefatafl {
 		
 		
 	}
-	
-	
-	
-	
-	
-	
+
 	
 	/**
 	 * Main gameloop. Takes two player objects, assumes they implement the turn method declared in Player object. 
@@ -206,6 +206,8 @@ public class Hnefatafl {
 						black.addPlayedGame(gameid,false,Board.BLACK, turns, end-start,Result.LOSS);
 						white.addPlayedGame(gameid,true,Board.WHITE,turns,end-start,winResult);						
 					}
+					black.gameover();
+					white.gameover();
 					break;
 				}
 				turns+=1;
@@ -225,16 +227,6 @@ public class Hnefatafl {
 				white.addPlayedGame(gameid, false, Board.WHITE, turns, end-start, Result.DRAW);
 			}
 			
-			//this.getBoard().saveState();
-		}
-		this.getWhitePlayer().save("minimax_white.plr");
-		this.getBlackPlayer().save("minimax_black.plr");
-		try {
-			this.setWhitePlayer(Player.openPlayer("minimax_white.plr"));
-			this.setBlackPlayer(Player.openPlayer("minimax_black.plr"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		
 		
@@ -318,39 +310,74 @@ public class Hnefatafl {
 	}
 	
 	/**
-	 * Main entry, runs a default number of games between two RandomPlayer players. 
+	 * Main entry, runs a default number of games between two of the requested types. 
+	 * Currently only games played between the same type of algorithm are supported at the commandline. 
 	 * @param args
 	 * @throws InterruptedException
 	 */
 	public static void main(String... args) throws InterruptedException{
 		
 		Hnefatafl game=new Hnefatafl();
-		int searchDepth=3;
-		
+		String type="ANN"; //valid types - ANN, MM, RAND
+		int games=100;
+		int turns=150;
+		int depth=3;
 		if(args.length>0)
-			searchDepth=Integer.valueOf(args[0]);
+			type=args[0];
+		if(args.length>1)
+			games=Integer.valueOf(args[1]);
+		if(args.length>2)
+			turns=Integer.valueOf(args[2]);
+		if(args.length>3){
+			depth=Integer.valueOf(args[3]);
+			if(depth>3)
+				depth=3;
+		}
+		System.out.println("\nusage:java -jar Tablut.jar type=<ANN|MM|RAND> NumGames=int NumTurns=int searchdepth=int(<4) - \nCurrently only games played between the same type of algorithm are supported at the commandline\nRunning without arguments runs with type ANN(neural net) using the 1000 game trained nets for 100 games of 150 turns and depth 1\nNote - be careful with outputs, we clobber liberally right now.\n\n");
 		
-		ArrayList<Player> players=new ArrayList<Player>();
-		players.add(new RandomPlayer(game,game.getBoard().blackpieces));
-		players.add(new SimplePlayer(game,game.getBoard().blackpieces));
-		MiniMaxPlayer mmplayer=new MiniMaxPlayer(game, game.getBoard().blackpieces);
-		mmplayer.readFeatures("blackfeature1.txt");
-		mmplayer.searchDepth=searchDepth;
-		players.add(mmplayer);
 		
-		for(Player player:players)
-			game.playANN(game,player);
-		
-		
+		if(type.equals("ANN")){
+			depth=1;
+			ANN_Player white=new ANN_Player(game,game.getBoard().whitepieces);
+			white.readNeuralNet("savednets/white/ANN_1000.nn");
+			white.searchDepth=depth;
+			ANN_Player black=new ANN_Player(game,game.getBoard().blackpieces);
+			black.readNeuralNet("savednets/black/ANN_black_1000.nn");
+			white.searchDepth=depth;
+			game.playMatch(white,black,games,turns);
+		}
+		else if(type.equals("MM")){
+			game.playMinimax(depth, games, turns);
+		}
+		else if(type.equals("RAND")){
+			game.playRandom(games, turns);
+		}
+		else if(type.equals("TEST")){
+			//for testing only, do not use. 
+			depth=1;
+			MiniMaxPlayer white=new MiniMaxPlayer(game,game.getBoard().whitepieces);
+			white.readFeatures("config/whitefeature1.txt");
+			white.searchDepth=3;
+			ANN_Player black=new ANN_Player(game,game.getBoard().blackpieces);
+			black.readNeuralNet("savednets/black/ANN_black_1000.nn");
+			black.searchDepth=depth;
+			game.playMatch(white,black,games,turns);
+			
+		}
 	}
-	private void playANN(Hnefatafl game, Player black) throws InterruptedException {
-		ANN_Player white=new ANN_Player(game, game.getBoard().whitepieces);
-		int games=5000;
-		int turns=250;
+	/**
+	 * play any two players. no special considerations.
+	 * @param white
+	 * @param black
+	 * @param games
+	 * @param turns
+	 * @throws InterruptedException
+	 */
+	private void playMatch(Player white, Player black, int games, int turns) throws InterruptedException{
 		int delay=0;
-		game.play(white, black, games, turns,delay);
+		this.play(white, black, games, turns,delay);
 		try {
-			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_"+white.type+"_"+black.type+"_"+games+"_"+turns+".txt")));
+			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("reports/results_"+white.type+"_"+black.type+"_"+games+"_"+turns+".txt")));
 			for(Outcome result:black.games){
 				bw.write(result.toString());
 			}
@@ -364,21 +391,34 @@ public class Hnefatafl {
 		}
 	}
 	/**
+	 * Play the white trained neural net against any black player
+	 * @param black
+	 * @param games
+	 * @param turns
+	 * @throws InterruptedException
+	 */
+	private void playANN(Player black, int games, int turns) throws InterruptedException {
+		ANN_Player white=new ANN_Player(this, this.getBoard().whitepieces);
+		white.training=false;
+		white.readNeuralNet("savednets/white/ANN_1000.nn");
+		playMatch(white,black,games,turns);
+	}
+	/**
 	 * 
 	 * @param game
 	 * @throws InterruptedException
 	 */
-	private void playSimple(Hnefatafl game) throws InterruptedException {
-		SimplePlayer white=new SimplePlayer(game, game.getBoard().whitepieces);
-		RandomPlayer black=new RandomPlayer(game, game.getBoard().blackpieces);
-		white.readFeatures("whitefeature1.txt");
+	private void playSimple() throws InterruptedException {
+		SimplePlayer white=new SimplePlayer(this, this.getBoard().whitepieces);
+		RandomPlayer black=new RandomPlayer(this, this.getBoard().blackpieces);
+		white.readFeatures("config/whitefeature1.txt");
 		int games=100;
 		int turns=1000;
 		int delay=0;
-		game.play(white, black, games, turns,delay);
+		this.play(white, black, games, turns,delay);
 		
 		try {
-			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_simple_random_"+games+"_"+turns+".txt")));
+			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("reports/results_simple_random_"+games+"_"+turns+".txt")));
 			for(Outcome result:black.games){
 				bw.write(result.toString());
 			}
@@ -389,6 +429,42 @@ public class Hnefatafl {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+	}
+	/**
+	 * Play neural nets trained on each side(black/white) against each other, testing neural nets from different points in their
+	 * development to see where learning plateaued, if at all. Reads neural nets from ./savednets/white and ./savednets/black. 
+	 * Please each player against each other 100 times with max turns set to 150. 
+	 * @param game
+	 * @param depth
+	 */
+	private void tournamentOfNeuralNets(int depth){
+		ArrayList<ANN_Player> whiteplayers=new ArrayList<ANN_Player>();
+		ArrayList<ANN_Player> blackplayers=new ArrayList<ANN_Player>();
+		
+		for(File net:new File("./savednets/white").listFiles()){
+			ANN_Player ann=new ANN_Player(this, this.getBoard().whitepieces);
+			ann.type="white_"+net.getName().replace(".nn","");
+			ann.readNeuralNet(net.getAbsolutePath());
+			ann.searchDepth=depth;
+			whiteplayers.add(ann);
+		}
+		for(File net:new File("./savednets/black").listFiles()){
+			ANN_Player ann=new ANN_Player(this, this.getBoard().blackpieces);
+			ann.type="black_"+net.getName().replace(".nn","");
+			ann.readNeuralNet(net.getAbsolutePath());
+			ann.searchDepth=depth;
+			blackplayers.add(ann);
+		}
+		for(ANN_Player white:whiteplayers){
+			for(ANN_Player black:blackplayers){
+				try {
+					this.playMatch(white,black,100,150);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 	/**
@@ -396,23 +472,21 @@ public class Hnefatafl {
 	 * @param game
 	 * @throws InterruptedException
 	 */
-	private void playMinimax(Hnefatafl game, int depth) throws InterruptedException {
-		System.out.println(game.getBoard().toStateString());
+	private void playMinimax(int depth, int games, int turns) throws InterruptedException {
+		System.out.println(this.getBoard().toStateString());
 		
-		MiniMaxPlayer black = new MiniMaxPlayer(game, game.getBoard().blackpieces);
+		MiniMaxPlayer black = new MiniMaxPlayer(this, this.getBoard().blackpieces);
 		black.readFeatures("blackfeature1.txt");
-		MiniMaxPlayer white = new MiniMaxPlayer(game,game.getBoard().whitepieces);
+		MiniMaxPlayer white = new MiniMaxPlayer(this,this.getBoard().whitepieces);
 		white.readFeatures("whitefeature1.txt");
 		white.searchDepth=depth;
 		black.searchDepth=depth;
 		
-		int games=1000;
-		int turns=50;
 		int delay=0;
-		game.play(white, black, games, turns,delay);
+		this.play(white, black, games, turns,delay);
 		
 		try {
-			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results_minimax_"+games+"_"+turns+".txt")));
+			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("reports/results_minimax_"+games+"_"+turns+".txt")));
 			for(Outcome result:black.games){
 				bw.write(result.toString());
 			}
@@ -425,13 +499,18 @@ public class Hnefatafl {
 			e.printStackTrace();
 		}
 	}
-	private static void playRandom(Hnefatafl game) throws InterruptedException {
-		System.out.println(game.getBoard().toStateString());
-		RandomPlayer black=new RandomPlayer(game, game.getBoard().getBlackpieces());
-		RandomPlayer white = new RandomPlayer(game,game.getBoard().whitepieces);
-		game.play(white, black, 1000, 1000,0);
+	/**
+	 * Start a game with 2 random players and run for games games with turns max turns. write results to 'results_random_games_turns.txt'
+	 * @param game
+	 * @throws InterruptedException
+	 */
+	private void playRandom(int games, int turns) throws InterruptedException {
+		System.out.println(this.getBoard().toStateString());
+		RandomPlayer black=new RandomPlayer(this, this.getBoard().getBlackpieces());
+		RandomPlayer white = new RandomPlayer(this,this.getBoard().whitepieces);
+		this.play(white, black, games, turns,0);
 		try {
-			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("results.txt")));
+			BufferedWriter bw=new BufferedWriter(new FileWriter(new File("reports/results_random_"+games+"_"+turns+".txt")));
 			for(Outcome result:black.games){
 				bw.write(result.toString());
 			}
@@ -445,12 +524,7 @@ public class Hnefatafl {
 		}
 		
 	}
-	public Board getBoard() {
-		return board;
-	}
-	public void setBoard(Board board) {
-		this.board = board;
-	}
+	
 	
 	
 	

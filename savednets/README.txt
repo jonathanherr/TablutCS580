@@ -1,0 +1,1 @@
+each net is saved upon completion of the nth game, where n is in the filename and hardcoded to save each 100 games. 

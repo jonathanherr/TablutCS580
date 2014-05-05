@@ -1,0 +1,7 @@
+kingdist=5.0
+piecedist=2.0
+cornerdist=1.0
+numpieces=1.0
+incapture=3.0
+escaperoute=1.0
+freedom=1.0

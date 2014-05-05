@@ -12,10 +12,12 @@ public class ANN_Player extends MiniMaxPlayer {
 
 	double[] lastoutput={0};
 	NeuralNetwork<BackPropagation> nn;
+	public boolean training;
 	public ANN_Player(Hnefatafl game, ArrayList<Piece> pieces) {
 		super(game, pieces);
 		this.type="ANN";
 		this.searchDepth=1;
+		training=true;
 		nn=new org.neuroph.nnet.MultiLayerPerceptron(TransferFunctionType.SIGMOID,Board.getBoardheight()*Board.getBoardwidth()+3,50,1);
 	}
 	/**
@@ -64,21 +66,32 @@ public class ANN_Player extends MiniMaxPlayer {
 			reward=0.0d;
 		inputdata.addRow(new DataSetRow(input,new double[]{reward}));
 		nn.setLearningRule(new org.neuroph.nnet.learning.BackPropagation());
-		nn.learn(inputdata);
-		lastoutput=nn.getOutput();
-		int turns=this.moves.size();
-		if(turns%100==0){
-			save("ANN_"+turns+".nn");
+		if(training)
+			nn.learn(inputdata);
+		else{
+			nn.setInput(inputdata.getRowAt(0).getInput());
+			nn.calculate();
 		}
+		lastoutput=nn.getOutput();
+		
 		
 		return nn.getOutput()[0];
 	}
-	
+	public void gameover(){
+		if(training){
+			int games=this.games.size();
+			if(games%100==0 || games==1 || games==0){
+				save("ANN_"+this.getColor()+"_"+games+".nn");
+			}
+		}
+	}
 	public void save(String path){
 		nn.save(path);
 	}
-	public void load(String path){
+	public void readNeuralNet(String path){
+		System.out.println("Loading net from " + path);
 		nn=NeuralNetwork.createFromFile(path);
+		System.out.println("Done loading net.");
 	}
 	
 	

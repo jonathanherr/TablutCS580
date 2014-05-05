@@ -88,6 +88,8 @@ Player {
 		
 		
 	}
+	public void gameover(){
+	}
 	public Move turn(){
 		return null;
 	}
