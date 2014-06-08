@@ -79,7 +79,7 @@ public class Hnefatafl {
 	 */
 	public Hnefatafl(){
 		board=new Board();
-		setupfile="config/setup7x7.cfg";
+		setupfile="config/setup9x9.cfg";
 		reset(true);
 		
 	}
@@ -318,7 +318,7 @@ public class Hnefatafl {
 	public static void main(String... args) throws InterruptedException{
 		
 		Hnefatafl game=new Hnefatafl();
-		String type="ANN"; //valid types - ANN, MM, RAND
+		String type="HUMAN"; //valid types - ANN, MM, RAND,HUMAN
 		int games=100;
 		int turns=150;
 		int depth=3;
@@ -333,10 +333,16 @@ public class Hnefatafl {
 			if(depth>3)
 				depth=3;
 		}
-		System.out.println("\nusage:java -jar Tablut.jar type=<ANN|MM|RAND> NumGames=int NumTurns=int searchdepth=int(<4) - \nCurrently only games played between the same type of algorithm are supported at the commandline\nRunning without arguments runs with type ANN(neural net) using the 1000 game trained nets for 100 games of 150 turns and depth 1\nNote - be careful with outputs, we clobber liberally right now.\n\n");
+		System.out.println("\nusage:java -jar Tablut.jar type=<ANN|MM|RAND|HUMAN|TRAIN_WHITE> NumGames=int NumTurns=int searchdepth=int(<4) - \nCurrently only games played between the same type of algorithm are supported at the commandline\nRunning without arguments runs with type ANN(neural net) using the 1000 game trained nets for 100 games of 150 turns and depth 1\nNote - be careful with outputs, we clobber liberally right now.\n\n");
 		
-		
-		if(type.equals("ANN")){
+		if(type.equals("TRAIN_WHITE")) {
+			MiniMaxPlayer black = new MiniMaxPlayer(game, game.getBoard().blackpieces);
+			black.searchDepth=depth;
+			black.readFeatures("config/blackfeature1.txt");
+			game.playANN(black, games, turns, true);
+			
+		}
+		else if(type.equals("ANN")){
 			depth=1;
 			ANN_Player white=new ANN_Player(game,game.getBoard().whitepieces);
 			white.readNeuralNet("savednets/white/ANN_1000.nn");
@@ -362,6 +368,16 @@ public class Hnefatafl {
 			black.readNeuralNet("savednets/black/ANN_black_1000.nn");
 			black.searchDepth=depth;
 			game.playMatch(white,black,games,turns);
+			
+		}
+		else if(type.equals("HUMAN")) {
+			System.out.println(game.getBoard().toStateString());
+			HumanPlayer white=new HumanPlayer(game, game.getBoard().whitepieces,"bob");
+			ANN_Player black=new ANN_Player(game,game.getBoard().blackpieces);
+			black.readNeuralNet("savednets/black/ANN_black_1000.nn");
+			black.searchDepth=1;
+			game.playMatch(white, black, games, turns);
+			
 			
 		}
 	}
@@ -397,10 +413,11 @@ public class Hnefatafl {
 	 * @param turns
 	 * @throws InterruptedException
 	 */
-	private void playANN(Player black, int games, int turns) throws InterruptedException {
+	private void playANN(Player black, int games, int turns, boolean training) throws InterruptedException {
 		ANN_Player white=new ANN_Player(this, this.getBoard().whitepieces);
-		white.training=false;
-		white.readNeuralNet("savednets/white/ANN_1000.nn");
+		white.training=training;
+		if(!training)
+			white.readNeuralNet("savednets/white/ANN_1000.nn");
 		playMatch(white,black,games,turns);
 	}
 	/**

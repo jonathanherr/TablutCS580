@@ -9,7 +9,19 @@ import java.util.ArrayList;
 import net.jonathanherr.gmu.hnefatafl.Player.Result;
 
 /**
- * Container for all functionality related to knowing and changing the state of the game board
+ * Container for all functionality related to knowing and changing the state of the game board.
+ * Sample board:
+ *   0 1 2 3 4 5 6 7 8 
+   0 x _ _ _ _ _ _ _ x 
+   1 _ _ _ b _ _ w _ _ 
+   2 _ _ b _ _ w _ _ _ 
+   3 _ b _ _ _ _ _ _ _ 
+   4 w b _ _ _ _ _ b _ 
+   5 w _ _ _ b _ _ _ b 
+   6 _ b _ _ _ w b _ _ 
+   7 _ _ _ w _ _ b _ b 
+   8 x _ _ _ _ _ b _ x 
+ 
  * @author herrjr
  *
  */
