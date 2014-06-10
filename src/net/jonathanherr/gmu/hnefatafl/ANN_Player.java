@@ -80,7 +80,7 @@ public class ANN_Player extends MiniMaxPlayer {
 	public void gameover(){
 		if(training){
 			int games=this.games.size();
-			if(games%100==0 || games==1 || games==0){
+			if(games%25==0 || games==1 || games==0){
 				save("ANN_"+this.getColor()+"_"+games+".nn");
 			}
 		}
